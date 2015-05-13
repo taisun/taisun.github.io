@@ -61,14 +61,28 @@
     </header>
     <div class="entry">
       
-        <p>HTML制作のガイドライン＆方法です。<br>基本的にHTML5のコーディングについて記述していきます。<br>なるべくWeb標準と論理(<strong><a href="http://webcomponents.org/" target="_blank" rel="external">WebComponents</a></strong>)と文脈（コンテキスト）を意識したコーディング書いています。</p>
-<p>さらにパーフォマンスを考えたコーディイングについても書いています。</p>
+        <p>HTML制作のガイドライン＆方法です。<br>基本的にHTML5のコーディング＆ルールについて記述していきます。<br>Web標準と論理(<strong><a href="http://webcomponents.org/" target="_blank" rel="external">WebComponents</a></strong>)と文脈（コンテキスト）を意識したコーディング<br>さらにパーフォマンスを考えたコーディイングについても書いています。</p>
 <p>WAI-ARIA(アクセシビリティ)などの記述も含め記述していきたいと考えています。</p>
 <h2 id="HTML5について">HTML5について</h2><p>2014年10月28日に正式勧告されました。<br>2016年にはHTML5.1も勧告予定です。</p>
 <p>ここではHTML5（一部5.1）の使い方について書いていきます。</p>
 <p>基本的にHTML5の各タグには意味があります。</p>
 <p>例えば<br><code>&lt;strong&gt;</code>タグは「強い強調」という意味があります。</p>
 <p>各タグには意味があり文脈（コンテキスト）に合わせてタグを選択し使用しなければいけません。<br>各タグの意味などについては<strong><a href="http://momdo.github.io/html5/Overview.html" target="_blank" rel="external">W３C</a></strong>や<strong><a href="https://developer.mozilla.org/ja/docs/Web/HTML/HTML5" target="_blank" rel="external">Mozilla</a></strong>などをご覧ください。</p>
+<h2 id="基本的なマークアップ（HTML5）について">基本的なマークアップ（HTML5）について</h2><p>HTML5を使用した基本的なマークアップについて記述します。<br>HTMLは構造体です。</p>
+<p>なので構造を崩すようなマークアップはしてはいけません。<br>例えば以下のような例です。</p>
+<p><strong>大量な<br>＆スペース(&nbsp;)を使用してレイアウトしている</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">br</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span>&gt;</span>見出し&amp;nbsp;&amp;nbsp;&amp;nbsp;重要<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>これはなぜいけないかというと、<br>タグの意味として使用方法が間違っていて構造体ではないからです。<br><code>&lt;br&gt;</code>は文章の改行、<code>&amp;nbsp;</code>は半角ではなくて「Non-breaking Space」なので自動的な改行を防ぐ物です。</p>
+<p>このような意味を理解してマークアップをしないと構造体が崩れてしまいメンテナンスができないカオスなサイトになります。<br>そのためレイアウト目的では使用しないでください。</p>
+<p>では構造を意識したマークアップとは何か、<br>しっかりと構造体になっており、コードが読みやすいサイトです。</p>
+<h3 id="コードが読みやすいサイト">コードが読みやすいサイト</h3><p>コードが読みやすいサイトとはある一定のコーディングルールに基づいたマークアップのことです。<br><code>コメントの記述方法</code>や<code>インデントルール</code>などがあります。<br>以下は例ですルールの例です。</p>
+<p>・<strong>コメントの記述方法</strong><br>  <code>閉じタグの後ろにIDまたはClass名を記述</code></p>
+<p>・<strong>インデントルール</strong><br>  <code>2スペース</code></p>
+<p>・<strong>タグの改行</strong><br>  <code>各閉じタグごと</code></p>
+<p>・<strong>閉じタグ</strong><br>  <code>省略しない</code></p>
+<p>このようにルールを定めることにより読みやすく、良質なマークアップとなります。</p>
+<p><strong>コードが読みやすいサイト = イケてるサイト</strong></p>
+<p><br></p>
 <h2 id="WEB標準とは何か？">WEB標準とは何か？</h2><p>簡単にいうとW３Cが定めた<code>コーディング方法</code>です。<br>このタグはこう記述しなさいとかというものです。</p>
 <p>-「でもこれってやる必要あるの？」<br>-「デザイン通りにコーディングできてレガシー＆モダンブラウザで崩れなければいいんじゃん」</p>
 <p>と思う方も多いとおもいます。</p>
@@ -106,7 +120,7 @@
 <p>あくまでWebComponentsの技術ではなくここでは、その考えをもとにした制作方法について書いています。</p>
 <p>私は次のように考えます。</p>
 <p><strong>WebComponentsを意識した制作 = 論理が成り立つパーツ（部品） ＝ おもちゃのブロック（各パーツ）</strong></p>
-<p><strong>WebComponentsを意識した制作</strong>をすることでメンテナンスしやすく人にも機械にもわかりやすい、壊れにくいサイトができると考えます。</p>
+<p><strong>WebComponentsを意識した制作</strong>をすることでメンテナンスしやすく人にも機械にもわかりやすい、壊れにくいサイトができると考えます。<br><br></p>
 
       
     </div>
