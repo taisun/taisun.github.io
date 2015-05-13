@@ -37,7 +37,11 @@
     
       <li><a href="/">Home</a></li>
     
-      <li><a href="/archives">Archives</a></li>
+      <li><a href="/html-guide">HTMLガイド</a></li>
+    
+      <li><a href="/css-guide">CSSガイド</a></li>
+    
+      <li><a href="/javascript-guide">Javascriptガイド</a></li>
     
   </ul>
   <div class="clearfix"></div>
@@ -61,8 +65,8 @@
     <div class="entry">
       
         <p>本サイトは「Static Site Generator(静的サイトジェネレーター)」<strong><a href="https://hexo.io/" target="_blank" rel="external">HEXO</a></strong>を使用し制作しました。</p>
-<h2 id="概要">概要</h2><p>ご閲覧いただきありがとうございます。</p>
-<p>本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。<br>私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。　<br>ご閲覧された方の参考になれば幸いです。</p>
+<h2 id="概要">概要</h2><p>ご閲覧いただきありがとうございます。  </p>
+<p>本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。<br>私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。<br>ご閲覧された方の参考になれば幸いです。</p>
 
       
     </div>
@@ -70,13 +74,8 @@
       
         
         
-  
-  <div class="tags">
-    <a href="/tags/About/">About</a>
-  </div>
-
         
-  <div class="addthis addthis_toolbox addthis_default_style">
+  <!-- div class="addthis addthis_toolbox addthis_default_style">
     
       <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
     
@@ -91,7 +90,7 @@
     
     <a class="addthis_counter addthis_pill_style"></a>
   </div>
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script -->
 
       
       <div class="clearfix"></div>
@@ -101,7 +100,7 @@
 
 
 <section id="comment">
-  <h1 class="title">留言</h1>
+  <h1 class="title">Comments</h1>
 
   
       <div id="fb-root"></div>
@@ -124,7 +123,7 @@
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="搜尋">
+    <input type="search" name="q" results="0" placeholder="Search">
     <input type="hidden" name="q" value="site:github.com/taisun/taisun.github.io.git">
   </form>
 </div>
@@ -133,10 +132,10 @@
 
   
 <div class="widget tag">
-  <h3 class="title">標籤</h3>
+  <h3 class="title">Tags</h3>
   <ul class="entry">
   
-    <li><a href="/tags/About/">About</a><small>1</small></li>
+    <li><a href="/tags/About/">About</a><small>0</small></li>
   
   </ul>
 </div>
