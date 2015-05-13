@@ -70,7 +70,7 @@
 <p>各タグには意味があり文脈（コンテキスト）に合わせてタグを選択し使用しなければいけません。<br>各タグの意味などについては<strong><a href="http://momdo.github.io/html5/Overview.html" target="_blank" rel="external">W３C</a></strong>や<strong><a href="https://developer.mozilla.org/ja/docs/Web/HTML/HTML5" target="_blank" rel="external">Mozilla</a></strong>などをご覧ください。</p>
 <h2 id="基本的なマークアップ（HTML5）について">基本的なマークアップ（HTML5）について</h2><p>HTML5を使用した基本的なマークアップについて記述します。<br>HTMLは構造体です。</p>
 <p>なので構造を崩すようなマークアップはしてはいけません。<br>例えば以下のような例です。</p>
-<p><strong>大量な<br>＆スペース(&nbsp;)を使用してレイアウトしている</strong></p>
+<p><strong>大量な<code>&lt;br&gt;</code>＆スペース(<code>&amp;nbsp;</code>)を使用してレイアウトしている</strong></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">br</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span>&gt;</span>見出し&amp;nbsp;&amp;nbsp;&amp;nbsp;重要<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>これはなぜいけないかというと、<br>タグの意味として使用方法が間違っていて構造体ではないからです。<br><code>&lt;br&gt;</code>は文章の改行、<code>&amp;nbsp;</code>は半角ではなくて「Non-breaking Space」なので自動的な改行を防ぐ物です。</p>
 <p>このような意味を理解してマークアップをしないと構造体が崩れてしまいメンテナンスができないカオスなサイトになります。<br>そのためレイアウト目的では使用しないでください。</p>
