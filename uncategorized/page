@@ -54,7 +54,7 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-05-13T05:52:04.000Z"><a href="/uncategorized/本サイトについて">2015-05-13</a></time>
+        <time datetime="2015-05-13T07:41:10.000Z"><a href="/uncategorized/page">2015-05-13</a></time>
       
       
   
@@ -114,7 +114,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="https://github.com/taisun/taisun.github.io.git/uncategorized/本サイトについて" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="https://github.com/taisun/taisun.github.io.git/uncategorized/page" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>
@@ -131,15 +131,6 @@
   
 
   
-<div class="widget tag">
-  <h3 class="title">Tags</h3>
-  <ul class="entry">
-  
-    <li><a href="/tags/About/">About</a><small>0</small></li>
-  
-  </ul>
-</div>
-
 </aside>
     <div class="clearfix"></div>
   </div>

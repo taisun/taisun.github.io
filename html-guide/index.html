@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>HTMLガイドライン | GuideMemo</title>
+  <title>HTML制作ガイドライン＆方法 | GuideMemo</title>
   <meta name="author" content="Taichi Suzuki">
   
   <meta name="description" content="HTML/CSS/JavascriptのMemo的なもの">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="HTMLガイドライン"/>
+  <meta property="og:title" content="HTML制作ガイドライン＆方法"/>
   <meta property="og:site_name" content="GuideMemo"/>
 
   
@@ -55,14 +55,58 @@
       
       
   
-    <h1 class="title">HTMLガイドライン</h1>
+    <h1 class="title">HTML制作ガイドライン＆方法</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>HTMLのガイドラインです。<br>基本的にHTML5のコーディングについて記述していきます。<br>なるべくWeb標準と論理(<strong><a href="http://webcomponents.org/" target="_blank" rel="external">WebComponents</a></strong>)意識したコーディングについて書いています。</p>
+        <p>HTML制作のガイドライン＆方法です。<br>基本的にHTML5のコーディングについて記述していきます。<br>なるべくWeb標準と論理(<strong><a href="http://webcomponents.org/" target="_blank" rel="external">WebComponents</a></strong>)と文脈（コンテキスト）を意識したコーディング書いています。</p>
+<p>さらにパーフォマンスを考えたコーディイングについても書いています。</p>
 <p>WAI-ARIA(アクセシビリティ)などの記述も含め記述していきたいと考えています。</p>
+<h2 id="HTML5について">HTML5について</h2><p>2014年10月28日に正式勧告されました。<br>2016年にはHTML5.1も勧告予定です。</p>
+<p>ここではHTML5（一部5.1）の使い方について書いていきます。</p>
+<p>基本的にHTML5の各タグには意味があります。</p>
+<p>例えば<br><code>&lt;strong&gt;</code>タグは「強い強調」という意味があります。</p>
+<p>各タグには意味があり文脈（コンテキスト）に合わせてタグを選択し使用しなければいけません。<br>各タグの意味などについては<strong><a href="http://momdo.github.io/html5/Overview.html" target="_blank" rel="external">W３C</a></strong>や<strong><a href="https://developer.mozilla.org/ja/docs/Web/HTML/HTML5" target="_blank" rel="external">Mozilla</a></strong>などをご覧ください。</p>
+<h2 id="WEB標準とは何か？">WEB標準とは何か？</h2><p>簡単にいうとW３Cが定めた<code>コーディング方法</code>です。<br>このタグはこう記述しなさいとかというものです。</p>
+<p>-「でもこれってやる必要あるの？」<br>-「デザイン通りにコーディングできてレガシー＆モダンブラウザで崩れなければいいんじゃん」</p>
+<p>と思う方も多いとおもいます。</p>
+<p>しかし標準ベースのHTMLにする事でたくさん得します。<br>標準ベースのHTMLにすることで、多様な新しい技術を使用する事ができ、さらに多様なソフトウェアやデバイスが解釈しやすくなり、アクセシブルになります。。</p>
+<p>なんか難しい感じですがようするに</p>
+<p>「<strong>人にも機械にも分かりやすく、使いやすくなり、最新技術を使っていろいろできます</strong>」</p>
+<p>細かくいうといろいろありますが大雑把にいうとこんな感じです。</p>
+<p><strong>標準化 ＝ いけてるサイト</strong></p>
+<p>常に意識して制作することでサイトの「パフォーマンス」や「SEO対策」などが改善していくと私は考えています。</p>
+<h3 id="例：（テーブルに複数ある場合）">例：（テーブルに複数ある場合）<table></table></h3><p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">caption</span>&gt;</span>表の名前<span class="tag">&lt;/<span class="title">caption</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">thead</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">th</span>&gt;</span>表見出し1<span class="tag">&lt;/<span class="title">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">th</span>&gt;</span>表見出し2<span class="tag">&lt;/<span class="title">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">th</span>&gt;</span>表見出し3<span class="tag">&lt;/<span class="title">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">th</span>&gt;</span>表見出し4<span class="tag">&lt;/<span class="title">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">thead</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="title">tbody</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">"rowgroup"</span>&gt;</span>小見出し<span class="tag">&lt;/<span class="title">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>値<span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">row</span>&gt;</span>孫見出し<span class="tag">&lt;/<span class="title">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>値<span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>値<span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>値<span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">row</span>&gt;</span>Tails<span class="tag">&lt;/<span class="title">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>値<span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>値<span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">tbody</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">table</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><br></p>
+<h2 id="文脈（コンテキスト）を意識したコーディングとは何か？">文脈（コンテキスト）を意識したコーディングとは何か？</h2><p>コーディングをする時はデザインorワイヤーフレームなどをベースに作る事が多いと思います。<br>その際に以下のように大きく３つに分ける事ができると思います。<br><code>ヘッダー</code>、<code>メイン</code>、<code>フッター</code><br>さらに細かく見ていくと<code>ロゴ</code>、<code>グローバルナビゲーション</code>…などに分ける事ができるます。</p>
+<p>文脈（コンテキスト）を考えながら<code>ロゴ</code>というパーツを見てみましょう。<br>ちなみに、本サイトはテンプレートで制作しているためあまり参考にしないでもらいたいです。</p>
+<p><code>ロゴ</code>とは何か考えてみましょう。<br>google先生に聞いたところ、「会社名・商品名などの文字を特別にデザインしたもの」と解答してくれました。<br>ですがこれはサイト全体かしたらなんの文脈もありません。<br>意味は合っていると思いますが、ロゴはサイトのどのページにも存在し、このサイトはなんのサイトかを表しているもの<br>だと私は考えます。<br>かといって「見出し」ではないし、トップページから見たら「見出し」にもなるし。。。。<br>一つのパーツをとっても文脈を考えるだけでいくつも考えがでて、混乱してしまいます。<br><br></p>
+<h3 id="じゃあどうするのか？">じゃあどうするのか？</h3><p>賛否はあると思いますが私は次のように考えます。</p>
+<p><strong>文脈（コンテキスト） =　論理</strong></p>
+<p>そのままなのですが、論理通りに設計するのがシンプルで分かりやすい<code>コード</code>ではないのでしょうか？<br>なのでこの<code>ロゴ</code>というパーツは以下のように考えます。</p>
+<p><strong>ロゴ =&gt; サイト名 =&gt; テキスト</strong></p>
+<p>HTML5は各タグの意味が重要です。<br>なのでこの例では<code>p</code>タグ書きます。<br>それでは「<code>ロゴ</code>って事わからないじゃん」と思う方もいると思います。</p>
+<p>そこは<code>class属性</code>や<code>role(WAI-ARIA)属性</code>を使用してこのパーツがなんなのかを機械的に指定すればいいのです。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">header</span> <span class="attribute">class</span>=<span class="value">"header"</span> <span class="attribute">role</span>=<span class="value">"banner"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"logo"</span>&gt;</span>サイトロゴ<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">  ...省略</span><br><span class="line"><span class="tag">&lt;/<span class="title">header</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>この例のように文脈（コンテキスト）を考えてパーツ＆サイトを制作するこてでマークアップがシンプルになり、メンテナンス性が向上します。<br><br></p>
+<h2 id="WebComponentsを意識した制作">WebComponentsを意識した制作</h2><p>前の項目で<strong>文脈（コンテキスト）</strong>で以下のように少し触れましたが、</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#12381;&#12398;&#38555;&#12395;&#20197;&#19979;&#12398;&#12424;&#12358;&#12395;&#22823;&#12365;&#12367;&#65299;&#12388;&#12395;&#20998;&#12369;&#12427;&#20107;&#12364;&#12391;&#12365;&#12427;&#12392;&#24605;&#12356;&#12414;&#12377;&#12290;&#10;&#39;&#12504;&#12483;&#12480;&#12540;&#39;&#12289;&#39;&#12513;&#12452;&#12531;&#39;&#12289;&#39;&#12501;&#12483;&#12479;&#12540;&#39;&#10;&#12373;&#12425;&#12395;&#32048;&#12363;&#12367;&#35211;&#12390;&#12356;&#12367;&#12392;&#39;&#12525;&#12468;&#39;&#12289;&#39;&#12464;&#12525;&#12540;&#12496;&#12523;&#12490;&#12499;&#12466;&#12540;&#12471;&#12519;&#12531;&#39;...&#10;&#12394;&#12393;&#12395;&#20998;&#12369;&#12427;&#20107;&#12364;&#12391;&#12365;&#12427;&#12414;&#12377;&#12290;</span><br></pre></td></tr></table></figure>
+<p>このようにどんどん細かく各パーツ（部品）に分割して制作していくことで<br><strong>WebComponentsを意識した制作</strong>に近づけるとおもいます。</p>
+<p>しかしどのレベルまで分割したらいいのか、など問題が出てくると思います。<br>その時に役立つのが<strong>論理</strong>です。</p>
+<p><strong>論理</strong>が成り立たないパーツ（部品）はパーツ（部品）ではありませんただの装飾です。<br>そのレベルで意識し制作するの好ましいと私は考えます。</p>
+<p><br></p>
+<h3 id="汎用性のあるパーツ（部品）について">汎用性のあるパーツ（部品）について</h3><p>汎用性があるパーツ（部品）とは、どんな箇所で使用しても壊れないパーツ（部品）です。<br>壊れないパーツ（部品）を作るのはほぼ無理に等しいです。</p>
+<p>壊れないパーツ（部品）はできませんが、<strong>壊れにくくメンテナンスしやすいパーツ（部品）</strong>は作ることができます。<br>そのためにも文脈（コンテキスト）や論理を意識してパーツ（部品）を作るといいと思います。</p>
+<p>では実際にどう作るか、<br>HTMLは複数のパーツが組み合わさった構造体です。</p>
+<p>なので汎用性をがあるパーツ（部品）を作れば、<br>おもちゃのブロックのように組みあわるだけでサイトができてしまいます（理想）。</p>
+<p><strong>おもちゃのブロック = 各パーツ</strong></p>
+<p>それにはやはり<strong>論理</strong>が重要になってきます。<br><strong>論理</strong>を意識して制作することで自然と汎用性の高いパーツができあがります。</p>
+<p>あくまでWebComponentsの技術ではなくここでは、その考えをもとにした制作方法について書いています。</p>
+<p>私は次のように考えます。</p>
+<p><strong>WebComponentsを意識した制作 = 論理が成り立つパーツ（部品） ＝ おもちゃのブロック（各パーツ）</strong></p>
+<p><strong>WebComponentsを意識した制作</strong>をすることでメンテナンスしやすく人にも機械にもわかりやすい、壊れにくいサイトができると考えます。</p>
 
       
     </div>
@@ -107,15 +151,6 @@
   
 
   
-<div class="widget tag">
-  <h3 class="title">Tags</h3>
-  <ul class="entry">
-  
-    <li><a href="/tags/About/">About</a><small>0</small></li>
-  
-  </ul>
-</div>
-
 </aside>
     <div class="clearfix"></div>
   </div>
