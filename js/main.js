@@ -15,7 +15,7 @@ var Tips = (function(){
 			$tipBox.addClass("hide");
 		},
 		init: function(){
-			
+
 		}
 	}
 })();
@@ -34,6 +34,9 @@ var Main = (function(){
 	}
 
 	var slide = function(idx){
+		console.log(idx);
+		if(idx>=1){idx=idx+1}
+		console.log(idx);
 		var $wrap = $(".switch-wrap");
 		$wrap.css({
 			"transform": "translate(-"+idx*100+"%, 0 )"
