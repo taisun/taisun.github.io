@@ -5,21 +5,21 @@
   
   <title>HTML制作ガイドライン＆方法 | GuideMemo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HTML制作のガイドライン＆方法です。基本的にHTML5のコーディング＆ルールについて記述していきます。Web標準と論理(WebComponents)と文脈（コンテキスト）を意識したコーディングさらにパーフォマンスを考えたコーディイングについても書いています。
-WAI-ARIA(アクセシビリティ)などの記述も含め記述していきたいと考えています。
-HTML5について2014年10月28日に正式勧告さ">
+  <meta name="description" content="HTML制作のガイドライン＆方法です。基本的にHTML5のコーディング＆ルールについて記述していきます。Web標準と論理(WebComponents)と文脈（コンテキスト）を意識したコーディングさらにパーフォマンスを考えたコーディイングについて書いています。
+WAI-ARIA(アクセシビリティ)などの記述も含め記述しています。
+コーディングルールHTMLのコーディングルールの概念＆思考をまとめまし">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTML制作ガイドライン＆方法">
 <meta property="og:url" content="https://github.com/taisun/taisun.github.io.git/html-guide/index.html">
 <meta property="og:site_name" content="GuideMemo">
-<meta property="og:description" content="HTML制作のガイドライン＆方法です。基本的にHTML5のコーディング＆ルールについて記述していきます。Web標準と論理(WebComponents)と文脈（コンテキスト）を意識したコーディングさらにパーフォマンスを考えたコーディイングについても書いています。
-WAI-ARIA(アクセシビリティ)などの記述も含め記述していきたいと考えています。
-HTML5について2014年10月28日に正式勧告さ">
+<meta property="og:description" content="HTML制作のガイドライン＆方法です。基本的にHTML5のコーディング＆ルールについて記述していきます。Web標準と論理(WebComponents)と文脈（コンテキスト）を意識したコーディングさらにパーフォマンスを考えたコーディイングについて書いています。
+WAI-ARIA(アクセシビリティ)などの記述も含め記述しています。
+コーディングルールHTMLのコーディングルールの概念＆思考をまとめまし">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML制作ガイドライン＆方法">
-<meta name="twitter:description" content="HTML制作のガイドライン＆方法です。基本的にHTML5のコーディング＆ルールについて記述していきます。Web標準と論理(WebComponents)と文脈（コンテキスト）を意識したコーディングさらにパーフォマンスを考えたコーディイングについても書いています。
-WAI-ARIA(アクセシビリティ)などの記述も含め記述していきたいと考えています。
-HTML5について2014年10月28日に正式勧告さ">
+<meta name="twitter:description" content="HTML制作のガイドライン＆方法です。基本的にHTML5のコーディング＆ルールについて記述していきます。Web標準と論理(WebComponents)と文脈（コンテキスト）を意識したコーディングさらにパーフォマンスを考えたコーディイングについて書いています。
+WAI-ARIA(アクセシビリティ)などの記述も含め記述しています。
+コーディングルールHTMLのコーディングルールの概念＆思考をまとめまし">
   
     <link rel="alternative" href="/atom.xml" title="GuideMemo" type="application/atom+xml">
   
@@ -216,108 +216,24 @@ HTML5について2014年10月28日に正式勧告さ">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>HTML制作のガイドライン＆方法です。<br>基本的にHTML5のコーディング＆ルールについて記述していきます。<br>Web標準と論理(<strong><a href="http://webcomponents.org/" target="_blank" rel="external">WebComponents</a></strong>)と文脈（コンテキスト）を意識したコーディング<br>さらにパーフォマンスを考えたコーディイングについても書いています。</p>
-<p>WAI-ARIA(アクセシビリティ)などの記述も含め記述していきたいと考えています。</p>
-<h2 id="HTML5について">HTML5について</h2><p>2014年10月28日に正式勧告されました。<br>2016年にはHTML5.1も勧告予定です。</p>
-<p>ここではHTML5（一部5.1）の使い方について書いていきます。</p>
-<p>基本的にHTML5の各タグには意味があります。</p>
-<p>例えば<br><code>&lt;strong&gt;</code>タグは「強い強調」という意味があります。</p>
-<p>各タグには意味があり文脈（コンテキスト）に合わせてタグを選択し使用しなければいけません。<br>各タグの意味などについては<strong><a href="http://momdo.github.io/html5/Overview.html" target="_blank" rel="external">W３C</a></strong>や<strong><a href="https://developer.mozilla.org/ja/docs/Web/HTML/HTML5" target="_blank" rel="external">Mozilla</a></strong>などをご覧ください。</p>
-<h2 id="基本的なマークアップ（HTML5）について">基本的なマークアップ（HTML5）について</h2><p>HTML5を使用した基本的なマークアップについて記述します。<br>HTMLは構造体です。</p>
-<p>なので構造を崩すようなマークアップはしてはいけません。<br>例えば以下のような例です。</p>
-<p><strong>大量な<code>&lt;br&gt;</code>＆スペース(<code>&amp;nbsp;</code>)を使用してレイアウトしている</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">br</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span>&gt;</span>見出し&amp;nbsp;&amp;nbsp;&amp;nbsp;重要<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>これはなぜいけないかというと、<br>タグの意味として使用方法が間違っていて構造体ではないからです。<br><code>&lt;br&gt;</code>は文章の改行、<code>&amp;nbsp;</code>は半角ではなくて「Non-breaking Space」なので自動的な改行を防ぐ物です。</p>
-<p>このような意味を理解してマークアップをしないと構造体が崩れてしまいメンテナンスができないカオスなサイトになります。<br>そのためレイアウト目的では使用しないでください。</p>
-<p>では構造を意識したマークアップとは何か、<br>しっかりと構造体になっており、コードが読みやすいサイトです。</p>
-<h3 id="コードが読みやすいサイト">コードが読みやすいサイト</h3><p>コードが読みやすいサイトとはある一定のコーディングルールに基づいたマークアップのことです。<br><code>コメントの記述方法</code>や<code>インデントルール</code>などがあります。<br>以下は例ですルールの例です。</p>
+        <p>HTML制作のガイドライン＆方法です。<br>基本的にHTML5のコーディング＆ルールについて記述していきます。<br>Web標準と論理(<strong><a href="http://webcomponents.org/" target="_blank" rel="external">WebComponents</a></strong>)と文脈（コンテキスト）を意識したコーディング<br>さらにパーフォマンスを考えたコーディイングについて書いています。</p>
+<p>WAI-ARIA(アクセシビリティ)などの記述も含め記述しています。</p>
+<h2 id="コーディングルール">コーディングルール</h2><p>HTMLのコーディングルールの概念＆思考をまとめました。</p>
 <ul>
-<li><p><strong>コメントの記述方法</strong><br><code>閉じタグの後ろにIDまたはClass名を記述</code></p>
-</li>
-<li><p><strong>インデントルール</strong><br><code>2スペース</code></p>
-</li>
-<li><p><strong>タグの改行</strong><br><code>各閉じタグごと</code></p>
-</li>
-<li><p><strong>閉じタグ</strong><br><code>省略しない</code></p>
-</li>
+<li><a href="/html-rules">コーディングルールの思考＆概念</a></li>
 </ul>
-<p>このようにルールをいくつも定めることにより読みやすく、良質なマークアップとなり作業効率とメンテナンス性が上がります。</p>
-<div class="em"><strong>コードが読みやすいサイト = イケてるサイト</strong></div>
-
-
-<h2 id="記述例">記述例</h2><p>ここでは基本的な構造＆パーツの記述例を書いていきます。</p>
-<h3 id="html">html</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"ja"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="head">head</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"Author"</span> <span class="attribute">content</span>=<span class="value">"サイト名"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width, initial-scale=1"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="value">"IE=edge"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">title</span>&gt;</span>サイトタイトル<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"description"</span> <span class="attribute">content</span>=<span class="value">"サイトの説明"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"keywords"</span> <span class="attribute">content</span>=<span class="value">"検索ワード"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"home"</span> <span class="attribute">href</span>=<span class="value">"サイトURL"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"index"</span> <span class="attribute">href</span>=<span class="value">"サイトマップ"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="HTML5基礎">HTML5基礎</h2><p>HTML5のコーディング基礎＆思考まとめました。</p>
 <ul>
-<li><code>script</code>タグは<code>body</code>閉じタグの直前に記述する。</li>
-<li>そのほか<code>ogp</code>等は<code>title</code>たぐのあとに記述する。</li>
-<li>ピンチをしない場合は<code>viewport</code>の<code>content</code>に<code>user-scalable=no</code>を追記する。<br><br></li>
+<li><a href="/html-basic">HTML5基礎</a></li>
 </ul>
-<h3 id="header">header</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">header</span> <span class="attribute">class</span>=<span class="value">"l-header"</span> <span class="attribute">role</span>=<span class="value">"banner"</span>&gt;</span></span><br><span class="line">		...省略</span><br><span class="line"><span class="tag">&lt;/<span class="title">header</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="navigation">navigation</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">nav</span> <span class="attribute">class</span>=<span class="value">"l-globalNav"</span> <span class="attribute">role</span>=<span class="value">"navigation"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"p-gloNav"</span> <span class="attribute">roel</span>=<span class="value">"menu"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"p-gloNav__item"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"xxx.html"</span>&gt;</span>メニュー１<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"p-gloNav__item"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"xxx.html"</span>&gt;</span>メニュー２<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">    ...省略</span><br><span class="line">  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">nav</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="構造設計＆思考">構造設計＆思考</h2><p>HTMLのマークアップ思考＆設計についてまとめました。</p>
 <ul>
-<li>入れ子のメニューになる時は<code>dl</code>を使用する。<br><br></li>
+<li><a href="/html-structural">構造設計＆思考</a></li>
 </ul>
-<h3 id="main">main</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">main</span> <span class="attribute">class</span>=<span class="value">"l-main"</span> <span class="attribute">role</span>=<span class="value">"main"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">article</span> <span class="attribute">class</span>=<span class="value">"l-contents"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">h1</span> <span class="attribute">aria-level</span>=<span class="value">"1"</span> <span class="attribute">class</span>=<span class="value">"c-heading__lvOne"</span>&gt;</span>見出し1<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span>テキストテキストテキストテキスト<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">section</span> <span class="attribute">classs</span>=<span class="value">"l-contents"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">h2</span> <span class="attribute">aria-level</span>=<span class="value">"2"</span> <span class="attribute">class</span>=<span class="value">"c-heading__lvOne"</span>&gt;</span>見出し2<span class="tag">&lt;/<span class="title">h2</span>&gt;</span></span><br><span class="line">      ...省略</span><br><span class="line">    <span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">section</span> <span class="attribute">classs</span>=<span class="value">"l-contents"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">h2</span> <span class="attribute">aria-level</span>=<span class="value">"2"</span> <span class="attribute">class</span>=<span class="value">"c-heading__lvOne"</span>&gt;</span>見出し2<span class="tag">&lt;/<span class="title">h2</span>&gt;</span></span><br><span class="line">      ...省略</span><br><span class="line">    <span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">article</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">main</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="アクセシビリティ">アクセシビリティ</h2><p>WAI-ARIAやMicroDataについて書いています</p>
 <ul>
-<li><code>section</code>や<code>article</code>を使用する時はレイアウト目的（<code>div</code>と同じように）使用してはいけない。</li>
-<li><code>section</code>&amp;<code>article</code>を入れ子の構造にする時は見出しをつけること。<br>　<code>section</code> &gt; <code>section</code>のようになると構造的にも文脈（コンテキスト）としてもおかしいので必ず、見出しをつけて区別すること。</li>
-<li>同じレベルの要素が連続している時は入れ子にしてはいけない。<br><br><h3 id="sidebar">sidebar</h3></li>
+<li><a href="/html-accessibility">アクセシビリティ</a></li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"l-sidebar"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">section</span> <span class="attribute">class</span>=<span class="value">"l-contents"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">h2</span> <span class="attribute">aria-level</span>=<span class="value">"2"</span> <span class="attribute">class</span>=<span class="value">"c-heading__lvOne"</span>&gt;</span>関連情報<span class="tag">&lt;/<span class="title">h2</span>&gt;</span></span><br><span class="line">    ...省略</span><br><span class="line">  <span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">aside</span> <span class="attribute">class</span>=<span class="value">"l-contents"</span> <span class="attribute">role</span>=<span class="value">"complementary"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"c-banner"</span> <span class="attribute">href</span>=<span class="value">""</span>&gt;</span>バナー<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">    ...省略</span><br><span class="line">  <span class="tag">&lt;/<span class="title">aside</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>サイドバーは要素が何が入るかわからないため<code>aside</code>は使用しない。<br><br></li>
-</ul>
-<h3 id="footer">footer</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">footer</span> <span class="attribute">class</span>=<span class="value">"l-footer"</span> <span class="attribute">role</span>=<span class="value">"contetinfo"</span>&gt;</span></span><br><span class="line">  ...省略</span><br><span class="line"><span class="tag">&lt;/<span class="title">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h2 id="WEB標準とは何か？">WEB標準とは何か？</h2><p>簡単にいうとW３Cが定めた<code>コーディング方法</code>です。<br>このタグはこう記述しなさいとかというものです。</p>
-<p>-「でもこれってやる必要あるの？」<br>-「デザイン通りにコーディングできてレガシー＆モダンブラウザで崩れなければいいんじゃん」</p>
-<p>と思う方も多いとおもいます。</p>
-<p>しかし標準ベースのHTMLにする事でたくさん得します。<br>標準ベースのHTMLにすることで、多様な新しい技術を使用する事ができ、さらに多様なソフトウェアやデバイスが解釈しやすくなり、アクセシブルになります。。</p>
-<p>なんか難しい感じですがようするに</p>
-<p>「<strong>人にも機械にも分かりやすく、使いやすくなり、最新技術を使っていろいろできます</strong>」</p>
-<p>細かくいうといろいろありますが大雑把にいうとこんな感じです。</p>
-<div class="em"><strong>標準化 ＝ イケてるサイト</strong></div>
-
-
-<p>常に意識して制作することでサイトの「パフォーマンス」や「SEO対策」などが改善していくと私は考えています。</p>
-<h3 id="例：（テーブルに複数ある場合)">例：（テーブルに複数ある場合)</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">caption</span>&gt;</span>表の名前<span class="tag">&lt;/<span class="title">caption</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">thead</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">th</span>&gt;</span>表見出し1<span class="tag">&lt;/<span class="title">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">th</span>&gt;</span>表見出し2<span class="tag">&lt;/<span class="title">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">th</span>&gt;</span>表見出し3<span class="tag">&lt;/<span class="title">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">th</span>&gt;</span>表見出し4<span class="tag">&lt;/<span class="title">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">thead</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="title">tbody</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">"rowgroup"</span>&gt;</span>小見出し<span class="tag">&lt;/<span class="title">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>値<span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">row</span>&gt;</span>孫見出し<span class="tag">&lt;/<span class="title">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>値<span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>値<span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>値<span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">row</span>&gt;</span>Tails<span class="tag">&lt;/<span class="title">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>値<span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>値<span class="tag">&lt;/<span class="title">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">tbody</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h2 id="文脈（コンテキスト）を意識したコーディングとは何か？">文脈（コンテキスト）を意識したコーディングとは何か？</h2><p>コーディングをする時はデザインorワイヤーフレームなどをベースに作る事が多いと思います。<br>その際に以下のように大きく３つに分ける事ができると思います。<br><code>ヘッダー</code>、<code>メイン</code>、<code>フッター</code><br>さらに細かく見ていくと<code>ロゴ</code>、<code>グローバルナビゲーション</code>…などに分ける事ができるます。</p>
-<p>文脈（コンテキスト）を考えながら<code>ロゴ</code>というパーツを見てみましょう。<br>ちなみに、本サイトはテンプレートで制作しているためあまり参考にしないでもらいたいです。</p>
-<p><code>ロゴ</code>とは何か考えてみましょう。<br>google先生に聞いたところ、「会社名・商品名などの文字を特別にデザインしたもの」と解答してくれました。<br>ですがこれはサイト全体かしたらなんの文脈もありません。<br>意味は合っていると思いますが、ロゴはサイトのどのページにも存在し、このサイトはなんのサイトかを表しているもの<br>だと私は考えます。<br>かといって「見出し」ではないし、トップページから見たら「見出し」にもなるし。。。。<br>一つのパーツをとっても文脈を考えるだけでいくつも考えがでて、混乱してしまいます。<br><br></p>
-<h3 id="じゃあどうするのか？">じゃあどうするのか？</h3><p>賛否はあると思いますが私は次のように考えます。</p>
-<div class="em"><strong>文脈（コンテキスト） =　論理</strong></div>
-
-<p>そのままなのですが、論理通りに設計するのがシンプルで分かりやすい<code>コード</code>ではないのでしょうか？<br>なのでこの<code>ロゴ</code>というパーツは以下のように考えます。</p>
-<div class="em"><strong>ロゴ =&gt; サイト名 =&gt; テキスト</strong></div>
-
-<p>HTML5は各タグの意味が重要です。<br>なのでこの例では<code>p</code>タグ書きます。<br>それでは「<code>ロゴ</code>って事わからないじゃん」と思う方もいると思います。</p>
-<p>そこは<code>class属性</code>や<code>role(WAI-ARIA)属性</code>を使用してこのパーツがなんなのかを機械的に指定すればいいのです。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">header</span> <span class="attribute">class</span>=<span class="value">"header"</span> <span class="attribute">role</span>=<span class="value">"banner"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"logo"</span>&gt;</span>サイトロゴ<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">  ...省略</span><br><span class="line"><span class="tag">&lt;/<span class="title">header</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>この例のように文脈（コンテキスト）を考えてパーツ＆サイトを制作するこてでマークアップがシンプルになり、メンテナンス性が向上します。<br><br></p>
-<h2 id="WebComponentsを意識した制作">WebComponentsを意識した制作</h2><p>前の項目で<strong>文脈（コンテキスト）</strong>で以下のように少し触れましたが、</p>
-<blockquote>
-<p>その際に以下のように大きく３つに分ける事ができると思います。<br>‘ヘッダー’、’メイン’、’フッター’<br>さらに細かく見ていくと’ロゴ’、’グローバルナビゲーション’…<br>などに分ける事ができるます。</p>
-</blockquote>
-<p>このようにどんどん細かく各パーツ（部品）に分割して制作していくことで<br><strong>WebComponentsを意識した制作</strong>に近づけるとおもいます。</p>
-<p>しかしどのレベルまで分割したらいいのか、など問題が出てくると思います。<br>その時に役立つのが<strong>論理</strong>です。</p>
-<p><strong>論理</strong>が成り立たないパーツ（部品）はパーツ（部品）ではありませんただの装飾です。<br>そのレベルで意識し制作するの好ましいと私は考えます。</p>
-<p><br></p>
-<h3 id="汎用性のあるパーツ（部品）について">汎用性のあるパーツ（部品）について</h3><p>汎用性があるパーツ（部品）とは、どんな箇所で使用しても壊れないパーツ（部品）です。<br>壊れないパーツ（部品）を作るのはほぼ無理に等しいです。</p>
-<p>壊れないパーツ（部品）はできませんが、<strong>壊れにくくメンテナンスしやすいパーツ（部品）</strong>は作ることができます。<br>そのためにも文脈（コンテキスト）や論理を意識してパーツ（部品）を作るといいと思います。</p>
-<p>では実際にどう作るか、<br>HTMLは複数のパーツが組み合わさった構造体です。</p>
-<p>なので汎用性をがあるパーツ（部品）を作れば、<br>おもちゃのブロックのように組みあわるだけでサイトができてしまいます（理想）。</p>
-<div class="em"><strong>おもちゃのブロック = 各パーツ</strong></div>
-
-<p>それにはやはり<strong>論理</strong>が重要になってきます。<br><strong>論理</strong>を意識して制作することで自然と汎用性の高いパーツができあがります。</p>
-<p>あくまでWebComponentsの技術ではなくここでは、その考えをもとにした制作方法について書いています。</p>
-<p>私は次のように考えます。</p>
-<div class="em"><strong>WebComponentsを意識した制作 = 論理が成り立つパーツ（部品） ＝ おもちゃのブロック（各パーツ）</strong></div>
-
-<p><strong>WebComponentsを意識した制作</strong>をすることでメンテナンスしやすく人にも機械にもわかりやすい、壊れにくいサイトができると考えます。<br><br></p>
 
       
     </div>

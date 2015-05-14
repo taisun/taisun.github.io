@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>html-rules | GuideMemo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="私はコーディングを開始する前に必ず「コーディングルール策定」・「環境構築&amp;amp;策定」・「スタイルガイド作成」・「CSS設計」などの基盤になるものを作ります。
+その中でもHTMLをコーディングするときのコーディングルールについて書いていきます。
+コーディングルールとはHTMLを書くときに何を考えて書きますか？以下のようなことを考えて書いていると思います。
+「良いコードを書く」・「デザイン再現」・">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html-rules">
+<meta property="og:url" content="https://github.com/taisun/taisun.github.io.git/html-rules/index.html">
+<meta property="og:site_name" content="GuideMemo">
+<meta property="og:description" content="私はコーディングを開始する前に必ず「コーディングルール策定」・「環境構築&amp;amp;策定」・「スタイルガイド作成」・「CSS設計」などの基盤になるものを作ります。
+その中でもHTMLをコーディングするときのコーディングルールについて書いていきます。
+コーディングルールとはHTMLを書くときに何を考えて書きますか？以下のようなことを考えて書いていると思います。
+「良いコードを書く」・「デザイン再現」・">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="html-rules">
+<meta name="twitter:description" content="私はコーディングを開始する前に必ず「コーディングルール策定」・「環境構築&amp;amp;策定」・「スタイルガイド作成」・「CSS設計」などの基盤になるものを作ります。
+その中でもHTMLをコーディングするときのコーディングルールについて書いていきます。
+コーディングルールとはHTMLを書くときに何を考えて書きますか？以下のようなことを考えて書いていると思います。
+「良いコードを書く」・「デザイン再現」・">
+  
+    <link rel="alternative" href="/atom.xml" title="GuideMemo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/icn/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/icn/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/icn/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/icn/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/icn/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/icn/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/icn/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/icn/apple-touch-icon-152x152.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img lazy-src="/img/taisun.jpg" class="js-avatar">
+		</a>
+		<p class="header-author"><a href="/">taisun0523</a></p>
+
+		
+		<p class="header-subtitle">GuideMemo<small>各種自分的ガイドライン</small></p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">Home</a></li>
+				        
+							<li><a href="/html-guide">HTML</a></li>
+				        
+							<li><a href="/css-guide">CSS</a></li>
+				        
+							<li><a href="/javascript-guide">Javascript</a></li>
+				        
+							<li><a href="/other-page">Other</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/taisun" title="github">github</a>
+					        
+								<a class="facebook" target="_blank" href="https://www.facebook.com/taiyi.lingmu" title="facebook">facebook</a>
+					        
+								<a class="google" target="_blank" href="https://plus.google.com/110932632031431342502/about" title="google">google</a>
+					        
+								<a class="twitter" target="_blank" href="https://twitter.com/taisun0523" title="twitter">twitter</a>
+					        
+						</div>
+					</nav>
+				</section>
+
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">はじめまして。都内でフロントエンドエンジニアとして働いているtaisun0523です。このサイトは勉強のためもありますが、私自身の考えをまとめたりしています。まだまだ勉強中のため至らない点などあるかもしれませんがご勘弁ください。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<p class="header-author js-mobile-header hide">taisun0523</p>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/taisun.jpg" class="js-avatar">
+			</div>
+			<p class="header-author">taisun0523</p>
+			
+      <p class="header-subtitle">GuideMemo<small>各種自分的ガイドライン</small></p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">Home</a></li>
+		        
+					<li><a href="/html-guide">HTML</a></li>
+		        
+					<li><a href="/css-guide">CSS</a></li>
+		        
+					<li><a href="/javascript-guide">Javascript</a></li>
+		        
+					<li><a href="/other-page">Other</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/taisun" title="github">github</a>
+			        
+						<a class="facebook" target="_blank" href="https://www.facebook.com/taiyi.lingmu" title="facebook">facebook</a>
+			        
+						<a class="google" target="_blank" href="https://plus.google.com/110932632031431342502/about" title="google">google</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/taisun0523" title="twitter">twitter</a>
+			        
+				</div>
+			</nav>
+		</header>
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/html-rules/index.html" class="article-date">
+  	<time datetime="2015-05-14T10:20:49.000Z" itemprop="datePublished">2015-05-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      html-rules
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>私はコーディングを開始する前に必ず「コーディングルール策定」・「環境構築&amp;策定」・「スタイルガイド作成」・「CSS設計」などの基盤になるものを作ります。</p>
+<p>その中でもHTMLをコーディングするときのコーディングルールについて書いていきます。</p>
+<h2 id="コーディングルールとは">コーディングルールとは</h2><p>HTMLを書くときに何を考えて書きますか？<br>以下のようなことを考えて書いていると思います。</p>
+<div class="em">「良いコードを書く」・「デザイン再現」・「文脈（コンテキスト）」etc…</div>
+
+<p>他にも「構造」・「論理」などあげたらきりがありません。</p>
+<ul>
+<li>「構造」・「論理」ついては他のページで書いています。</li>
+</ul>
+<p>兎に角いろいろなことを考えながらコーディングしていくと思います。</p>
+<p>しかし「複数の人で作業したらコードが読みにくカオスになってしまった」、「何ヶ月かたったあとに書いたコードを見たら何が何だかわからない」等。<br>こんな経験みなさんもあるとおもいます。</p>
+<p>ですがこんなときにルールがありまとめられていたらとっても楽だとおもいませんか？</p>
+<p><strong>コーディングの作法をまとめ</strong>たものがコーディングルールです。</p>
+<p>このコーディングルールがあるだけで<strong>コードの見通しが良く</strong>なり<strong>良いコード</strong>に近づけます。<br>良いコードに近ずくことで、<strong>メンテナンス</strong>がしやすくなり作業効率もUPします。</p>
+<p>コーディングルールは必要不可欠なのです。</p>
+<p><br></p>
+<h2 id="コーディングルールの策定方法">コーディングルールの策定方法</h2><p>では実際にどのようなことを決めて作っていくのでしょうか？<br>以下のようなことを決めていきます。</p>
+<ul>
+<li>コメントの記述方法</li>
+<li>インデント幅</li>
+<li>インデントのしかた</li>
+<li>スペースの空け方</li>
+<li>改行の位置</li>
+<li>レイアウト目的の<code>&lt;br&gt;</code>や<code>&amp;nbsp;</code>の使用禁止</li>
+<li>閉じタグの処理について</li>
+<li>基盤となるマークアップの方法  etc…</li>
+</ul>
+<p>このようなことはHTMLだけではなく<code>CSS</code>・<code>Javascript</code>・<code>git</code>などでも行います。<br>基本的に決めることはほぼほぼ同じだとおもいます（一部例外もありますが）。</p>
+<h2 id="コーディングルールの制作">コーディングルールの制作</h2><p>基本となるルールが決まったら次はコーディングルールの制作です。<br>「もう決めたんだから良いじゃんこいつ何いってんの？」と思うかもしれません。</p>
+<p><strong>策定</strong>と<strong>制作</strong>は別物です。<br>決めただけでは誰にも伝わりません。<br>それでは意味がありません、ルールを決めたら<strong>ドキュメント</strong>を作ります。</p>
+<p>ドキュメントの制作方法はなんでも良いと思います。<br>普通にテキストドキュメントで書いても良いですし、Wikiなどを利用して制作するのも良いと思います。</p>
+<p>ここで需要なのは以下の４つだと私は考えます。</p>
+<div class="em">「わかりやすい」・「見やすい」・「読みやすい」・「使いやすい」</div>
+
+<p>この４つを盛り込んで制作していくとなると制作するツールがとても重要になる思います。</p>
+<h2 id="制作ツール">制作ツール</h2><p>制作する側からしたら簡単に作れて上記の４つが盛り込むことができたらとても嬉しいですよね。<br>そこで私は、実際にも「<strong>スタイルガイド</strong>」を使用し制作しております。<br>なぜなら簡単で上記の４つを盛り込むことができドキュメントを１つにまとめることができるためです。</p>
+<p>「スタイルガイド」の制作方法についてですが手法やツールはたくさんあるので好みのものを使用すると良いと思います。</p>
+<p>ここでは私の使っているツールを紹介したいと思います。<br>以下のツールを使用し制作しています。</p>
+<ul>
+<li><a href="https://nodejs.org/" target="_blank" rel="external">NodeJs</a> // 英語版サイトのバージョン推奨（日本語版は少し遅いので）</li>
+<li><a href="http://gulpjs.com/" target="_blank" rel="external">gulpJs</a> // タスクランナーツール</li>
+<li><a href="http://trulia.github.io/hologram/" target="_blank" rel="external">hologram</a> // スタイルガイド</li>
+</ul>
+<p>基本的にはこの３つを使用して制作しています。</p>
+<ul>
+<li><code>NodeJs</code>の使用するヴァージョンは基本的に偶数が安定版なのでそれを使用します</li>
+<li><code>NodeJs</code>はインストーラを使用すると後々ヴァージョンを変更するのが面倒なので<code>nodebrew</code>や<code>nvm</code>や<code>nodist</code>を使用して管理するといいです。</li>
+<li><code>hologram</code>を<code>windows</code>で使用する際には<code>ruby</code>と<code>ruby development kit</code>が必要です。</li>
+</ul>
+<p>導入に少し技術が必要かもしれませんが最初だけです。<br>導入ができれば案件（プロジェクト）ごとで少しの設定使用できます。<br>導入法はここではあえて書きません。</p>
+<p>勉強になるので１から調べて導入してみましょう。<br>どうしてもわからなかったら連絡いただければ教えます。（できる限り答えますw）</p>
+<ul>
+<li>環境によってはプロキシでうまくインストールできなかったりするので。</li>
+</ul>
+<p>これらを使用し制作することにより誰でもわかりやすいものが出来上がります。</p>
+<h2 id="まとめ">まとめ</h2><p>いろいろ決めたり作ったりするので、時間がかかりますが一度作ってみると重要性がわかると思います。<br>コーディングルールを作ると<strong>コードの見通しが良くなり良いコード</strong>に近づくので世に言う<strong>イケてるサイト</strong>になります。</p>
+<div class="em">コードの見通しが良い = 良いコード = イケてるサイト</div>
+
+<p>このようにルールをいくつも定めることにより読みやすく、良質なマークアップとなり生産性やメンテナンス性が向上するので是非一度やってみてください。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+  
+</article>
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 taisun0523
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/mobile.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  </div>
+</body>
+</html>
