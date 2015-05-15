@@ -1,0 +1,358 @@
+
+.guide-body {
+  font: 13px/1.4 Helvetica,arial,freesans,clean,sans-serif;
+  color: #333;
+  background: #fff;
+}
+.guide-pagehead-nav a, .guide-footer a {
+  color: #fff;
+}
+.guide-pagehead-nav a, .guide-content a, .guide-footer a {
+  text-decoration: none;
+}
+
+.guide-content a:hover, .guide-footer a:hover {
+  text-decoration: underline;
+}
+
+.guide-container {
+  box-sizing: border-box;
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.guide-columns {
+  box-sizing: border-box;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.guide-columns:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.guide-columns:before {
+    display: table;
+    content: "";
+}
+
+.guide-column {
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.guide-column.one-fourth {
+  width: 25%;
+}
+
+.guide-column.three-fourths {
+  width: 75%;
+}
+
+.guide-pagehead {
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #ddd;
+  background: #1BC09B;
+}
+
+.guide-pagehead-title {
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 28px;
+}
+
+.guide-pagehead-nav {
+  box-sizing: border-box;
+  display: block;
+  float: right;
+  margin-bottom: -20px;
+}
+
+.guide-pagehead-nav-item {
+  box-sizing: border-box;
+  float: left;
+  padding: 6px 10px 21px;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+.guide-pagehead-nav-item {
+  text-decoration: none;
+}
+
+.guide-pagehead-nav-item:hover {
+  color: #333;
+  border-bottom: 4px solid #168286;
+}
+
+.guide-pagehead-nav-item.selected {
+  color: #333;
+  border-bottom: 4px solid #168286;
+}
+
+.guide-menu {
+  display: block;
+  list-style: outside none none;
+  margin-bottom: 15px;
+  list-style: outside none none;
+  background-color: #FFF;
+  border: 1px solid #D8D8D8;
+  border-radius: 3px;
+}
+
+.guide-menu-item {
+  position: relative;
+  display: block;
+  padding: 8px 10px;
+  text-shadow: 0 1px 0 #FFF;
+  border-bottom: 1px solid #EEE;
+}
+
+.guide-menu-item:hover {
+  text-decoration: none;
+  background-color: #F9F9F9;
+}
+
+.guide-menu-item.selected {
+  font-weight: bold;
+  color: #222;
+  cursor: default;
+  background-color: #FFF;
+}
+
+.guide-menu-item.selected:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  content: "";
+  background-color: #D26911;
+}
+
+.guide-menu-item:first-child:before {
+  border-top-left-radius: 2px;
+}
+
+.guide-sticky {
+  position: fixed;
+}
+
+.guide-menu.guide-sticky {
+  top: 5px;
+  width: 228px;
+}
+
+.guide-content {
+  font-family: "Helvetica Neue",Helvetica, Arial, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.guide-content h1,
+.guide-content h2,
+.guide-content h3,
+.guide-content h4,
+.guide-content h5,
+.guide-content h6 {
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.guide-content h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #EEE;
+}
+
+.guide-content h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #EEE;
+}
+
+.guide-content h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.guide-content h4 {
+  font-size: 1.25em;
+}
+
+.guide-content h5 {
+  font-size: 1em;
+}
+
+.guide-content h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.guide-content p,
+.guide-content blockquote,
+.guide-content dl,
+.guide-content table,
+.guide-content pre {
+  box-sizing: border-box;
+  margin: 0 0 16px;
+}
+
+.guide-content ul {
+  list-style: disc;
+  box-sizing: border-box;
+  margin: 0 0 16px;
+  padding-left: 1em;
+}
+
+.guide-content ol {
+  list-style: decimal;
+  box-sizing: border-box;
+  margin: 0 0 16px;
+  padding-left: 1em;
+}
+
+.guide-content code,
+.guide-content tt {
+  box-sizing: border-box;
+  padding: 0.2em 0;
+  margin: 0 3px 0 0;
+  font-size: 13.6px; /* 85% of 16px */
+  font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+}
+
+.guide-content code:before,
+.guide-content code:after,
+.guide-content tt:before,
+.guide-content tt:after {
+  letter-spacing: -0.2em;
+  content: " ";
+}
+
+.guide-content pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas,"Liberation Mono",Menlo,Courier,monospace;
+}
+
+.guide-content .highlight pre,
+.guide-content pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 13.6px; /* 85% of 16px */
+  line-height: 1.45;
+  background-color: #F7F7F7;
+  border-radius: 3px;
+}
+
+.guide-content pre {
+  word-wrap: normal;
+}
+
+.guide-content > :first-child {
+  margin-top: 0 !important;
+}
+
+.guide-content .codeExample,
+.guide-content .jsExample {
+  border: 1px solid #EEE;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.guide-content .jsExample {
+  border-top: 0;
+}
+
+.guide-content .codeExample:before,
+.guide-content .jsExample:before {
+  font-family: "Helvetica Neue",Helvetica, Arial, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+  color: #222;
+  border: 1px solid #EEE;
+  border-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  position: relative;
+  padding: 2px;
+  display: block;
+}
+
+/* .guide-content .codeExample:before { */
+/*   content: "Example"; */
+/*   background-color: #f9f9f9; */
+/*   width: 50px; */
+/*   top: -1px; */
+/*   left: -1px; */
+/*   font-size: 12px; */
+/* } */
+/* .guide-content .jsExample:before { */
+/*   content: "JS Example"; */
+/*   background-color: #f9f9f9; */
+/*   width: 65px; */
+/*   top: -11px; */
+/*   left: -11px; */
+/*   font-size: 12px; */
+/* } */
+
+.guide-content .exampleOutput {
+  padding: 16px;
+}
+
+.guide-content .codeBlock {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 1px solid #EEE;
+}
+
+.guide-content table .codeBlock {
+  background-color: transparent;
+  border-top: none;
+  border-radius: 0;
+}
+
+.guide-footer {
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #777;
+  border-top: 1px solid #EEE;
+}
+
+.guide-footer:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.guide-footer:before {
+    display: table;
+    content: "";
+}

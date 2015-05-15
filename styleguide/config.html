@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>スタイルガイド</title>
+
+  <!-- Styleguide CSS -->
+  <link rel="stylesheet" href="css/guide-syntax.css">
+  <link rel="stylesheet" href="css/guide.css">
+
+  <!-- Source CSS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+  <body class="guide-body">
+    <div class="guide-pagehead">
+      <div class="guide-container">
+        <nav class="guide-pagehead-nav" role="navigation">
+          <a href="index.html"
+             class="guide-pagehead-nav-item ">
+            Home
+          </a>
+
+          
+          <a href="components_css.html"
+             class="guide-pagehead-nav-item ">
+            Components CSS
+          </a>
+          
+          <a href="coding_rules.html"
+             class="guide-pagehead-nav-item ">
+            Coding Rules
+          </a>
+          
+          <a href="config.html"
+             class="guide-pagehead-nav-item selected">
+            Config
+          </a>
+          
+          <a href="grid_system.html"
+             class="guide-pagehead-nav-item ">
+            Grid System
+          </a>
+          
+        </nav>
+
+        <h1 class="guide-pagehead-title"></h1>
+      </div>
+    </div>
+
+    <div class="guide-styleguide guide-container">
+      <div class="guide-columns">
+        
+          <div class="guide-column one-fourth">
+            <nav class="guide-menu">
+              
+                
+                  <a href="#Config（設定ファイル）" class="guide-menu-item">Config（設定ファイル）</a>
+                
+              
+            </nav>
+          </div>
+        
+
+        <div class="guide-column three-fourths">
+          <div class="guide-content">
+<h1 id="Config（設定ファイル）" class="styleguide">Config（設定ファイル）</h1>
+
+<h1>設定ファイル</h1>
+<p class="styleguide">各種設定です。<br>
+変数で管理しています。</p>
+<h2>色</h2>
+<p class="styleguide"><strong>Base Colors</strong></p><table class="styleguide"> <tr>
+<th>色</th>
+<th>変数名</th>
+<th>値</th>
+<th>説明</th>
+</tr>
+ <tr>
+<td><div style="background-color:#a2bb60;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$color__main</code></td>
+<td>#a2bb60</td>
+<td>メインの色です　　</td>
+</tr>
+<tr>
+<td><div style="background-color:#eb6d58;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$color__second</code></td>
+<td>#eb6d58</td>
+<td>サブの色です　　　</td>
+</tr>
+<tr>
+<td><div style="background-color:#94c1c8;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$color__accent</code></td>
+<td>#94c1c8</td>
+<td>アクセントの色です</td>
+</tr>
+<tr>
+<td><div style="background-color:#0D699C;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$color__sub</code></td>
+<td>#0D699C</td>
+<td>サブ色です　　　</td>
+</tr>
+ </table><p class="styleguide"><br>
+<strong>No Colors</strong>  </p><table class="styleguide"> <tr>
+<th>色</th>
+<th>変数名</th>
+<th>値</th>
+<th>説明</th>
+</tr>
+ <tr>
+<td><div style="background-color:#515554;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$color__black</code></td>
+<td>#515554</td>
+<td>黒です　　</td>
+</tr>
+<tr>
+<td><div style="background-color:#b0b3b3;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$color__grey</code></td>
+<td>#b0b3b3</td>
+<td>グレイです　　　</td>
+</tr>
+<tr>
+<td><div style="background-color:#cfd2d2;height:30px;width:30px;"></div></td>
+<td>`$color__grey--light</td>
+<td>#cfd2d2</td>
+<td>明るいグレイです</td>
+</tr>
+<tr>
+<td><div style="background-color:#cfd2d2;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$color__grey--dark</code></td>
+<td>#cfd2d2</td>
+<td>暗いグレイです</td>
+</tr>
+<tr>
+<td><div style="background-color:#f4f4f4;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$color__offwhite</code></td>
+<td>#f4f4f4</td>
+<td>オフホワイトです</td>
+</tr>
+<tr>
+<td><div style="background-color:#ffffff;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$color__white</code></td>
+<td>#ffffff</td>
+<td>白です　　　</td>
+</tr>
+ </table><p class="styleguide"><br>
+<strong>Buton Colors</strong></p><table class="styleguide"> <tr>
+<th>色</th>
+<th>変数名</th>
+<th>値</th>
+<th>説明</th>
+</tr>
+ <tr>
+<td><div style="background-color:#F0F0F0;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$btn-color-default</code></td>
+<td>#F0F0F0</td>
+<td>デフォルトボタン色です</td>
+</tr>
+<tr>
+<td><div style="background-color:#337ab7;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$btn-color-primary</code></td>
+<td>#337ab7</td>
+<td>主要のボタン色です　　</td>
+</tr>
+<tr>
+<td><div style="background-color:#5CB85F;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$btn-color-success</code></td>
+<td>#5CB85F</td>
+<td>実行するボタン色です</td>
+</tr>
+<tr>
+<td><div style="background-color:#5bc0de;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$btn-color-info</code></td>
+<td>#5bc0de</td>
+<td>お知らせ等のボタン色です</td>
+</tr>
+<tr>
+<td><div style="background-color:#f0ad4e;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$btn-color-denger</code></td>
+<td>#f0ad4e</td>
+<td>確認のボタン色をです</td>
+</tr>
+<tr>
+<td><div style="background-color:#d9534f;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$btn-color-warning</code></td>
+<td>#d9534f</td>
+<td>エラーのボタン色です</td>
+</tr>
+ </table><p class="styleguide"><br></p><p class="styleguide"><strong>Table Colors</strong></p><table class="styleguide"> <tr>
+<th>色</th>
+<th>変数名</th>
+<th>値</th>
+<th>説明</th>
+</tr>
+ <tr>
+<td><div style="background-color:#bbbbbb;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$table-color-border</code></td>
+<td>#bbbbbb</td>
+<td>tableの線の色です</td>
+</tr>
+<tr>
+<td><div style="background-color:#e4e4e4;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$table-color-heading</code></td>
+<td>#e4e4e4</td>
+<td>th色です　</td>
+</tr>
+<tr>
+<td><div style="background-color:#ffffff;height:30px;width:30px;"></div></td>
+<td><code class="styleguide">$table-color-content</code></td>
+<td>#ffffff</td>
+<td>tdの色です</td>
+</tr>
+ </table><p class="styleguide"><br></p>
+<h2>サイズ</h2>
+<p class="styleguide"><strong>Braek Point</strong></p><table class="styleguide"> <tr>
+<th>変数名</th>
+<th>値</th>
+<th>説明</th>
+</tr>
+ <tr>
+<td><code class="styleguide">$breakPoint__pc-min</code></td>
+<td>640</td>
+<td>PC表示Min値</td>
+</tr>
+<tr>
+<td><code class="styleguide">$breakPoint__pc-max</code></td>
+<td>960</td>
+<td>PC表示Max値</td>
+</tr>
+<tr>
+<td><code class="styleguide">$breakPoint__tab-min</code></td>
+<td>640</td>
+<td>Tablet表示Min値</td>
+</tr>
+<tr>
+<td><code class="styleguide">$breakPoint__tab-max</code></td>
+<td>700</td>
+<td>Tablet表示Max値</td>
+</tr>
+<tr>
+<td><code class="styleguide">$breakPoint__sp-min</code></td>
+<td>320</td>
+<td>SP表示Min値</td>
+</tr>
+<tr>
+<td>$breakPoint__sp-max`</td>
+<td>640</td>
+<td>SP表示Max値</td>
+</tr>
+ </table><p class="styleguide"><br>
+<strong>Margin</strong></p><table class="styleguide"> <tr>
+<th>変数名</th>
+<th>値</th>
+</tr>
+ <tr>
+<td><code class="styleguide">$mgn__xs</code></td>
+<td>5</td>
+</tr>
+<tr>
+<td><code class="styleguide">$mgn__sm</code></td>
+<td>10</td>
+</tr>
+<tr>
+<td><code class="styleguide">$mgn__md</code></td>
+<td>15</td>
+</tr>
+<tr>
+<td><code class="styleguide">$mgn__n</code></td>
+<td>20</td>
+</tr>
+<tr>
+<td><code class="styleguide">$mgn__lg</code></td>
+<td>30</td>
+</tr>
+<tr>
+<td><code class="styleguide">$mgn__xl</code></td>
+<td>40</td>
+</tr>
+<tr>
+<td><code class="styleguide">$mgn__xxl</code></td>
+<td>50</td>
+</tr>
+ </table>        </div>
+      </div>
+    </div>
+
+    <footer class="hgt-footer">
+      Built using <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme">Hologram Github Theme</a>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="js/lib/jquery.waypoints.min.js"></script>
+  <script src="js/lib/sticky.min.js"></script>
+  <script src="js/lib/infinite.min.js"></script>
+  <script src="js/guide.js"></script>
+
+  
+
+  
+</body>
+</html>
