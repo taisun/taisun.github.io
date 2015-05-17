@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>スタイルガイド</title>
+
+  <!-- Styleguide CSS -->
+  <link rel="stylesheet" href="css/guide-syntax.css">
+  <link rel="stylesheet" href="css/guide.css">
+
+  <!-- Source CSS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+  <body class="guide-body">
+    <div class="guide-pagehead">
+      <div class="guide-container">
+        <nav class="guide-pagehead-nav" role="navigation">
+          <a href="index.html"
+             class="guide-pagehead-nav-item ">
+            Home
+          </a>
+
+          
+          <a href="components_css.html"
+             class="guide-pagehead-nav-item selected">
+            Components CSS
+          </a>
+          
+          <a href="coding_rules.html"
+             class="guide-pagehead-nav-item ">
+            Coding Rules
+          </a>
+          
+          <a href="config.html"
+             class="guide-pagehead-nav-item ">
+            Config
+          </a>
+          
+          <a href="grid_system.html"
+             class="guide-pagehead-nav-item ">
+            Grid System
+          </a>
+          
+          <a href="https://github.com/taisun/tai-styleguide-base"
+             class="guide-pagehead-nav-item" target="_blank">
+            GitHub
+          </a>
+        </nav>
+
+        <h1 class="guide-pagehead-title"></h1>
+      </div>
+    </div>
+
+    <div class="guide-styleguide guide-container">
+      <div class="guide-columns">
+        
+          <div class="guide-column one-fourth">
+            <nav class="guide-menu">
+              
+                
+                  <a href="#Button" class="guide-menu-item">Button</a>
+                
+              
+                
+                  <a href="#Footer" class="guide-menu-item">Footer</a>
+                
+              
+                
+                  <a href="#Heading" class="guide-menu-item">Heading</a>
+                
+              
+                
+                  <a href="#List" class="guide-menu-item">List</a>
+                
+              
+                
+                  <a href="#Navigaation" class="guide-menu-item">Navigaation</a>
+                
+              
+                
+                  <a href="#table" class="guide-menu-item">table</a>
+                
+              
+                
+                  <a href="#Typography" class="guide-menu-item">Typography</a>
+                
+              
+            </nav>
+          </div>
+        
+
+        <div class="guide-column three-fourths">
+          <div class="guide-content">
+<h1 id="Button" class="styleguide">Button</h1>
+
+<h2>ボタン</h2>
+<p class="styleguide">共通クラスなるc-buttonはsassの機能プレースホルダ%buttonとして@extendしています。<br>
+そのためクラスの記述はしていません。</p><div class="codeExample">
+  <div class="exampleOutput">
+    <a class="c-button__default"><span>Default</span></a>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"c-button__default"</span><span class="nt">&gt;&lt;span&gt;</span>Default<span class="nt">&lt;/span&gt;&lt;/a&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeTable">
+  <table>
+    <tbody>
+      
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <a class="c-button__primary">Primary</a>
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"c-button__primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/a&gt;</span></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <a class="c-button__success">Success</a>
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"c-button__success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/a&gt;</span></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <a class="c-button__info">Info</a>
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"c-button__info"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/a&gt;</span></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <a class="c-button__warning">Warning</a>
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"c-button__warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/a&gt;</span></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <a class="c-button__denger">Denger</a>
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"c-button__denger"</span><span class="nt">&gt;</span>Denger<span class="nt">&lt;/a&gt;</span></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <a class="c-button__link">Link</a>
+
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"c-button__link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+
+<h1 id="Footer" class="styleguide">Footer</h1>
+
+<h2>フッター</h2>
+<p class="styleguide">基本的なフッターのマークアップです。</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="c-footer__bottom">
+    <div class="l-inner">
+        <p class="c-footer__bottom--body">
+            Copyright &copy; taisun0523 All rights reserved.
+        </p>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-footer__bottom"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-inner"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-footer__bottom--body"</span><span class="nt">&gt;</span>
+            Copyright <span class="ni">&amp;copy;</span> taisun0523 All rights reserved.
+        <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="Heading" class="styleguide">Heading</h1>
+
+<h1>Heading（見出し）</h1>
+<p class="styleguide">基本的な見出しのマークアップです。</p><div class="codeExample">
+  <div class="exampleOutput">
+    <header class="c-heading c-heading__lvOne">
+<h1>見出しの　Sample</h1>
+</header>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"c-heading c-heading__lvOne"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;h1&gt;</span>見出しの　Sample<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/header&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeTable">
+  <table>
+    <tbody>
+      
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <header class="c-heading__lvOne">
+  <h1>h1 見出し</h1>
+</header>
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"c-heading__lvOne"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>h1 見出し<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/header&gt;</span></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <header class="c-heading__lvTwo">
+  <h2>h2 見出し</h2>
+</header>
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"c-heading__lvTwo"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>h2 見出し<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;/header&gt;</span></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <header class="c-heading__lvThird">
+  <h3>h3 見出し</h3>
+</header>
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"c-heading__lvThird"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h3&gt;</span>h3 見出し<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;/header&gt;</span></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <header class="c-heading__lvFour">
+  <h4>h4 見出し</h4>
+</header>
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"c-heading__lvFour"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4&gt;</span>h4 見出し<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;/header&gt;</span></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <header class="c-heading__lvFive">
+  <h5>h5 見出し</h5>
+</header>
+
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"c-heading__lvFive"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h5&gt;</span>h5 見出し<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;/header&gt;</span></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+
+<h1 id="List" class="styleguide">List</h1>
+<p class="styleguide">基本的なリストのマークアップです。</p>
+<h2>ナンバー付きリスト</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <ol class="c-listNumber">
+    <li class="c-listNumber__item">
+        <dl class="c-listNumber__body">
+            <dt class="c-listNumber__num">(1)</dt>
+            <dd class="c-listNumber__txt">テキストテキストテキストテキストテキストテキスト</dd>
+        </dl>
+    </li>
+    <li class="c-listNumber__item">
+        <dl class="c-listNumber__body">
+            <dt class="c-listNumber__num">(2)</dt>
+            <dd class="c-listNumber__txt">
+                <span>テキストテキストテキストテキストテキストテキストテキスト</span>
+                <ul>
+                    <li>テキストテキストテキストテキストテキストテキストテキスト</li>
+                    <li>テキストテキストテキストテキストテキストテキストテキスト</li>
+                </ul>
+            </dd>
+        </dl>
+    </li>
+    <li class="c-listNumber__item">
+        <dl class="c-listNumber__body">
+            <dt class="c-listNumber__num">(3)</dt>
+            <dd class="c-listNumber__txt">テキストテキストテキストテキストテキストテキストテキスト</dd>
+        </dl>
+    </li>
+    <li class="c-listNumber__item">
+        <dlv class="c-listNumber__body">
+            <dt class="c-listNumber__num">(4)</dt>
+            <dd>テキストテキストテキストテキストテキストテキストテキスト</dd>
+        </dl>
+    </li>
+    <li class="c-listNumber__item">
+        <dl class="c-listNumber__body">
+            <dt class="c-listNumber__num">(5)</dt>
+            <dd class="c-listNumber__txt">テキストテキストテキストテキストテキストテキストテキスト</dd>
+        </dl>
+    </li>
+    <li class="c-listNumber__item">
+        <dl class="c-listNumber__body">
+            <dt class="c-listNumber__num">(6)</dt>
+            <dd class="c-listNumber__txt">テキストテキストテキストテキストテキストテキストテキスト</dd>
+        </dl>
+    </li>
+</ol>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"c-listNumber"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-listNumber__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"c-listNumber__body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"c-listNumber__num"</span><span class="nt">&gt;</span>(1)<span class="nt">&lt;/dt&gt;</span>
+            <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"c-listNumber__txt"</span><span class="nt">&gt;</span>テキストテキストテキストテキストテキストテキスト<span class="nt">&lt;/dd&gt;</span>
+        <span class="nt">&lt;/dl&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-listNumber__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"c-listNumber__body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"c-listNumber__num"</span><span class="nt">&gt;</span>(2)<span class="nt">&lt;/dt&gt;</span>
+            <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"c-listNumber__txt"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;</span>テキストテキストテキストテキストテキストテキストテキスト<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;ul&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>テキストテキストテキストテキストテキストテキストテキスト<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>テキストテキストテキストテキストテキストテキストテキスト<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/dd&gt;</span>
+        <span class="nt">&lt;/dl&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-listNumber__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"c-listNumber__body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"c-listNumber__num"</span><span class="nt">&gt;</span>(3)<span class="nt">&lt;/dt&gt;</span>
+            <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"c-listNumber__txt"</span><span class="nt">&gt;</span>テキストテキストテキストテキストテキストテキストテキスト<span class="nt">&lt;/dd&gt;</span>
+        <span class="nt">&lt;/dl&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-listNumber__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;dlv</span> <span class="na">class=</span><span class="s">"c-listNumber__body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"c-listNumber__num"</span><span class="nt">&gt;</span>(4)<span class="nt">&lt;/dt&gt;</span>
+            <span class="nt">&lt;dd&gt;</span>テキストテキストテキストテキストテキストテキストテキスト<span class="nt">&lt;/dd&gt;</span>
+        <span class="nt">&lt;/dl&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-listNumber__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"c-listNumber__body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"c-listNumber__num"</span><span class="nt">&gt;</span>(5)<span class="nt">&lt;/dt&gt;</span>
+            <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"c-listNumber__txt"</span><span class="nt">&gt;</span>テキストテキストテキストテキストテキストテキストテキスト<span class="nt">&lt;/dd&gt;</span>
+        <span class="nt">&lt;/dl&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-listNumber__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"c-listNumber__body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"c-listNumber__num"</span><span class="nt">&gt;</span>(6)<span class="nt">&lt;/dt&gt;</span>
+            <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"c-listNumber__txt"</span><span class="nt">&gt;</span>テキストテキストテキストテキストテキストテキストテキスト<span class="nt">&lt;/dd&gt;</span>
+        <span class="nt">&lt;/dl&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>サイトマップリスト</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <ul class="c-siteMaplist">
+        <li class="c-siteMaplist__item"><a href="xxx.html">テキスト</a></li>
+        <li class="c-siteMaplist__item"><a href="xxx.html">テキスト</a></li>
+        <li class="c-siteMaplist__item"><a href="xxx.html">テキスト</a></li>
+        <li class="c-siteMaplist__item"><a href="xxx.html">テキストテキスト</a></li>
+        <li class="c-siteMaplist__item"><a href="xxx.html">テキスト</a></li>
+    </ul>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"c-siteMaplist"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-siteMaplist__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"xxx.html"</span><span class="nt">&gt;</span>テキスト<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-siteMaplist__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"xxx.html"</span><span class="nt">&gt;</span>テキスト<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-siteMaplist__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"xxx.html"</span><span class="nt">&gt;</span>テキスト<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-siteMaplist__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"xxx.html"</span><span class="nt">&gt;</span>テキストテキスト<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-siteMaplist__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"xxx.html"</span><span class="nt">&gt;</span>テキスト<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="Navigaation" class="styleguide">Navigaation</h1>
+<p class="styleguide">ナビゲーションのマークアップです。</p>
+<h2>ヘッダー</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <header id="header" class="l-header">
+    <div class="l-inner g-rows">
+        <p class="c-logo g-col__4"><a href="/">ロゴ</a></p>
+        <nav class="c-subNav g-col__8">
+            <ul class="c-subNav__body">
+                <li class="c-subNav__item"><a href="xxx.html">LINK1</a></li><li class="c-subNav__item"><a href="xxx.html">LINK2</a></li><li class="c-subNav__item"><a href="xxx.html">LINK3</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;header</span> <span class="na">id=</span><span class="s">"header"</span> <span class="na">class=</span><span class="s">"l-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-inner g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-logo g-col__4"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>ロゴ<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+        <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"c-subNav g-col__8"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"c-subNav__body"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-subNav__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"xxx.html"</span><span class="nt">&gt;</span>LINK1<span class="nt">&lt;/a&gt;&lt;/li&gt;&lt;li</span> <span class="na">class=</span><span class="s">"c-subNav__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"xxx.html"</span><span class="nt">&gt;</span>LINK2<span class="nt">&lt;/a&gt;&lt;/li&gt;&lt;li</span> <span class="na">class=</span><span class="s">"c-subNav__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"xxx.html"</span><span class="nt">&gt;</span>LINK3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/nav&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/header&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>グローバルナビゲーション</h2>
+<p class="styleguide">基本的なグローバルナビゲーションのマークアップになります。</p><div class="codeExample">
+  <div class="exampleOutput">
+    <nav class="c-gloNav">
+    <ul class="c-gloNav__body">
+        <li class="c-gloNav__item"><a href="/"><span>Menu1</span></a></li><li class="c-gloNav__item is-currentMenu"><a href="/"><span>Menu2</span></a></li><li class="c-gloNav__item"><a href="/"><span>Menu3</span></a></li><li class="c-gloNav__item"><a href="/"><span>Menu4</span></a></li><li class="c-gloNav__item"><a href="/"><span>Menu5</span></a></li>
+    </ul>
+</nav>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"c-gloNav"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"c-gloNav__body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-gloNav__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;&lt;span&gt;</span>Menu1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li</span> <span class="na">class=</span><span class="s">"c-gloNav__item is-currentMenu"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;&lt;span&gt;</span>Menu2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li</span> <span class="na">class=</span><span class="s">"c-gloNav__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;&lt;span&gt;</span>Menu3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li</span> <span class="na">class=</span><span class="s">"c-gloNav__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;&lt;span&gt;</span>Menu4<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li</span> <span class="na">class=</span><span class="s">"c-gloNav__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;&lt;span&gt;</span>Menu5<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>フッター</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <footer class="l-footer">
+    <nav class="c-footerNav">
+        <ul class="c-footerNav__body">
+            <li class="c-footerNav__item"><a href="/">Menu1</a></li>
+            <li class="c-footerNav__item"><a href="/">Menu2</a></li>
+            <li class="c-footerNav__item"><a href="/">Menu3</a></li>
+            <li class="c-footerNav__item"><a href="/">Menu4</a></li>
+            <li class="c-footerNav__item"><a href="#">Menu5</a></li>
+        </ul>
+    </nav>
+</footer>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"l-footer"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"c-footerNav"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"c-footerNav__body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-footerNav__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Menu1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-footerNav__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Menu2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-footerNav__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Menu3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-footerNav__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Menu4<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-footerNav__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Menu5<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/footer&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>パンくずリスト</h2>
+<p class="styleguide">パンくずリストです。</p><div class="codeExample">
+  <div class="exampleOutput">
+    <nav class="c-breadCrumb">
+    <ul class="c-breadCrumb__body">
+        <li class="c-breadCrumb__item"><a class="c-breadCrumb__link">パンくず１</a><span class="c-breadCrumb__arrow">></span></li>
+        <li class="c-breadCrumb__item"><a class="c-breadCrumb__link">パンくず２</a><span class="c-breadCrumb__arrow">></span></li>
+        <li class="c-breadCrumb__item"><a class="c-breadCrumb__link">パンくず３</a><span class="c-breadCrumb__arrow">></span></li>
+        <li class="c-breadCrumb__item is-page">パンくず4</li>
+    </ul>
+</nav>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"c-breadCrumb"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"c-breadCrumb__body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-breadCrumb__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"c-breadCrumb__link"</span><span class="nt">&gt;</span>パンくず１<span class="nt">&lt;/a&gt;&lt;span</span> <span class="na">class=</span><span class="s">"c-breadCrumb__arrow"</span><span class="nt">&gt;</span>&gt;<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-breadCrumb__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"c-breadCrumb__link"</span><span class="nt">&gt;</span>パンくず２<span class="nt">&lt;/a&gt;&lt;span</span> <span class="na">class=</span><span class="s">"c-breadCrumb__arrow"</span><span class="nt">&gt;</span>&gt;<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-breadCrumb__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"c-breadCrumb__link"</span><span class="nt">&gt;</span>パンくず３<span class="nt">&lt;/a&gt;&lt;span</span> <span class="na">class=</span><span class="s">"c-breadCrumb__arrow"</span><span class="nt">&gt;</span>&gt;<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-breadCrumb__item is-page"</span><span class="nt">&gt;</span>パンくず4<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>トップへ戻る</h2>
+<p class="styleguide">トップへ戻るボタンです。</p><div class="codeExample">
+  <div class="exampleOutput">
+    <ul class="c-pageTop">
+    <li class="c-pageTop__item">
+        <a href="#" class="c-pageTop__text">トップへ戻る</a>
+    </li>
+</ul>
+
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"c-pageTop"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"c-pageTop__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"c-pageTop__text"</span><span class="nt">&gt;</span>トップへ戻る<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="table" class="styleguide">table</h1>
+
+<h2>table</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="c-tableBorder">
+    <table>
+        <tbody>
+            <tr>
+                <th>項目</th>
+                <td>テキスト</td>
+            </tr>
+            <tr>
+                <th>項目</th>
+                <td>テキスト</td>
+            </tr>
+            <tr>
+                <th>項目</th>
+                <td>テキスト</td>
+            </tr>
+            <tr>
+                <th>項目</th>
+                <td>テキスト</td>
+            </tr>
+            <tr>
+                <th>項目</th>
+                <td>テキスト</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-tableBorder"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table&gt;</span>
+        <span class="nt">&lt;tbody&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>項目<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>テキスト<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>項目<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>テキスト<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>項目<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>テキスト<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>項目<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>テキスト<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>項目<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>テキスト<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>table noborder</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="c-tableNoBorder">
+    <table>
+        <tbody>
+            <tr class="first">
+                <th>項目</th>
+                <td>テキスト</td>
+            </tr>
+            <tr>
+                <th>項目</th>
+                <td>テキスト</td>
+            </tr>
+            <tr>
+                <th>項目</th>
+                <td>テキスト</td>
+            </tr>
+            <tr>
+                <th>項目</th>
+                <td>テキスト</td>
+            </tr>
+            <tr class="last">
+                <th>項目</th>
+                <td>テキスト</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-tableNoBorder"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table&gt;</span>
+        <span class="nt">&lt;tbody&gt;</span>
+            <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"first"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;th&gt;</span>項目<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>テキスト<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>項目<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>テキスト<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>項目<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>テキスト<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>項目<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>テキスト<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"last"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;th&gt;</span>項目<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>テキスト<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="Typography" class="styleguide">Typography</h1>
+<p class="styleguide">基本的なフォントは以下になります。</p><table class="styleguide"> <tr>
+<th>使用フォント</th>
+<th>単位</th>
+<th>ベースサイズ</th>
+</tr>
+ <tr>
+<td>font-family:&#39;Lucida Grande&#39;, &#39;Hiragino Kaku Gothic ProN&#39;, &#39;ヒラギノ角ゴ ProN W3&#39;, Meiryo, メイリオ, sans-serif;</td>
+<td>px（ピクセル）</td>
+<td>14px</td>
+</tr>
+ </table><p class="styleguide"><br>
+テキストのマークアップ＆デザインです。</p><div class="codeTable">
+  <table>
+    <tbody>
+      
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <p>基本のてきすと</p>
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">&lt;p&gt;</span>基本のてきすと<span class="nt">&lt;/p&gt;</span></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <p class="u-err">エラーテキスト</p>
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-err"</span><span class="nt">&gt;</span>エラーテキスト<span class="nt">&lt;/p&gt;</span></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <p><strong>太字テキスト</strong></p>
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">&lt;p&gt;&lt;strong&gt;</span>太字テキスト<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      
+        <tr>
+          <th>
+            <div class="exampleOutput">
+              <p><small>サブテキスト</small></p>
+            </div>
+          </th>
+          <td>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre><span class="nt">&lt;p&gt;&lt;small&gt;</span>サブテキスト<span class="nt">&lt;/small&gt;&lt;/p&gt;</span></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+<p class="styleguide"><br></p>
+<h3>注釈</h3>
+<p class="styleguide">注釈のマークアップです。</p><div class="codeExample">
+  <div class="exampleOutput">
+    <dl class="c-annotation">
+    <dt>※</dt><dd>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
+</dl>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"c-annotation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;dt&gt;</span>※<span class="nt">&lt;/dt&gt;&lt;dd&gt;</span>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>定義文1</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <dl class="c-definition">
+    <dt>テキストテキストテキストテキスト</dt>
+    <dd>テキストテキストテキストテキストテキストテキストテキストテキスト</dd>
+</dl>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"c-definition"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;dt&gt;</span>テキストテキストテキストテキスト<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>テキストテキストテキストテキストテキストテキストテキストテキスト<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>定義文2</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <dl class="c-definitionTbl">
+    <dt class="c-definitionTbl__title"><span>項目1</span></dt>
+    <dd class="c-definitionTbl__body">
+        <ol>
+            <li>
+                <span class="c-definitionTbl__num">（1）</span>
+                <span class="c-definitionTbl__txt">
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                </span>
+            </li>
+            <li>
+                <span class="c-definitionTbl__num">（2）</span>
+                <span class="c-definitionTbl__txt">テキストテキストテキストテキスト</span>
+            </li>
+            <li>
+                <span class="c-definitionTbl__num">（3）</span>
+                <span class="c-definitionTbl__txt">
+              テキストテキストテキストテキスト<br>テキストテキストテキストテキスト<br>テキストテキストテキストテキスト
+                </span>
+            </li>
+        </ol>
+    </dd>
+</dl>
+<dl class="c-definitionTbl">
+    <dt class="c-definitionTbl__title"><span>項目2</span></dt>
+    <dd class="c-definitionTbl__body">
+    テキストテキストテキストテキストテキストテキストテキストテキスト
+    </dd>
+</dl>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"c-definitionTbl"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"c-definitionTbl__title"</span><span class="nt">&gt;&lt;span&gt;</span>項目1<span class="nt">&lt;/span&gt;&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"c-definitionTbl__body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ol&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"c-definitionTbl__num"</span><span class="nt">&gt;</span>（1）<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"c-definitionTbl__txt"</span><span class="nt">&gt;</span>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                <span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"c-definitionTbl__num"</span><span class="nt">&gt;</span>（2）<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"c-definitionTbl__txt"</span><span class="nt">&gt;</span>テキストテキストテキストテキスト<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"c-definitionTbl__num"</span><span class="nt">&gt;</span>（3）<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"c-definitionTbl__txt"</span><span class="nt">&gt;</span>
+              テキストテキストテキストテキスト<span class="nt">&lt;br&gt;</span>テキストテキストテキストテキスト<span class="nt">&lt;br&gt;</span>テキストテキストテキストテキスト
+                <span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ol&gt;</span>
+    <span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+<span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"c-definitionTbl"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"c-definitionTbl__title"</span><span class="nt">&gt;&lt;span&gt;</span>項目2<span class="nt">&lt;/span&gt;&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"c-definitionTbl__body"</span><span class="nt">&gt;</span>
+    テキストテキストテキストテキストテキストテキストテキストテキスト
+    <span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>囲み</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="c-infoNote">
+    <div class="c-infoNote__inner">
+        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-infoNote"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-infoNote__inner"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="hgt-footer">
+      Built using <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme">Hologram Github Theme</a>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="js/lib/jquery.waypoints.min.js"></script>
+  <script src="js/lib/sticky.min.js"></script>
+  <script src="js/lib/infinite.min.js"></script>
+  <script src="js/guide.js"></script>
+
+  
+
+  
+</body>
+</html>

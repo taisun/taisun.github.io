@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>スタイルガイド</title>
+
+  <!-- Styleguide CSS -->
+  <link rel="stylesheet" href="css/guide-syntax.css">
+  <link rel="stylesheet" href="css/guide.css">
+
+  <!-- Source CSS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+  <body class="guide-body">
+    <div class="guide-pagehead">
+      <div class="guide-container">
+        <nav class="guide-pagehead-nav" role="navigation">
+          <a href="index.html"
+             class="guide-pagehead-nav-item ">
+            Home
+          </a>
+
+          
+          <a href="components_css.html"
+             class="guide-pagehead-nav-item ">
+            Components CSS
+          </a>
+          
+          <a href="coding_rules.html"
+             class="guide-pagehead-nav-item ">
+            Coding Rules
+          </a>
+          
+          <a href="config.html"
+             class="guide-pagehead-nav-item ">
+            Config
+          </a>
+          
+          <a href="grid_system.html"
+             class="guide-pagehead-nav-item selected">
+            Grid System
+          </a>
+          
+          <a href="https://github.com/taisun/tai-styleguide-base"
+             class="guide-pagehead-nav-item" target="_blank">
+            GitHub
+          </a>
+        </nav>
+
+        <h1 class="guide-pagehead-title"></h1>
+      </div>
+    </div>
+
+    <div class="guide-styleguide guide-container">
+      <div class="guide-columns">
+        
+          <div class="guide-column one-fourth">
+            <nav class="guide-menu">
+              
+                
+                  <a href="#Grid" class="guide-menu-item">Grid</a>
+                
+              
+            </nav>
+          </div>
+        
+
+        <div class="guide-column three-fourths">
+          <div class="guide-content">
+<h1 id="Grid" class="styleguide">Grid</h1>
+
+<h2>グリッド</h2>
+<p class="styleguide">グリッドシステムのスタイルガイドです。
+汎用性を考え本サイトでは１２グリッドを採用しております。
+使用方法は以下のスタイルガイドをご参照ください。</p><p class="styleguide">※本ページのグリッドの「色」、「高さ」などのスタイルはインラインスタイルです。</p><div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__1" style="background: #2ECBA8;height:30px;text-align: center;">1</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__1"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__2" style="background: #2ECBA8;height:30px;text-align: center;">2</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__2"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__3" style="background: #2ECBA8;height:30px;text-align: center;">3</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__3"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__4" style="background: #2ECBA8;height:30px;text-align: center;">4</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__4"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__5" style="background: #2ECBA8;height:30px;text-align: center;">5</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__5"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__6" style="background: #2ECBA8;height:30px;text-align: center;">6</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__6"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>6<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__7" style="background: #2ECBA8;height:30px;text-align: center;">7</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__7"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>7<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__8" style="background: #2ECBA8;height:30px;text-align: center;">8</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__8"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>8<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__9" style="background: #2ECBA8;height:30px;text-align: center;">9</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__9"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>9<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__10" style="background: #2ECBA8;height:30px;text-align: center;">10</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__10"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>10<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__11" style="background: #2ECBA8;height:30px;text-align: center;">11</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__11"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>11<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__12" style="background: #2ECBA8;height:30px;text-align: center;">12</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__12"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>12<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>その他組み合わせ例</h2>
+<p class="styleguide"><strong>2カラム</strong><br>
+<code class="styleguide">html_example
+    &lt;div class=&quot;g-rows&quot;&gt;
+        &lt;div class=&quot;g-col__1&quot; style=&quot;background: #2ECBA8;height:30px;text-align: center;&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;g-col__11&quot; style=&quot;background: #58EDCC;height:30px;text-align: center;&quot;&gt;11&lt;/div&gt;
+    &lt;/div&gt;
+</code>
+<code class="styleguide">html_example
+    &lt;div class=&quot;g-rows&quot;&gt;
+        &lt;div class=&quot;g-col__2&quot; style=&quot;background: #2ECBA8;height:30px;text-align: center;&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;g-col__10&quot; style=&quot;background: #58EDCC;height:30px;text-align: center;&quot;&gt;10&lt;/div&gt;
+    &lt;/div&gt;
+</code></p><div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__9" style="background: #2ECBA8;height:30px;text-align: center;">9</div>
+        <div class="g-col__3" style="background: #58EDCC;height:30px;text-align: center;">3</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__9"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>9<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__3"</span> <span class="na">style=</span><span class="s">"background: #58EDCC;height:30px;text-align: center;"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__4" style="background: #2ECBA8;height:30px;text-align: center;">4</div>
+        <div class="g-col__8" style="background: #58EDCC;height:30px;text-align: center;">8</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__4"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__8"</span> <span class="na">style=</span><span class="s">"background: #58EDCC;height:30px;text-align: center;"</span><span class="nt">&gt;</span>8<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__5" style="background: #2ECBA8;height:30px;text-align: center;">5</div>
+        <div class="g-col__7" style="background: #58EDCC;height:30px;text-align: center;">7</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__5"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__7"</span> <span class="na">style=</span><span class="s">"background: #58EDCC;height:30px;text-align: center;"</span><span class="nt">&gt;</span>7<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__6" style="background: #2ECBA8;height:30px;text-align: center;">6</div>
+        <div class="g-col__6" style="background: #58EDCC;height:30px;text-align: center;">6</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__6"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>6<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__6"</span> <span class="na">style=</span><span class="s">"background: #58EDCC;height:30px;text-align: center;"</span><span class="nt">&gt;</span>6<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__7" style="background: #2ECBA8;height:30px;text-align: center;">7</div>
+        <div class="g-col__5" style="background: #58EDCC;height:30px;text-align: center;">5</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__7"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>7<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__5"</span> <span class="na">style=</span><span class="s">"background: #58EDCC;height:30px;text-align: center;"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__8" style="background: #2ECBA8;height:30px;text-align: center;">8</div>
+        <div class="g-col__4" style="background: #58EDCC;height:30px;text-align: center;">4</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__8"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>8<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__4"</span> <span class="na">style=</span><span class="s">"background: #58EDCC;height:30px;text-align: center;"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__9" style="background: #2ECBA8;height:30px;text-align: center;">9</div>
+        <div class="g-col__3" style="background: #58EDCC;height:30px;text-align: center;">3</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__9"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>9<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__3"</span> <span class="na">style=</span><span class="s">"background: #58EDCC;height:30px;text-align: center;"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__10" style="background: #2ECBA8;height:30px;text-align: center;">10</div>
+        <div class="g-col__2" style="background: #58EDCC;height:30px;text-align: center;">2</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__10"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>10<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__2"</span> <span class="na">style=</span><span class="s">"background: #58EDCC;height:30px;text-align: center;"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__11" style="background: #2ECBA8;height:30px;text-align: center;">11</div>
+        <div class="g-col__1" style="background: #58EDCC;height:30px;text-align: center;">1</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__11"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>11<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__1"</span> <span class="na">style=</span><span class="s">"background: #58EDCC;height:30px;text-align: center;"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__4" style="background: #2ECBA8;height:30px;text-align: center;">4</div>
+        <div class="g-col__4" style="background: #58EDCC;height:30px;text-align: center;">4</div>
+        <div class="g-col__4" style="background:#EFEFEF;height:30px;text-align: center;">4</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__4"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__4"</span> <span class="na">style=</span><span class="s">"background: #58EDCC;height:30px;text-align: center;"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__4"</span> <span class="na">style=</span><span class="s">"background:#EFEFEF;height:30px;text-align: center;"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__3" style="background: #2ECBA8;height:30px;text-align: center;">3</div>
+        <div class="g-col__5" style="background: #58EDCC;height:30px;text-align: center;">5</div>
+        <div class="g-col__4" style="background:#EFEFEF;height:30px;text-align: center;">4</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__3"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__5"</span> <span class="na">style=</span><span class="s">"background: #58EDCC;height:30px;text-align: center;"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__4"</span> <span class="na">style=</span><span class="s">"background:#EFEFEF;height:30px;text-align: center;"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+        <div class="g-rows">
+        <div class="g-col__2" style="background: #2ECBA8;height:30px;text-align: center;">2</div>
+        <div class="g-col__5" style="background: #58EDCC;height:30px;text-align: center;">5</div>
+        <div class="g-col__5" style="background:#EFEFEF;height:30px;text-align: center;">2</div>
+    </div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-rows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__2"</span> <span class="na">style=</span><span class="s">"background: #2ECBA8;height:30px;text-align: center;"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__5"</span> <span class="na">style=</span><span class="s">"background: #58EDCC;height:30px;text-align: center;"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-col__5"</span> <span class="na">style=</span><span class="s">"background:#EFEFEF;height:30px;text-align: center;"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="hgt-footer">
+      Built using <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme">Hologram Github Theme</a>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="js/lib/jquery.waypoints.min.js"></script>
+  <script src="js/lib/sticky.min.js"></script>
+  <script src="js/lib/infinite.min.js"></script>
+  <script src="js/guide.js"></script>
+
+  
+
+  
+</body>
+</html>
