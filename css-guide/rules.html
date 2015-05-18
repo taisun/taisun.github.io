@@ -181,7 +181,7 @@
   
     <div class="article-meta">
       <a href="/css-guide/rules.html" class="article-date">
-  	<time datetime="2015-05-18T08:49:00.000Z" itemprop="datePublished">2015-05-18</time>
+  	<time datetime="2015-05-18T12:02:07.000Z" itemprop="datePublished">2015-05-18</time>
 </a>
     </div>
   
@@ -213,149 +213,31 @@
         <p>CSSをコーディングするための基本的なルールについてと考え方を中心にまとめました。<br>CSSはとても難しいです。<br>とくにコーディングのルールが決まってないとメンテナンス性が悪くなりCSSのファイルサイズが膨大になってしまいパフォーマンスが下がる原因の一つになります。</p>
 <p>そうならないようにどう作るのかの基本となるルールを説明します。<br><br></p>
 <h2 id="CSSコーディングルール">CSSコーディングルール</h2><p>基本的に決めるルールはHTMLと同じです。<br>少し違うのは命名の規則です。</p>
-<p>まずは基本的なコーディングルールを書いていきます。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">セレクタ名 &#123;</span><br><span class="line">  プロパティ: 値;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>基本的なスタイルの書き方です。<br>記述のルールとして以下を基本とします。</p>
+<p>まずは基本的なコーディングルールを書いていきます。<br>記述のルールとして以下を基本とします。</p>
 <ul>
-<li>セレクタ名のと『{』波括弧の間は半角１スペースとする。</li>
-<li>波括弧の始まりで改行し閉じ括弧はセレクタの頭のい揃える。</li>
-<li>インデントはプロパティ前のみとし半角２スペースとする</li>
-<li>「,」「:」「,」などの記号は前に文字列がある場合はそのすぐ後ろにつけ記号の後ろに半角１スペース空ける。記号の前は空けてはならない。</li>
-<li>各セレクタとセレクタのブロック間は一行開けること</li>
-<li>「擬似セレクタ」「!important」は基本使用しない。<br>以下のように複数セレクタがある場合は上記ルールに従い記号の後ろに半角スペースを入れた上で改行する。</li>
+<li><p>セレクタ名のと『{』波括弧の間は半角１スペースとする。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">セレクタ名 &#123; //波括弧前半角１スペース</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>波括弧の始まりで改行し閉じ括弧はセレクタの頭のい揃える。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">セレクタ名 &#123;</span><br><span class="line">  ...省略</span><br><span class="line">&#125; //括弧位置を揃える</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>インデントはプロパティ前のみとし半角２スペースとする</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">セレクタ名 &#123;</span><br><span class="line">  プロパティ: 値; //インデント半角２スペース</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>「,」「:」「,」などの記号は前に文字列がある場合はそのすぐ後ろにつけ記号の後ろに半角１スペース空ける。記号の前は空けてはならない。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">セレクタ, セレクタ //カンマ</span><br><span class="line">プロパティ: 値; //コロン・セミコロン</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>各セレクタとセレクタのブロック間は1行空けること</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">セレクタ名 &#123;</span><br><span class="line">  ...省略</span><br><span class="line">&#125;</span><br><span class="line">　　　     //1行空けること</span><br><span class="line">セレクタ名 &#123;</span><br><span class="line">  ...省略</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>「擬似セレクタ」「!important」は基本使用しない。</p>
+</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">セレクタ名,</span><br><span class="line">セレクタ名 &#123;</span><br><span class="line">  ...省略</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以下のように複数セレクタがある場合は上記ルールに従い記号の後ろに半角スペースを入れた上で改行する。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">セレクタ名,</span><br><span class="line">セレクタ名</span><br></pre></td></tr></table></figure>
 <p>CSSのコメントの記述方法は以下のようにする。<br>また「一行コメント」以外は上下に空行を１行いれること。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line"> * パーツやカテゴリなどの大きな区切りのコメント</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">/**　スタイル説明用コメント　 **/</span><br><span class="line"></span><br><span class="line">セレクタ名 &#123;</span><br><span class="line">  プロパティ: 値; /* 一行コメント */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * パーツやカテゴリなどの大きな区切りのコメント</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">/**　スタイル説明用コメント　 **/</span><br><span class="line"></span><br><span class="line">セレクタ名 &#123;</span><br><span class="line">  プロパティ: 値; /* 一行コメント */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>これは一例ですが、<br>このような基本的なコーディングルールを決めることで、<br>わかりやすくなり誰でもメンテナンスができるようになります。<br><br></p>
-<h3 id="CSSのプロパティの順番＆論理">CSSのプロパティの順番＆論理</h3><p>CSSのプロパティの書く順番を意識して書いたことがあるでしょうか？<br>書く順番を意識することで、表示速度に影響があります。</p>
-<p>CSSなどのコードは上から下に読まれます。<br>そのとき以下のようなコードだと論理上どう表示されるでしょう。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">a</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">url</span>(hoge.png)</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> red</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">10px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>このコードはまず最初に「bacground-image」が指定され、<br>次に「color」「margin」「display」という順に設定されています。</p>
-<p>回線速度が遅い環境では表示が一瞬でも崩れる可能性があります。<br>なぜな実際ブラウザ側では以下のように設定しているからです。</p>
-<div class="em">背景の画像取得 =&gt; 背景の画像表示 =&gt; テキストの色を設定 =&gt; 要素のマージン設定 =&gt; 要素をblockに設定</div>
-
-
-<p>そのことを考え、私は以下のような順番でプロパティを書いています。</p>
-<ul>
-<li>1.表示に関するプロパティ</li>
-<li>2.配置に関するプロパティ</li>
-<li>3.ボックスモデルに関するプロパティ</li>
-<li>4.背景に関するプロパティ</li>
-<li>5.テキストに関するプロパティ</li>
-<li>6.内容に関するプロパティ</li>
-<li>7.ユーザーインターフェイスに関するプロパティ</li>
-<li>8.アニメーションに関するプロパティ</li>
-</ul>
-<p>最低限表示が崩れないように考えこのような順番にしています。</p>
-<p>各詳しいプロパティは以下にを参照ください。</p>
-<h3 id="表示に関するプロパティ">表示に関するプロパティ</h3><ul>
-<li>display</li>
-<li>list-style<ul>
-<li>type</li>
-<li>image</li>
-<li>position</li>
-</ul>
-</li>
-<li>overflow</li>
-<li>clip</li>
-<li>visbilty</li>
-<li>opacity</li>
-</ul>
-<h3 id="配置に関するプロパティ">配置に関するプロパティ</h3><ul>
-<li>position</li>
-<li>top</li>
-<li>right</li>
-<li>bottom</li>
-<li>left</li>
-<li>float</li>
-<li>clear</li>
-<li>z-index</li>
-<li>transform</li>
-</ul>
-<h3 id="ボックスモデルに関するプロパティ">ボックスモデルに関するプロパティ</h3><ul>
-<li>width</li>
-<li>height</li>
-<li>margin</li>
-<li>padding</li>
-<li>border<ul>
-<li>width</li>
-<li>style</li>
-<li>color</li>
-</ul>
-</li>
-<li>border-radius</li>
-<li>border-image</li>
-<li>box-sizing</li>
-<li>box-shadow</li>
-</ul>
-<h3 id="背景に関するプロパティ">背景に関するプロパティ</h3><ul>
-<li>background<ul>
-<li>color</li>
-<li>image</li>
-<li>repeat</li>
-<li>attachment</li>
-<li>position</li>
-</ul>
-</li>
-<li>background-clip</li>
-<li>background-origin</li>
-<li>background-size</li>
-</ul>
-<h3 id="テキストに関するプロパティ">テキストに関するプロパティ</h3><ul>
-<li>color</li>
-<li>font<ul>
-<li>family</li>
-<li>style</li>
-<li>variant</li>
-<li>weight</li>
-<li>size</li>
-</ul>
-</li>
-<li>line-height</li>
-<li>text-decoration</li>
-<li>text-align</li>
-<li>vertical-align</li>
-<li>leter-spacing</li>
-<li>word-spacing</li>
-<li>text-transform</li>
-<li>white-space<ul>
-<li>text-shadow</li>
-</ul>
-</li>
-</ul>
-<h3 id="内容に関するプロパティ">内容に関するプロパティ</h3><ul>
-<li>content</li>
-<li>quputes</li>
-<li>counter-reset</li>
-<li>counter-increment</li>
-</ul>
-<h3 id="ユーザーインターフェイスに関するプロパティ">ユーザーインターフェイスに関するプロパティ</h3><ul>
-<li>cursor</li>
-<li>resize</li>
-<li>appearance</li>
-</ul>
-<h3 id="アニメーションに関するプロパティ">アニメーションに関するプロパティ</h3><ul>
-<li>transition<ul>
-<li>property</li>
-<li>duration</li>
-<li>timing-function</li>
-<li>delay</li>
-</ul>
-</li>
-<li>animation<ul>
-<li>name</li>
-<li>duration</li>
-<li>timing-function</li>
-<li>iteration-count</li>
-<li>direction</li>
-<li>play-state</li>
-<li>delay</li>
-<li>fill-mode</li>
-</ul>
-</li>
-</ul>
-<p>私たちにとって表示崩れやホワイトバック（白い状態が続くこと）は致命的な<strong>バグ</strong>です。<br>この<strong>バグ</strong>を起こさない為にも順番を決めることが大切です。<br><br></p>
 <h2 id="CSSの命名規則について">CSSの命名規則について</h2><p>命名規則とはIDやクラスの名前付けのルールです。<br>基本的には以下のようなことを決めます。</p>
 <ul>
 <li><p>文字と文字の接続方法<br>例えば<a href="http://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%A3%E3%83%A1%E3%83%AB%E3%82%B1%E3%83%BC%E3%82%B9" target="_blank" rel="external">ローワーキャメルケース</a>で書くとか「-」「_」でつなぐとかです。</p>
