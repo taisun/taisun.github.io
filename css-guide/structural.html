@@ -183,7 +183,7 @@
   
     <div class="article-meta">
       <a href="/css-guide/structural.html" class="article-date">
-  	<time datetime="2015-05-19T09:30:23.000Z" itemprop="datePublished">2015-05-19</time>
+  	<time datetime="2015-05-19T15:24:41.000Z" itemprop="datePublished">2015-05-20</time>
 </a>
     </div>
   
@@ -233,9 +233,19 @@
 <h3 id="ツールファイル">ツールファイル</h3><p>sassの<strong>mixin</strong>や<strong>function</strong>のファイルです。</p>
 <h3 id="リセットファイル">リセットファイル</h3><p>「reset.css」や「normalize.css」です。</p>
 <h3 id="ベースファイル">ベースファイル</h3><p>プロジェクトごとの各タグ(bodyやpなど)のCSSファイルです。</p>
-<h3 id="オブジェクトファイル">オブジェクトファイル</h3><p>「grid」などのレイアウトファイルや「header」「navigation」などのパーツなどのまとまりのファイル。<br>ここでいうオブジェクトとは<strong>大きなまとまり</strong>を示しています。</p>
-<h3 id="コンポネントファイル">コンポネントファイル</h3><p>最小限のパーツファイルです。<br>実際はファイルを<strong>小さなまとまり</strong>ごとの分割して使用します。<br>複数のパーツの組み合わせも含まれるためファイルを「@import」する際には注意が必要です。</p>
-<h3 id="調整ファイル">調整ファイル</h3><p>各パーツやレイアウトの調整ファイルです。<br>必殺技的な特殊ファイルです。<br>例えば状態を表したり、マージンの調整などでしようします。</p>
+<h3 id="オブジェクトファイル">オブジェクトファイル</h3><p>レイアウトファイルです。<br>ページを構成するヘッダーやメインのコンテンツエリアなどの共通のレイアウトです。</p>
+<h3 id="コンポネントファイル">コンポネントファイル</h3><p>コンポネントファイルは２種類に分けることができます。<br>汎用性があり再利用できる最小限のパーツファイルと、プロジェクト固有のファイルに分けることができます。<br>最小限のパーツファイルとプロジェクト固有のファイルは以下のように各パーツごとに分けて使用します。</p>
+<ul>
+<li>汎用性があり再利用できる最小限のパーツファイル =&gt; parts</li>
+<li>プロジェクト固有のファイル =&gt; project</li>
+</ul>
+<p>とファイル名をつけます。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">_<span class="tag">component-parts_button</span><span class="class">.scss</span></span><br><span class="line">...省略</span><br><span class="line">_<span class="tag">component-project_button</span><span class="class">.scss</span></span><br></pre></td></tr></table></figure>
+<p>読み込み順は以下の順に読み込みます。</p>
+<div class="em">parts =&gt; project</div>
+
+<p>複数のパーツの組み合わせも含まれるためファイルを「@import」する際には注意が必要です。</p>
+<h3 id="調整ファイル">調整ファイル</h3><p>各パーツやレイアウトの調整ファイルです。<br>解決することが難しい・適切では無いわずかなスタイルを調整をするファイルです。<br>例えば状態を表したり、マージンの調整などでしようします。</p>
 <h3 id="まとめ">まとめ</h3><p>最終的には１ファイルにまとめますが、細分化することで管理がしやすくなり、メンテナンスもしやすくなります。<br>ここで重要なのは各ファイルの読み込む順番です。<br>セレクタ強度が高いものが先に読み込まれてしまうとCSSが汚染されてしまい、<br>思ったように動作しなくなってしまいます。</p>
 <p>このことがないようにセレクタの強度は常に意識して設計しましょう。</p>
 <h2 id="セレクタ強度について">セレクタ強度について</h2><p>先ほど分割したファイルのセレクタ強度について説明します。</p>
@@ -254,7 +264,7 @@
 <h3 id="オブジェクトファイル-1">オブジェクトファイル</h3><p>クラスやタグをにスタイルを指定するので<strong>40%</strong>としております。</p>
 <div class="progressBar"><div class="progressBar_middle">%</div><p class="progressBar_text">40&nbsp;%</p></div>
 
-<h3 id="コンポネントファイル-1">コンポネントファイル</h3><p>ここは<strong>40 ~ 60%</strong>にしました。<br>パーツファイルは組み合わせのものとそうで無いものがあるので幅を待たせています。</p>
+<h3 id="コンポネントファイル-1">コンポネントファイル</h3><p>ここは<strong>40 ~ 60%</strong>にしました。<br>各ファイルは組み合わせのものとそうで無いものと、パーツファイルとプロジェクトファイルにも強度の強さが異なるので幅をもたせております。</p>
 <div class="progressBar"><div class="progressBar_heigh">%</div><p class="progressBar_text">40 ~ 60&nbsp;%</p></div>
 
 <h3 id="調整ファイル-1">調整ファイル</h3><p>このファイルを<strong>100%</strong>にした理由はどのセレクタよりも強くし無いといけないファイルだからです。<br>ルールでは「!important」を禁止していますがこのファイルは例外で他に勝つため使用します。<br>そのため100%としました。</p>
