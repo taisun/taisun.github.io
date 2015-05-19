@@ -719,13 +719,65 @@ a {
 #disqus_thread {
   padding: 0 40px;
 }
-.em {
+.em,
+.em-normal {
   border: 1px solid #9d9d9d;
   padding: 8px 12px;
   text-align: center;
   margin: 10px 0;
   display: block;
   background: #efeeee;
+}
+.em-normal {
+  text-align: left;
+}
+.progressBar {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 20px 0 10px;
+  border: 1px solid #ddd;
+  width: 40%;
+}
+.progressBar_none,
+.progressBar_low,
+.progressBar_lowMid,
+.progressBar_middle,
+.progressBar_heigh,
+.progressBar_max {
+  height: 36px;
+  font-size: 0;
+  line-height: 0;
+  background-color: #45cdae;
+}
+.progressBar_none {
+  width: 0%;
+}
+.progressBar_low {
+  width: 10%;
+}
+.progressBar_lowMid {
+  width: 20%;
+}
+.progressBar_middle {
+  width: 40%;
+}
+.progressBar_heigh {
+  width: 60%;
+}
+.progressBar_max {
+  width: 100%;
+}
+.progressBar_text {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 3px 0;
+  color: #333;
+  text-align: center;
 }
 .archives-wrap {
   position: relative;
