@@ -2,18 +2,24 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="author" content="taisun0523のGuide&Memo">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta generator="atom">
   
-  <title>css-structural | GuideMemo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+  <title>CSS設計について | GuideMemo</title>
+  <meta name="description" content="CSS設計の概念や考えを書いてます。OOCSS・BEM・SMACSS・ITCSSの考えを元にどう設計していくかをまとめています。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css-structural">
+<meta property="og:title" content="CSS設計について">
 <meta property="og:url" content="https://github.com/taisun/taisun.github.io.git/css-guide/structural.html">
 <meta property="og:site_name" content="GuideMemo">
-<meta property="og:description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+<meta property="og:description" content="CSS設計の概念や考えを書いてます。OOCSS・BEM・SMACSS・ITCSSの考えを元にどう設計していくかをまとめています。">
+<meta property="og:image" content="/img/traiangle.png">
+<meta property="og:image" content="/img/txt.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css-structural">
-<meta name="twitter:description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+<meta name="twitter:title" content="CSS設計について">
+<meta name="twitter:description" content="CSS設計の概念や考えを書いてます。OOCSS・BEM・SMACSS・ITCSSの考えを元にどう設計していくかをまとめています。">
+  <meta name="google-site-verification" content="mgpVzCYu5iYEYrcPjubr3THQ9YmfI_kYAwUDoJAHMII">
   
     <link rel="alternative" href="/atom.xml" title="GuideMemo" type="application/atom+xml">
   
@@ -29,7 +35,8 @@
     <link rel="apple-touch-icon" sizes="152x152" href="/img/icn/apple-touch-icon-152x152.png">
   
   <link rel="stylesheet" href="/css/style.css" type="text/css">
-  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+  <link rel="home" href="http://taisun.github.io">
+	<link rel="index" href="/sitemap.xml">
 </head>
 
 <body>
@@ -181,7 +188,7 @@
   
     <div class="article-meta">
       <a href="/css-guide/structural.html" class="article-date">
-  	<time datetime="2015-05-15T07:44:38.000Z" itemprop="datePublished">2015-05-15</time>
+  	<time datetime="2015-05-20T05:32:51.000Z" itemprop="datePublished">2015-05-20</time>
 </a>
     </div>
   
@@ -194,7 +201,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      css-structural
+      CSS設計について
     </h1>
   
 
@@ -210,7 +217,105 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>CSS設計については<a href="/css-guide/rule.html">CSSルール</a>にで少し触れましたが<br>ほんの一部にしかすぎませんCSS設計は奥深いのです。</p>
+<p>基本はOOCSSの考えが元になっています。<br>さらに<a href="/css-guide/basic.html">CSS基礎</a>でも触れたセレクタの強度も設計に重要に関わっています。</p>
+<p><strong>CSSを書く上で設計本当に重要です。</strong></p>
+<p>この設計がしっかりできているかできていないかでWeb全体がイケてるかイケてないか決まってしまいます。<br>いくらデザインがかっこよくても設計がダサかったら全てが台無しになるとでも言えます。<br>そのくらい大事なことです。</p>
+<p>そのための方法を私はいつも考えています。</p>
+<h2 id="モダンCSS設計について">モダンCSS設計について</h2><p>モダンCSS設計とはOOCSSのオブジェクト指向が元にさらに考えれたものです。<br>有名なものではBEMやSMACSSが有名です。</p>
+<p>この二つを含め基本的にSASSを使用てファイルの構成から考え設計していきます。<br>以下のようにファイル分けます。</p>
+<ul>
+<li>設定ファイル</li>
+<li>ツールファイル</li>
+<li>リセットファイル</li>
+<li>エレメントファイル</li>
+<li>オブジェクトファイル</li>
+<li>コンポネントファイル</li>
+<li>調整ファイル</li>
+</ul>
+<p>大きく分けるとこの７つに分けることができます。<br>各ファイルについて詳しく説明していきます。</p>
+<h3 id="設定ファイル">設定ファイル</h3><p>configファイルです基本的な設定など（ベースの色、フォントサイズなど）の変数や設定を管理するファイルです。</p>
+<h3 id="ツールファイル">ツールファイル</h3><p>sassの<strong>mixin</strong>や<strong>function</strong>のファイルです。</p>
+<h3 id="リセットファイル">リセットファイル</h3><p>「reset.css」や「normalize.css」です。</p>
+<h3 id="エレメントファイル">エレメントファイル</h3><p>プロジェクトごとの各タグ(bodyやpなど)のCSSファイルです。</p>
+<h3 id="オブジェクトファイル">オブジェクトファイル</h3><p>レイアウトファイルです。<br>ページを構成するヘッダーやメインのコンテンツエリアなどの共通のレイアウトです。</p>
+<h3 id="コンポネントファイル">コンポネントファイル</h3><p>コンポネントファイルは２種類に分けることができます。<br>汎用性があり再利用できる最小限のパーツファイルと、プロジェクト固有のファイルに分けることができます。<br>最小限のパーツファイルとプロジェクト固有のファイルは以下のように各パーツごとに分けて使用します。</p>
+<ul>
+<li>汎用性があり再利用できる最小限のパーツファイル =&gt; parts</li>
+<li>プロジェクト固有のファイル =&gt; project</li>
+</ul>
+<p>とファイル名をつけます。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">_<span class="tag">component-parts_button</span><span class="class">.scss</span></span><br><span class="line">...省略</span><br><span class="line">_<span class="tag">component-project_button</span><span class="class">.scss</span></span><br></pre></td></tr></table></figure>
+<p>読み込み順は以下の順に読み込みます。</p>
+<div class="em">parts =&gt; project</div>
+
+<p>複数のパーツの組み合わせも含まれるためファイルを「@import」する際には注意が必要です。</p>
+<h3 id="調整ファイル">調整ファイル</h3><p>各パーツやレイアウトの調整ファイルです。<br>解決することが難しい・適切では無いわずかなスタイルを調整をするファイルです。<br>例えば状態を表したり、マージンの調整などでしようします。</p>
+<h3 id="まとめ">まとめ</h3><p>最終的には１ファイルにまとめますが、細分化することで管理がしやすくなり、メンテナンスもしやすくなります。<br>ここで重要なのは各ファイルの読み込む順番です。<br>セレクタ強度が高いものが先に読み込まれてしまうとCSSが汚染されてしまい、<br>思ったように動作しなくなってしまいます。</p>
+<p>このことがないようにセレクタの強度は常に意識して設計しましょう。</p>
+<h2 id="セレクタ強度について">セレクタ強度について</h2><p>先ほど分割したファイルのセレクタ強度について説明します。</p>
+<h3 id="設定ファイル-1">設定ファイル</h3><p>基本的にこのファイルはSASSの設定を書いているだけなのでセレクタとは関係無いため<strong>0%</strong>です。</p>
+<div class="progressBar"><div class="progressBar_none">%</div><p class="progressBar_text">0%</p></div>
+
+<h3 id="ツールファイル-1">ツールファイル</h3><p>「mixin」「function」の設計にもよりますが両方も基本的には戻り値を返すだけなのでセレクタとは関係ないので<strong>0%</strong>です。</p>
+<div class="progressBar"><div class="progressBar_none">%</div><p class="progressBar_text">0&nbsp;%</p></div>
+
+<h3 id="リセットファイル-1">リセットファイル</h3><p>リセットするだけなでここでは最低の強度として<strong>10%</strong>です。</p>
+<div class="progressBar"><div class="progressBar_low">%</div><p class="progressBar_text">10&nbsp;%</p></div>
+
+<h3 id="エレメントファイル-1">エレメントファイル</h3><p>各タグに基本的になスタイルをあてるファイルです実際はそこまでリセットと変わりませんが少しは高いので<strong>20%</strong>にしました。</p>
+<div class="progressBar"><div class="progressBar_lowMid">%</div><p class="progressBar_text">20&nbsp;%</p></div>
+
+<h3 id="オブジェクトファイル-1">オブジェクトファイル</h3><p>クラスやタグをにスタイルを指定するので<strong>40%</strong>としております。</p>
+<div class="progressBar"><div class="progressBar_middle">%</div><p class="progressBar_text">40&nbsp;%</p></div>
+
+<h3 id="コンポネントファイル-1">コンポネントファイル</h3><p>ここは<strong>40 ~ 60%</strong>にしました。<br>各ファイルは組み合わせのものとそうで無いものと、パーツファイルとプロジェクトファイルにも強度の強さが異なるので幅をもたせております。</p>
+<div class="progressBar"><div class="progressBar_heigh">%</div><p class="progressBar_text">40 ~ 60&nbsp;%</p></div>
+
+<h3 id="調整ファイル-1">調整ファイル</h3><p>このファイルを<strong>100%</strong>にした理由はどのセレクタよりも強くし無いといけないファイルだからです。<br>ルールでは「!important」を禁止していますがこのファイルは例外で他に勝つため使用します。<br>そのため100%としました。</p>
+<div class="progressBar"><div class="progressBar_max">%</div><p class="progressBar_text">100&nbsp;%</p></div>
+
+<h3 id="まとめ-1">まとめ</h3><p>CSSのコードは上から下に読み込まれるのでファイルの上に書いてあるコードはセレクタ強度が弱く下にいくほど<br>強くなっていきます。<br>「RWD」のサイトなどでよく大きい「mediascreen」で囲ったりしていますが、<br>セレクタの強度のことを考えると個別に指定する「mixin」で対応します。<br><br></p>
+<p><center><img src="/img/traiangle.png" alt="セレクタ強度のピラミッド" title="セレクタ強度"></center><br><br></p>
+<h2 id="ファイル・ディレクトリ構成">ファイル・ディレクトリ構成</h2><p>上記のことを踏まえ基本的な構成は以下のようにしました。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line">/*-----------------------</span><br><span class="line"> 設定ファイル - settings</span><br><span class="line"> ------------------------ */</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * global</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line"> $base-font-size: ...;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*-----------------------</span><br><span class="line"> ツールファイル - tools</span><br><span class="line"> ------------------------ */</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * mixin</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">@mixin grid(arg1, arg2)&#123;...&#125;</span><br><span class="line"></span><br><span class="line">/*-----------------------</span><br><span class="line"> リセットファイル -generic</span><br><span class="line"> ------------------------ */</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * reset</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">* &#123;...&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*-----------------------</span><br><span class="line"> エレメントファイル - element</span><br><span class="line"> ------------------------ */</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * page</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">html &#123;...&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*-----------------------</span><br><span class="line"> オブジェクトファイル - object</span><br><span class="line"> ------------------------ */</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * layout</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">.o-header &#123;...&#125;</span><br><span class="line"></span><br><span class="line">/*-----------------------</span><br><span class="line"> コンポネントファイル　-component</span><br><span class="line"> ------------------------ */</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * parts</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">/*--- ボタン ---*/</span><br><span class="line"></span><br><span class="line">/** defaltボタン **/</span><br><span class="line"></span><br><span class="line"> .c-button &#123;...&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * project</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">/** 問い合わせボタン　**/</span><br><span class="line">.p-button__contact &#123;...&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*-----------------------</span><br><span class="line"> 調整ファイル - trumps</span><br><span class="line"> ------------------------ */</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * utility</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">/*--- マージン ---*/</span><br><span class="line"></span><br><span class="line">/** bottom **/</span><br><span class="line"></span><br><span class="line">.t-mgb_s &#123;...&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * state</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line"> /*--- メニュー ---*/</span><br><span class="line"></span><br><span class="line"> /** active **/</span><br><span class="line"></span><br><span class="line"> .is-active &#123;...&#125;</span><br></pre></td></tr></table></figure>
+<p>もしSASSなどのCSSプロセッサやビルドツールCSSを結合できるのであれば、<br>次のようにディレクトリ構造作るとわかりやすいです。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">├── setting</span><br><span class="line">│   └── _config.scss</span><br><span class="line">|</span><br><span class="line">├── tools</span><br><span class="line">│   ├── _functions.scss</span><br><span class="line">│   └── _mixins.scss</span><br><span class="line">|</span><br><span class="line">├── generic</span><br><span class="line">│   ├── _normalize.scss</span><br><span class="line">│   └── _reset.scss</span><br><span class="line">|</span><br><span class="line">├── element</span><br><span class="line">│   └── _base.scss</span><br><span class="line">|</span><br><span class="line">├── object</span><br><span class="line">│   └── _layout.scss</span><br><span class="line">|</span><br><span class="line">├── component</span><br><span class="line">|   ├── parts</span><br><span class="line">|   │   ├── _button.scss</span><br><span class="line">|   │   └── ...省略</span><br><span class="line">|   |</span><br><span class="line">|   └── project</span><br><span class="line">|       ├── _articles.scss</span><br><span class="line">|       └── ...省略</span><br><span class="line">|</span><br><span class="line">└── utility</span><br><span class="line">        ├── _utility.scss</span><br><span class="line">        └── _state.scss</span><br></pre></td></tr></table></figure>
+<p>モジュール単位でファイルを分割することによって、ページ単位またはプロジェクト単位でのモジュールの追加・削除の管理がしやすくなります。</p>
+<h2 id="CSS命名規則による設計">CSS命名規則による設計</h2><p>モダンCSS設計の考えにはBEMとSMACSSといった考えかたがあります。<br>この二つの特徴としてはOOCSSの考えを元に独自の命名規則やパーツの考え方に特徴があります。<br>ここでは二つについて詳しく説明しません。</p>
+<p>ですが両方に共通して考えられてるComponentsを意識したパーツの設計のについて説明します。<br>Componentsとは他のページでも何回も触れていますが<strong>おもちゃのブロック</strong>のような<strong>パーツのまとまり</strong>です。<br>これと文脈（コンテキスト）を細かく分けた作りなっています。<br>さらに私は役割がわかるように、ファイルで分割した「オブジェクト」「コンポネント」「調整」の３つで分けています。</p>
+<h3 id="方法">方法</h3><p>基本的に上記の考え元にCSSを設計していきます。<br>基本的な記法は「<a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" target="_blank" rel="external">MindBEMding</a>」をベースに<strong>Block</strong>、<strong>Element</strong>、<strong>Modifier</strong>の考えを使用しています。<br>以下のように記述します。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr_selector">[Block]</span>__<span class="attr_selector">[Element]</span><span class="tag">--</span><span class="attr_selector">[Modifire]</span></span><br></pre></td></tr></table></figure>
+<p>そこに役割を明確にするために接頭辞(プレフィックス)つけます。<br>3つに加え状態を表す「is」という接頭辞(プレフィックス)を追加します。<br>以下のようにします。</p>
+<ul>
+<li>オブジェクト(Object) =&gt; o-</li>
+<li>コンポネント(Components) =&gt; c-</li>
+<li>調整(Utility) =&gt; u-</li>
+<li>状態 =&gt; is-</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr_selector">[Prefix]</span><span class="tag">-</span><span class="attr_selector">[Block]</span>__<span class="attr_selector">[Element]</span><span class="tag">--</span><span class="attr_selector">[Modifire]</span></span><br></pre></td></tr></table></figure>
+<p>このように記述していきます。<br>それでは実際どう使用するか例を見ていきます。</p>
+<h3 id="記述例">記述例</h3><p>以下のパーツ例に見ていきます。</p>
+<p><img src="/img/txt.png" alt="サンプルテキストの画像" title="サンプルテキスト"></p>
+<p>上から順番に書いていきます。</p>
+<p><strong>HTML</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 通常 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"c-text"</span>&gt;</span>sample<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 太字 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"c-text c-text__bold"</span>&gt;</span>sample<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 太字の青 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"c-text c-text__bold c-text__bold--blue"</span>&gt;</span>sample<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 太字の赤 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"c-text c-text__bold c-text__bold--red"</span>&gt;</span>sample<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>CSS</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.c-text</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">14px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">1.5</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="class">.c-text</span><span class="class">.c-text__bold</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">font-weight</span>:<span class="value"> bold</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="class">.c-text</span><span class="class">.c-text__bold</span><span class="class">.c-text__bold--blue</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="class">.c-text</span><span class="class">.c-text__bold</span><span class="class">.c-text__bold--red</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> red</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>このように使用します。<br>次のように考えて命名していきます。</p>
+<div class="em-normal">まずこのパーツは「テキスト」という「コンポネント」なので「プレフィックス」は「c-」になります。<br>そして任意で文脈（コンテキスト）を考えながらクラス名を付けます（ここではサンプルのため「text」にしました）。<br>通常のパターンとして「太字」ですなので「bold」というクラスをつけます。<br>太字のさらなるパターンとして「青」と「赤」があります。<br>なので「blue」「red」とます。</div>
+
+<p>しかしパーツを設計するときにどの役割なのか考えて決めるのはとても難しいです。<br>そこで重要なのは論理と文脈（コンテキスト）です。<br>この二つを考えればどう作るか簡単にわかるはずです。</p>
+<h2 id="クラスが長い問題">クラスが長い問題</h2><p>BEMの考え方をもとに設計していくとクラス名がどんどん長くなってカオスになってしまいます。<br>以下のコードのように１つで完結したら美しいですよね。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"c-text__bold--red"</span>&gt;</span>sample<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>そこでSASSの機能を使用します。<br>以下のように書くことで上記のようにできます。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">.c-text &#123;</span><br><span class="line">  %text &#123;</span><br><span class="line">    font-size: 14px;</span><br><span class="line">    line-height: 1.5;</span><br><span class="line">  &#125;</span><br><span class="line">  @extend %text;</span><br><span class="line">  @at-root &#123;</span><br><span class="line">    %bold &#123;</span><br><span class="line">      @extend %text;</span><br><span class="line">      font-weight: bold;</span><br><span class="line">    &#125;</span><br><span class="line">    #&#123;selector-append(&amp;, "__bold")&#125; &#123;</span><br><span class="line">      @extend %bold;</span><br><span class="line">      @at-root &#123;</span><br><span class="line">        #&#123;&amp;&#125;--red &#123;</span><br><span class="line">          @extend %bold;</span><br><span class="line">          color: red;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>「c-text」と「c-text__bold」は共通な部分なのでこれを「CSSクラス」として考えSASSの機能である「@extend(継承)」を利用して書いていきます。<br>「@at-root」を使用することで「親要素」を無視できるのでこれで囲みます。<br>「selector-append($selector)」を利用することでスペースなしで文字列を繋いでくれます。</p>
+<p>このようにするとCSSでは以下のように出力されます。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.c-text</span>,</span><br><span class="line"><span class="class">.c-text__bold</span>,</span><br><span class="line"><span class="class">.c-text__bold--red</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">14px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">1.5</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="class">.c-text__bold</span>,</span><br><span class="line"><span class="class">.c-text__bold--red</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">font-weight</span>:<span class="value"> bold</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="class">.c-text__bold--red</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> red</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>こうなることで「c-text__bold—red」のクラスだけで適応されます。<br>これでカオスな状態を回避できます。</p>
+<h2 id="まとめ-2">まとめ</h2><p>設計するということは本当に重要で大事なことです。<br>これをしっかりしないとCSSもHTMLもカオスな状態になり改修できなくなります。<br>そうなってからでは手遅れです。<br>そうならないためにもしっかり設計するようにしましょう。</p>
+
       
     </div>
     
@@ -219,6 +324,7 @@
     
   
 </article>
+
 
 
 
@@ -237,6 +343,8 @@
     </div>
   </div>
 </footer>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+
     </div>
     
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">

@@ -2,18 +2,22 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="author" content="taisun0523のGuide&Memo">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta generator="atom">
   
-  <title>css-basic | GuideMemo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+  <title>CSS&amp;SASSのコーディングガイドライン | GuideMemo</title>
+  <meta name="description" content="CSSとSASSのコーディングルールについてと文脈（コンテキスト）を意識した命名規則（OOCSSの基礎）と考えについてまとめています。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css-basic">
+<meta property="og:title" content="CSS&SASSのコーディングガイドライン">
 <meta property="og:url" content="https://github.com/taisun/taisun.github.io.git/css-guide/rules.html">
 <meta property="og:site_name" content="GuideMemo">
-<meta property="og:description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+<meta property="og:description" content="CSSとSASSのコーディングルールについてと文脈（コンテキスト）を意識した命名規則（OOCSSの基礎）と考えについてまとめています。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css-basic">
-<meta name="twitter:description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+<meta name="twitter:title" content="CSS&SASSのコーディングガイドライン">
+<meta name="twitter:description" content="CSSとSASSのコーディングルールについてと文脈（コンテキスト）を意識した命名規則（OOCSSの基礎）と考えについてまとめています。">
+  <meta name="google-site-verification" content="mgpVzCYu5iYEYrcPjubr3THQ9YmfI_kYAwUDoJAHMII">
   
     <link rel="alternative" href="/atom.xml" title="GuideMemo" type="application/atom+xml">
   
@@ -29,7 +33,8 @@
     <link rel="apple-touch-icon" sizes="152x152" href="/img/icn/apple-touch-icon-152x152.png">
   
   <link rel="stylesheet" href="/css/style.css" type="text/css">
-  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+  <link rel="home" href="http://taisun.github.io">
+	<link rel="index" href="/sitemap.xml">
 </head>
 
 <body>
@@ -181,7 +186,7 @@
   
     <div class="article-meta">
       <a href="/css-guide/rules.html" class="article-date">
-  	<time datetime="2015-05-15T07:44:12.000Z" itemprop="datePublished">2015-05-15</time>
+  	<time datetime="2015-05-19T06:47:45.000Z" itemprop="datePublished">2015-05-19</time>
 </a>
     </div>
   
@@ -194,7 +199,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      css-basic
+      CSS&amp;SASSのコーディングガイドライン
     </h1>
   
 
@@ -210,7 +215,91 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>CSSをコーディングするための基本的なルールについてと考え方を中心にまとめました。<br>CSSはとても難しいです。<br>とくにコーディングのルールが決まってないとメンテナンス性が悪くなりCSSのファイルサイズが膨大になってしまいパフォーマンスが下がる原因の一つになります。</p>
+<p>そうならないようにどう作るのかの基本となるルールを説明します。<br><br></p>
+<h2 id="CSSコーディングルール">CSSコーディングルール</h2><p>基本的に決めるルールはHTMLと同じです。<br>少し違うのは命名の規則です。</p>
+<p>まずは基本的なコーディングルールを書いていきます。<br>記述のルールとして以下を基本とします。</p>
+<ul>
+<li><p>セレクタ名のと『{』波括弧の間は半角１スペースとする。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">セレクタ名 &#123; //波括弧前半角１スペース</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>波括弧の始まりで改行し閉じ括弧はセレクタの頭のい揃える。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">セレクタ名 &#123;</span><br><span class="line">  ...省略</span><br><span class="line">&#125; //括弧位置を揃える</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>インデントはプロパティ前のみとし半角２スペースとする</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">セレクタ名 &#123;</span><br><span class="line">  プロパティ: 値; //インデント半角２スペース</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>「,」「:」「,」などの記号は前に文字列がある場合はそのすぐ後ろにつけ記号の後ろに半角１スペース空ける。記号の前は空けてはならない。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">セレクタ, セレクタ //カンマ</span><br><span class="line">プロパティ: 値; //コロン・セミコロン</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>各セレクタとセレクタのブロック間は1行空けること</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">セレクタ名 &#123;</span><br><span class="line">  ...省略</span><br><span class="line">&#125;</span><br><span class="line">　　　     //1行空けること</span><br><span class="line">セレクタ名 &#123;</span><br><span class="line">  ...省略</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>要素を持ったclassセレクタは基本使用しない。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p.text &#123; //要素をもったセレクタは使用しない。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>「擬似セレクタ」「!important」は基本使用しない。</p>
+</li>
+</ul>
+<p>以下のように複数セレクタがある場合は上記ルールに従い記号の後ろに半角スペースを入れた上で改行する。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">セレクタ名,</span><br><span class="line">セレクタ名</span><br></pre></td></tr></table></figure>
+<p>CSSのコメントの記述方法は以下のようにする。<br>また「一行コメント」以外は上下に空行を１行いれること。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * パーツやカテゴリなどの大きな区切りのコメント</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">/**　スタイル説明用コメント　 **/</span><br><span class="line"></span><br><span class="line">セレクタ名 &#123;</span><br><span class="line">  プロパティ: 値; /* 一行コメント */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>これは一例ですが、<br>このような基本的なコーディングルールを決めることで、<br>わかりやすくなり誰でもメンテナンスができるようになります。<br><br></p>
+<h2 id="CSSの命名規則について">CSSの命名規則について</h2><p>命名規則とはIDやクラスの名前付けのルールです。<br>基本的には以下のようなことを決めます。</p>
+<ul>
+<li><p>文字と文字の接続方法<br>例えば<a href="http://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%A3%E3%83%A1%E3%83%AB%E3%82%B1%E3%83%BC%E3%82%B9" target="_blank" rel="external">ローワーキャメルケース</a>で書くとか「-」「_」でつなぐとかです。</p>
+</li>
+<li><p>セマンティクスであること</p>
+</li>
+</ul>
+<p>以上のようなことを決めていきます。<br>実際にどう考えどうつくるのでしょうか？</p>
+<p></p><p></p><p></p>
+<h2 id="セマンティクな命名">セマンティクな命名</h2><p>HTMLの設計にも深く関わることですがID名やクラス名を決めるときにどう考えて決めていますか？<br>私はHTMLの文脈（コンテキスト）を元に<strong>セマンティクス</strong>になるように決めています。<br>例えば以下のようなボタンのマークアップの場合は</p>
+<p></p><p></p><br><strong>HTML</strong><p></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a</span>&gt;</span>ボタン<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>以下のようにします。</p>
+<p></p><p></p><br><strong>HTML</strong><p></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"button"</span>&gt;</span>ボタン<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>CSS</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.button</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">8px</span> <span class="number">16px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">3px</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>例えばこのボタンが「青いボタン」だったら以下のようにします。<br><br><br><strong>HTML</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"buttonBlue"</span>&gt;</span>ボタン<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>CSS</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.button</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">8px</span> <span class="number">16px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">3px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">background-color</span>:<span class="value"> blue</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> white</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>ですがこれでは何のボタンかわかりません。<br>このボタンを押すと「Facebookへのリンク」するボタンだとします<br>なので以下のようにします。</p>
+<p></p><p></p><br><strong>HTML</strong><p></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"facebookButton"</span>&gt;</span>ボタン<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>CSS</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.facebookButton</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">8px</span> <span class="number">16px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">3px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">background-color</span>:<span class="value"> blue</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> white</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>これでセマンティックよりセマンティックスになりました。<br>ですがこれでは「Facebook」用のボタンとなり汎用性は全くありません。<br>このようなパーツが増えていくと汎用性がなくなりCSSが崩壊しカオスな状態になります。<br>これを防ぐ為に<strong>モダンCSS</strong>を使用することで解決します。<br>その入門としてまずは「<strong><a href="http://oocss.org/" target="_blank" rel="external">OOCSS(Object Oriented CSS)</a></strong>」を使用し解決してみましょう。</p>
+<p>先ほどのコードをもう一度見てみましょう。</p>
+<p></p><p></p><br><strong>HTML</strong><p></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"buttonFacebook"</span>&gt;</span>ボタン<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>これでは汎用性が全くないパーツです。<br><strong><a href="http://oocss.org/" target="_blank" rel="external">OOCSS(Object Oriented CSS)</a></strong>ではこう書きます。</p>
+<p></p><p></p><br><strong>HTML</strong><p></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"button facebook"</span>&gt;</span>ボタン<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>CSS</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** 共通部分 **/</span></span><br><span class="line"><span class="class">.button</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">8px</span> <span class="number">16px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">3px</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/** 個別部分 **/</span></span><br><span class="line"><span class="class">.button</span><span class="class">.facbook</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">background-color</span>:<span class="value"> blue</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> white</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>なをどうしたかというと<br>「.button」という共通部分（クラス部）と「.button.facebook」個別のスタイルの部分に分割しました。<br>ここで重要なのは<strong>共通クラス</strong>です。<br>共通クラスをつくるこてで例えば別の用途のボタンが出てきても汎用的に使用することができます。</p>
+<p>この<strong>共通クラス</strong>という考えはあとでとても重要になるのでしっかり覚えておいてください。<br><br></p>
+<h2 id="共通クラスについて（OOCSS）">共通クラスについて（OOCSS）</h2><p>共通クラスとは<strong>CSSオブジェクト</strong>のことです。<br>いきなり<strong>CSSオブジェクト</strong>と言われても何？と思う方も多いとおもます。</p>
+<p>「<strong>Object Oriented</strong>」とは「<strong>オブジェクト指向</strong>」のことです<br>ここでいうオブジェクト指向はオブジェクト指向のごく一部にすぎません<br>オブジェクト指向の考えを応用したCSSの考え方です。</p>
+<p><strong>CSSオブジェクト</strong>とは、HTMLでも言いましたが「おもちゃのブロック」です。<br>１つのブロックが<strong>CSSオブジェクト</strong>です。<br>それを組み合わせたものが<strong>パーツ</strong>になります。</p>
+<p>HTMLの構造とCSSの命名は一緒に考えなければいけません。<br>どちらかがおかしかったらページが論理上なりたたなくなり、HTMLもCSSも崩壊しカオスなページになってしまいます。</p>
+<p>そうならないためにもしっかりとした命名規則を考え作りましょう。<br>詳しくは<a href="/css-guide/structural.html">CSSの設計</a>で書いています。<br><br></p>
+<h2 id="SASSのコーディングルール">SASSのコーディングルール</h2><p>基本的に最新版の「SASS」を使用します。<br>記述方法は「SCSS」を使用します。<br>「Ruby」での<strong>ビルド</strong>はせず「タスクランナー」によるビルドを行います。</p>
+<p>記述方法の基本はCSSと同じですがSASS特有な書き方や機能についてのルールは以下のようにします。</p>
+<ul>
+<li>基本は入れ子で書いていく。</li>
+<li>親要素を継承する場合（OOCSS）は「&amp;」を使用する。</li>
+<li>「@extend」はむやみに使わず「CSSオブジェクト」のみに使用しSASSの機能の「プレースホルダ」を使用する。</li>
+<li>SASSのテンプレート「Compass」は使用してもいいがCSSスプライトに限る(Compassの更新が遅いため)。</li>
+<li>「@mixin」「@function」は必ず別ファイルに分けて記述し「@import」して使用する。</li>
+<li>入れ子になりすぎないようにする。最高でも３つまでとする。(@at-rootを使用する場合は別)</li>
+</ul>
+<p>このようなことを決めていく。<br>SASSの詳しい記法については<a href="/css-guide/sass.html">SASSの基礎ページ</a>で説明しています。</p>
+
       
     </div>
     
@@ -219,6 +308,7 @@
     
   
 </article>
+
 
 
 
@@ -237,6 +327,8 @@
     </div>
   </div>
 </footer>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+
     </div>
     
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
