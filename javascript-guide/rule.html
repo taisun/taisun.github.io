@@ -7,26 +7,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta generator="atom">
   
-  <title>本サイトについて | Guide&amp;Memo</title>
-  <meta name="description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用し制作しました。
-概要ご閲覧いただきありがとうございます。
-本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いです。
-読んでいただくにあた">
+  <title>Javascriptコーディングルール | Guide&amp;Memo</title>
+  <meta name="description" content="JavascriptとHTML＆CSSのルールの違いの説明">
 <meta property="og:type" content="article">
-<meta property="og:title" content="本サイトについて">
+<meta property="og:title" content="Javascriptコーディングルール">
 <meta property="og:image" content="http://taisun.github.io/img/ogp_image.png">
-<meta property="og:url" content="http://taisun.github.io/uncategorized/index">
+<meta property="og:url" content="http://taisun.github.io/javascript-guide/rule.html">
 <meta property="og:site_name" content="Guide&Memo">
-<meta property="og:description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用し制作しました。
-概要ご閲覧いただきありがとうございます。
-本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いです。
-読んでいただくにあた">
+<meta property="og:description" content="JavascriptとHTML＆CSSのルールの違いの説明">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="本サイトについて">
-<meta name="twitter:description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用し制作しました。
-概要ご閲覧いただきありがとうございます。
-本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いです。
-読んでいただくにあた">
+<meta name="twitter:title" content="Javascriptコーディングルール">
+<meta name="twitter:description" content="JavascriptとHTML＆CSSのルールの違いの説明">
 <meta name="twitter:image:src" content="http://taisun.github.io/img/ogp_image.png">
 <meta name="twitter:creator" content="@taisun0523">
   <meta name="google-site-verification" content="mgpVzCYu5iYEYrcPjubr3THQ9YmfI_kYAwUDoJAHMII">
@@ -194,11 +185,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-index" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/uncategorized/index" class="article-date">
-  	<time datetime="2015-05-13T07:41:10.000Z" itemprop="datePublished">2015-05-13</time>
+      <a href="/javascript-guide/rule.html" class="article-date">
+  	<time datetime="2015-05-20T11:37:21.000Z" itemprop="datePublished">2015-05-20</time>
 </a>
     </div>
   
@@ -211,7 +202,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      本サイトについて
+      Javascriptコーディングルール
     </h1>
   
 
@@ -227,17 +218,30 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本サイトは「Static Site Generator(静的サイトジェネレーター)」<strong><a href="https://hexo.io/" target="_blank" rel="external">HEXO</a></strong>を使用し制作しました。</p>
-<h2 id="概要">概要</h2><p>ご閲覧いただきありがとうございます。</p>
-<p>本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。<br>私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。<br>ご閲覧された方の参考になれば幸いです。</p>
-<h2 id="読んでいただくにあたり">読んでいただくにあたり</h2><p>本サイトはHTML/CSS/Javscriptが理解されている前提で書いております。<br>ですが初心者の方でもわかるように書いたつもりですので、<br>HTMLの項目からお読みになって頂けるとより理解しやすいと思います。</p>
+        <p>基本的なルール策定の考え方は<a href="/html-guide/rule.html">HTML</a>などと同じです。<br>しかし大きく違うのは「Javascript」はスクリプト言語というコードだということです</p>
+<p>Javascriptのコーディングは人によって違うので「Javascript」の場合はコーディングスタイル（記述方法）を決めます。</p>
+<p>例えば「if文」</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (boolean) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(boolean)</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>というように同じファイルに記述方法が複数あるとコードがとても読みずらいです。<br>このようなコーディンスタイルが「バグの原因」となります。<br>バグの発生を防ぐためにもコーディングスタイルを統一していきましょう。</p>
+<h2 id="命名規則">命名規則</h2><p>セマンティックスな命名が一番ですが、<br>文章のように長くなるとそれだけでコードが読みにくくなります。<br>逆に短くしすぎても分けがわからなくなります。</p>
+<p>原因は文脈を理解できていないためです。<br>これを解決するのは文脈を理解しそれにあった名前をつけることです。</p>
+<p>例えば「クリックするといろが赤く変わるボタン」だと</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> buttonClickChangeColorRed = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;&#125;;</span><br></pre></td></tr></table></figure>
+<p>これだと長すぎます文脈（コンテキスト）で重要なのは「色が変わる」ということです。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> changeColor = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;&#125;;</span><br></pre></td></tr></table></figure>
+<p>こうすることで色が変化するのがわかると思います。<br>また汎用性の高いコードになると思います。</p>
+<h2 id="実装方法">実装方法</h2><p>サイトを制作していくと、イロイロな機能を実装していくとファイルサイズが膨大になってしまうことがあります。<br>実際私も何千行というJavascriptファイルを見たことがあります。</p>
+<p>こうなってしまうとメンテナンスもできないし、パフォーマンスもとても悪くなってイケてないサイトになってしまいます。<br>こうならないためにもJavascriptコードを書くときは考え方もそうですが、切り分けて実装するのがいいと思います。</p>
+<p>その実装方法ですが方法はいくつかあると思います。<br>人によってJavascriptの技術レベルが違うと思うので、プロジェクトにあった実装方法決めていきます。<br>大きく以下の２つに分けることができると思います。</p>
 <ul>
-<li><a href="/html-guide/index.html">HTMLガイドライン</a></li>
+<li>命令型</li>
+<li>宣言型（関数型）</li>
+<li>オブジェクト指向</li>
 </ul>
-<h2 id="お詫び">お詫び</h2><p>本サイトは現在頑張って執筆しています。</p>
-<p>途中のページやまだないページがありますが<br>なるべく早く完成させるように努力しますので<br>温かい目で見守ってください。</p>
-<p>宜しくお願い申し上げます。</p>
-<p>tasisun0523</p>
+<p>私は「宣言型+オブジェクト指向」を強く勧めますがJavascriptを理解していないと実装は難しいと思います。<br>では「命令型」で進めるのことがおおいと思いますが、ここで注意が必要です。<br>「命令型」で書いていくとコードが膨大になってカオスなJavascriptになってしまいます。<br>どう書くかを最初に決めることはとても重要なのでしっかり決めていきましょう。</p>
+<h2 id="プラグイン">プラグイン</h2><p>プラグインを使用するときに基本となるライブラリを決めておきます。<br>「jQuery」は一般的で皆さん使用されているかと思います。<br>このように必ず使うプラグインを最初に決めておくことで、<br>今使っているプラグインがなにでライセンスがなにでと管理もとてもしやすくなります。</p>
+<p>これを決めていないとプラグインを選ぶのに時間がかかり無駄な時間になってしまいます。<br>あとプラグインをわざわざ使用しなくても実装できるものはプラグインを読むと多少なりとパフォーマンスが下がるので、<br>実装可能なものは自分で作りましょう。</p>
+<h2 id="まとめ">まとめ</h2><p>Javascriptの場合は使用も含め最初に決めることがHTMLやCSSに比べ多いですが、<br>このルールを決めればさくさく開発が進むはずです。<br>ポイントとしては他と同じですが文脈（コンテキスト）を理解し論理を考え細かく細分化していくということです。<br>自分なりのルールを考えてみましょう。</p>
 
       
     </div>
