@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://taisun.github.io/javascript-guide/index.html</loc>
+    <lastmod>2015-05-20T15:48:33.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taisun.github.io/css-guide/index.html</loc>
+    <lastmod>2015-05-20T15:45:44.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taisun.github.io/html-guide/index.html</loc>
+    <lastmod>2015-05-20T15:45:20.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://taisun.github.io/uncategorized/index</loc>
     <lastmod>2015-05-20T13:53:32.000Z</lastmod>
   </url>
@@ -24,16 +39,6 @@
   <url>
     <loc>http://taisun.github.io/html-guide/accessibility.html</loc>
     <lastmod>2015-05-20T13:42:51.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://taisun.github.io/html-guide/index.html</loc>
-    <lastmod>2015-05-20T13:37:54.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://taisun.github.io/css-guide/index.html</loc>
-    <lastmod>2015-05-20T13:36:36.000Z</lastmod>
   </url>
   
   <url>
@@ -69,11 +74,6 @@
   <url>
     <loc>http://taisun.github.io/css-guide/basic.html</loc>
     <lastmod>2015-05-18T13:12:41.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://taisun.github.io/javascript-guide/index.html</loc>
-    <lastmod>2015-05-17T17:40:10.000Z</lastmod>
   </url>
   
   <url>
