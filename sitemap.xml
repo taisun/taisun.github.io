@@ -2,13 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://taisun.github.io/css-guide/structural.html</loc>
-    <lastmod>2015-05-20T05:32:51.000Z</lastmod>
+    <loc>http://taisun.github.io/uncategorized/index</loc>
+    <lastmod>2015-05-20T13:53:32.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taisun.github.io/css-guide/sass.html</loc>
+    <lastmod>2015-05-20T13:49:48.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taisun.github.io/css-guide/tasktool.html</loc>
+    <lastmod>2015-05-20T13:47:07.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taisun.github.io/css-guide/performance.html</loc>
+    <lastmod>2015-05-20T13:45:31.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taisun.github.io/html-guide/accessibility.html</loc>
+    <lastmod>2015-05-20T13:42:51.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taisun.github.io/html-guide/index.html</loc>
+    <lastmod>2015-05-20T13:37:54.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://taisun.github.io/css-guide/index.html</loc>
-    <lastmod>2015-05-19T09:39:52.000Z</lastmod>
+    <lastmod>2015-05-20T13:36:36.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taisun.github.io/javascript-guide/performance.html</loc>
+    <lastmod>2015-05-20T13:35:39.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taisun.github.io/javascript-guide/structural.html</loc>
+    <lastmod>2015-05-20T13:32:42.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taisun.github.io/javascript-guide/basic.html</loc>
+    <lastmod>2015-05-20T13:08:14.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taisun.github.io/javascript-guide/rule.html</loc>
+    <lastmod>2015-05-20T11:37:21.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taisun.github.io/css-guide/structural.html</loc>
+    <lastmod>2015-05-20T05:32:51.000Z</lastmod>
   </url>
   
   <url>
@@ -22,18 +72,8 @@
   </url>
   
   <url>
-    <loc>http://taisun.github.io/uncategorized/index</loc>
-    <lastmod>2015-05-17T17:47:03.000Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://taisun.github.io/javascript-guide/index.html</loc>
     <lastmod>2015-05-17T17:40:10.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://taisun.github.io/html-guide/index.html</loc>
-    <lastmod>2015-05-17T17:40:09.000Z</lastmod>
   </url>
   
   <url>
@@ -47,16 +87,6 @@
   </url>
   
   <url>
-    <loc>http://taisun.github.io/css-guide/performance.html</loc>
-    <lastmod>2015-05-17T16:58:20.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://taisun.github.io/javascript-guide/performance.html</loc>
-    <lastmod>2015-05-17T16:58:20.000Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://taisun.github.io/html-guide/performance.html</loc>
     <lastmod>2015-05-17T16:58:20.000Z</lastmod>
   </url>
@@ -67,33 +97,8 @@
   </url>
   
   <url>
-    <loc>http://taisun.github.io/javascript-guide/basic.html</loc>
-    <lastmod>2015-05-15T07:47:36.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://taisun.github.io/javascript-guide/structural.html</loc>
-    <lastmod>2015-05-15T07:47:11.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://taisun.github.io/css-guide/sass.html</loc>
-    <lastmod>2015-05-15T07:46:00.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://taisun.github.io/css-guide/tasktool.html</loc>
-    <lastmod>2015-05-15T07:44:51.000Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://taisun.github.io/html-guide/basic.html</loc>
     <lastmod>2015-05-15T07:40:19.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://taisun.github.io/html-guide/accessibility.html</loc>
-    <lastmod>2015-05-14T16:15:17.000Z</lastmod>
   </url>
   
   <url>

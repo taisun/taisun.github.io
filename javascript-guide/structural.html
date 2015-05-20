@@ -7,17 +7,23 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta generator="atom">
   
-  <title>javascript-structural | Guide&amp;Memo</title>
-  <meta name="description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+  <title>Javascriptの設計 | Guide&amp;Memo</title>
+  <meta name="description" content="JavascriptもHTML/CSS共に設計はとてもじゅうようです。ここでは文脈（コンテキスト）と論理を意識したコード設計について書いていきます。
+Javascriptは普通に書いていくとだらだらと長く読みにくいコードになってしまいます。ぞくにいうスパゲッティーコードというやつです。
+そうならないように各機能の文脈（コンテキスト）を読み取り、適切な粒度に分割していきます。考え方は論理通りにプログ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript-structural">
+<meta property="og:title" content="Javascriptの設計">
 <meta property="og:image" content="http://taisun.github.io/img/ogp_image.png">
 <meta property="og:url" content="http://taisun.github.io/javascript-guide/structural.html">
 <meta property="og:site_name" content="Guide&Memo">
-<meta property="og:description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+<meta property="og:description" content="JavascriptもHTML/CSS共に設計はとてもじゅうようです。ここでは文脈（コンテキスト）と論理を意識したコード設計について書いていきます。
+Javascriptは普通に書いていくとだらだらと長く読みにくいコードになってしまいます。ぞくにいうスパゲッティーコードというやつです。
+そうならないように各機能の文脈（コンテキスト）を読み取り、適切な粒度に分割していきます。考え方は論理通りにプログ">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="javascript-structural">
-<meta name="twitter:description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+<meta name="twitter:title" content="Javascriptの設計">
+<meta name="twitter:description" content="JavascriptもHTML/CSS共に設計はとてもじゅうようです。ここでは文脈（コンテキスト）と論理を意識したコード設計について書いていきます。
+Javascriptは普通に書いていくとだらだらと長く読みにくいコードになってしまいます。ぞくにいうスパゲッティーコードというやつです。
+そうならないように各機能の文脈（コンテキスト）を読み取り、適切な粒度に分割していきます。考え方は論理通りにプログ">
 <meta name="twitter:image:src" content="http://taisun.github.io/img/ogp_image.png">
 <meta name="twitter:creator" content="@taisun0523">
   <meta name="google-site-verification" content="mgpVzCYu5iYEYrcPjubr3THQ9YmfI_kYAwUDoJAHMII">
@@ -202,7 +208,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      javascript-structural
+      Javascriptの設計
     </h1>
   
 
@@ -218,7 +224,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>JavascriptもHTML/CSS共に設計はとてもじゅうようです。<br>ここでは文脈（コンテキスト）と論理を意識したコード設計について書いていきます。</p>
+<p>Javascriptは普通に書いていくとだらだらと長く読みにくいコードになってしまいます。<br>ぞくにいうスパゲッティーコードというやつです。</p>
+<p>そうならないように各機能の文脈（コンテキスト）を読み取り、適切な粒度に分割していきます。<br>考え方は論理通りにプログラミングすることです。</p>
+<p>Javascriptのまとまりは「ブロック」といいます。<br>このブロックを利用して分割していけば読みやすく、解りやすく、メンテナンスしやすいコードになります。<br>「関数」や「配列」はブロックです。<br>これを使用していきます。</p>
+<h2 id="方法">方法</h2><p>方法としては「関数型」と「オブジェクト指向」です。<br>クラスオブジェクト（1つのまとまり）をつくって関数で機能を分割していく方法です。<br>しかし関数型とかオブジェクト指向とかよく分からないという方が多いと思います。<br>少しそのあたりを説明していきます。</p>
+<h2 id="命令型と宣言型（関数型）">命令型と宣言型（関数型）</h2><p>通常のJavascriptのコードは以下のように考えて書いていく方が多いと思います。</p>
+<div class="em-none">Aの高さを取得して、次にBの高さを取得して足して、その次に…</div>
+
+<p>この考えで書いていくとダラダラとしたコードになってしまったり、分割するのが難しいです。<br>このコードのことを<strong>命令型コード</strong>といいます。</p>
+<p>では関数型とはなんなのか以下にサンプルコード書いてみました。</p>
+<p>「Aの高さを取得して、次にBの高さを取得して足す」というコードを書いてみます。</p>
+<p><strong>命令型</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.querySelector(<span class="string">'.a'</span>),</span><br><span class="line">    b = <span class="built_in">document</span>.querySelector(<span class="string">'.b'</span>),</span><br><span class="line">    aHi = a.clientHeight,</span><br><span class="line">    bHi = b.clientHeight;</span><br><span class="line">    answer = aHi+bHi;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(answer);</span><br></pre></td></tr></table></figure>
+<p><strong>関数型</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> myfunc = &#123;</span><br><span class="line">  docs: <span class="function"><span class="keyword">function</span><span class="params">(a)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">document</span>.querySelector(arg);</span><br><span class="line">  &#125;,</span><br><span class="line">  plus: <span class="function"><span class="keyword">function</span><span class="params">(b, c)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b + c;</span><br><span class="line">  &#125;,</span><br><span class="line">  height: <span class="function"><span class="keyword">function</span><span class="params">(d)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> d.clientHeight</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> ary = [<span class="string">'.a'</span>, <span class="string">'.b'</span>],</span><br><span class="line">    el = ary.map(myfunc.docs),</span><br><span class="line">    hi = el.map(myfunc.height),</span><br><span class="line">    answer = hi.reduce(myfunc.plus);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(answer);</span><br></pre></td></tr></table></figure>
+<p>少し難しいかもですがまとめることができました。<br>こうすることで汎用性の高いコードになります。<br>このような粒度を幾つもつくって管理していくとわかりやすくメンテナンスしやすくなります。</p>
+<h2 id="まとめ">まとめ</h2><p>関数型にさらにオブジェクト指向の考えを<br>プラスするとさらに汎用性が増し良いコードになるでしょう。<br>分割した設計はパフォーマンス的にも軽くなるのでとても便利です。<br>ぜひ使ってみてください。</p>
+
       
     </div>
     
