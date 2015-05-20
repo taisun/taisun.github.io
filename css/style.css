@@ -1088,6 +1088,12 @@ a {
   padding-bottom: 5px;
   border-bottom: 1px solid #ddd;
 }
+.article-entry h2 a {
+  color: #574c4c;
+}
+.article-entry h2 a:hover {
+  color: #258fb8;
+}
 .article-entry h3,
 .article-entry h4,
 .article-entry h5,
@@ -1097,6 +1103,18 @@ a {
   color: #574c4c;
   padding-bottom: 5px;
   border-bottom: 1px solid #ddd;
+}
+.article-entry h3 a,
+.article-entry h4 a,
+.article-entry h5 a,
+.article-entry h6 a {
+  color: #574c4c;
+}
+.article-entry h3 a:hover,
+.article-entry h4 a:hover,
+.article-entry h5 a:hover,
+.article-entry h6 a:hover {
+  color: #258fb8;
 }
 .article-entry video {
   max-width: 100%;
