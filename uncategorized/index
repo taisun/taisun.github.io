@@ -8,7 +8,7 @@
   <meta generator="atom">
   
   <title>本サイトについて | Guide&amp;Memo</title>
-  <meta name="description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用しgithub上にページ制作し公開ました。
+  <meta name="description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用しGitHub上にページ制作し公開ました。
 概要ご閲覧いただきありがとうございます。
 本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いで">
 <meta property="og:type" content="article">
@@ -16,12 +16,12 @@
 <meta property="og:image" content="http://taisun.github.io/img/ogp_image.png">
 <meta property="og:url" content="http://taisun.github.io/uncategorized/index">
 <meta property="og:site_name" content="Guide&Memo">
-<meta property="og:description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用しgithub上にページ制作し公開ました。
+<meta property="og:description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用しGitHub上にページ制作し公開ました。
 概要ご閲覧いただきありがとうございます。
 本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いで">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="本サイトについて">
-<meta name="twitter:description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用しgithub上にページ制作し公開ました。
+<meta name="twitter:description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用しGitHub上にページ制作し公開ました。
 概要ご閲覧いただきありがとうございます。
 本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いで">
 <meta name="twitter:image:src" content="http://taisun.github.io/img/ogp_image.png">
@@ -224,7 +224,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本サイトは「Static Site Generator(静的サイトジェネレーター)」<strong><a href="https://hexo.io/" target="_blank" rel="external">HEXO</a></strong>を使用し<strong><a href="https://github.com/" target="_blank" rel="external">github</a></strong>上にページ制作し公開ました。</p>
+        <p>本サイトは「Static Site Generator(静的サイトジェネレーター)」<strong><a href="https://hexo.io/" target="_blank" rel="external">HEXO</a></strong>を使用し<strong><a href="https://github.com/" target="_blank" rel="external">GitHub</a></strong>上にページ制作し公開ました。</p>
 <h2 id="概要">概要</h2><p>ご閲覧いただきありがとうございます。</p>
 <p>本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。<br>私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。<br>ご閲覧された方の参考になれば幸いです。</p>
 <p>基礎とかのページもありますが基本はコードの書き方は少しで <strong>どうやって考えて作るか</strong> に重点を置いてまとめております。</p>
