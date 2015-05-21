@@ -399,6 +399,12 @@
   </div>
 </footer>
 <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script type="text/javascript">
+$("a").click(function(e) {
+        var ahref = $(this).attr('href');
+        ga('link','event','Click' ahref, true);
+    });
+</script>
 
     </div>
     

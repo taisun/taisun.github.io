@@ -288,6 +288,12 @@ CSS＆SASSコーディングルール設計＆思考ここでは基本的なCSS�
   </div>
 </footer>
 <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script type="text/javascript">
+$("a").click(function(e) {
+        var ahref = $(this).attr('href');
+        ga('link','event','Click' ahref, true);
+    });
+</script>
 
     </div>
     
