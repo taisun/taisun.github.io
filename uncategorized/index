@@ -11,7 +11,7 @@
   <meta name="description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用し制作しました。
 概要ご閲覧いただきありがとうございます。
 本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いです。
-読んでいただくにあた">
+基礎とかのページもあ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="本サイトについて">
 <meta property="og:image" content="http://taisun.github.io/img/ogp_image.png">
@@ -20,13 +20,13 @@
 <meta property="og:description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用し制作しました。
 概要ご閲覧いただきありがとうございます。
 本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いです。
-読んでいただくにあた">
+基礎とかのページもあ">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="本サイトについて">
 <meta name="twitter:description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用し制作しました。
 概要ご閲覧いただきありがとうございます。
 本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いです。
-読んでいただくにあた">
+基礎とかのページもあ">
 <meta name="twitter:image:src" content="http://taisun.github.io/img/ogp_image.png">
 <meta name="twitter:creator" content="@taisun0523">
   <meta name="google-site-verification" content="mgpVzCYu5iYEYrcPjubr3THQ9YmfI_kYAwUDoJAHMII">
@@ -230,6 +230,7 @@
         <p>本サイトは「Static Site Generator(静的サイトジェネレーター)」<strong><a href="https://hexo.io/" target="_blank" rel="external">HEXO</a></strong>を使用し制作しました。</p>
 <h2 id="概要">概要</h2><p>ご閲覧いただきありがとうございます。</p>
 <p>本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。<br>私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。<br>ご閲覧された方の参考になれば幸いです。</p>
+<p>基礎とかのページもありますが基本はコードの書き方は少しで<strong>どうやって考えて作るか</strong>に重点を置いてまとめております。</p>
 <h2 id="読んでいただくにあたり">読んでいただくにあたり</h2><p>本サイトはHTML/CSS/Javscriptが理解されている前提で書いております。<br>ですが初心者の方でもわかるように書いたつもりですので、<br>以下の順番で読んでいただくと理解しやすいと思います。</p>
 <div class="em"><strong><a href="/html-guide/index.html">HTML</a></strong>   =&gt;   <strong><a href="/css-guide/index.html">CSS</a></strong>   =&gt;   <strong><a href="/Javascript-guide/index.html">Javascript</a></strong> </div>
 
