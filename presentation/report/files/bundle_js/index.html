@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - bundle.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>bundle.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">68.40</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">194</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">198.28</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">22.27</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+/******/
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = &quot;&quot;;
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(2);
+	module.exports = __webpack_require__(1);
+
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var extend = function(ary, value){
+		for(var prot in value) {
+			ary[prot] = value[prot];
+		}
+		return ary;
+	}
+	var scrollFunction=function(){this.option={target:&quot;.c-pageTop&quot;,speed:200},this.option=extend(this.option,arguments[0])};scrollFunction.prototype={init:function(){var t=$(arguments).scrollTop();t&gt;=1?this.show():this.hide()},show:function(){$(this.option.target).stop().fadeIn(this.option.speed)},hide:function(){$(this.option.target).stop().fadeOut(this.option.speed/3)},animate:function(t){$(&quot;html,body&quot;).animate({scrollTop:t},this.option.speed)}};var _SCROLL=function(){},scroll;_SCROLL.prototype=new scrollFunction,scroll=new _SCROLL,$(function(){$(&quot;.c-pageTop&quot;).on(&quot;click&quot;,function(){scroll.animate(0)})});
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(setImmediate) {!function(e){e.flexslider=function(t,a){var n=e(t);n.vars=e.extend({},e.flexslider.defaults,a);var i,s=n.vars.namespace,r=window.navigator&amp;&amp;window.navigator.msPointerEnabled&amp;&amp;window.MSGesture,o=(&quot;ontouchstart&quot;in window||r||window.DocumentTouch&amp;&amp;document instanceof DocumentTouch)&amp;&amp;n.vars.touch,l=&quot;click touchend MSPointerUp keyup&quot;,c=&quot;&quot;,d=&quot;vertical&quot;===n.vars.direction,u=n.vars.reverse,v=n.vars.itemWidth&gt;0,p=&quot;fade&quot;===n.vars.animation,m=&quot;&quot;!==n.vars.asNavFor,f={},g=!0;e.data(t,&quot;flexslider&quot;,n),f={init:function(){n.animating=!1,n.currentSlide=parseInt(n.vars.startAt?n.vars.startAt:0,10),isNaN(n.currentSlide)&amp;&amp;(n.currentSlide=0),n.animatingTo=n.currentSlide,n.atEnd=0===n.currentSlide||n.currentSlide===n.last,n.containerSelector=n.vars.selector.substr(0,n.vars.selector.search(&quot; &quot;)),n.slides=e(n.vars.selector,n),n.container=e(n.containerSelector,n),n.count=n.slides.length,n.syncExists=e(n.vars.sync).length&gt;0,&quot;slide&quot;===n.vars.animation&amp;&amp;(n.vars.animation=&quot;swing&quot;),n.prop=d?&quot;top&quot;:&quot;marginLeft&quot;,n.args={},n.manualPause=!1,n.stopped=!1,n.started=!1,n.startTimeout=null,n.transitions=!n.vars.video&amp;&amp;!p&amp;&amp;n.vars.useCSS&amp;&amp;function(){var e=document.createElement(&quot;div&quot;),t=[&quot;perspectiveProperty&quot;,&quot;WebkitPerspective&quot;,&quot;MozPerspective&quot;,&quot;OPerspective&quot;,&quot;msPerspective&quot;];for(var a in t)if(void 0!==e.style[t[a]])return n.pfx=t[a].replace(&quot;Perspective&quot;,&quot;&quot;).toLowerCase(),n.prop=&quot;-&quot;+n.pfx+&quot;-transform&quot;,!0;return!1}(),n.ensureAnimationEnd=&quot;&quot;,&quot;&quot;!==n.vars.controlsContainer&amp;&amp;(n.controlsContainer=e(n.vars.controlsContainer).length&gt;0&amp;&amp;e(n.vars.controlsContainer)),&quot;&quot;!==n.vars.manualControls&amp;&amp;(n.manualControls=e(n.vars.manualControls).length&gt;0&amp;&amp;e(n.vars.manualControls)),n.vars.randomize&amp;&amp;(n.slides.sort(function(){return Math.round(Math.random())-.5}),n.container.empty().append(n.slides)),n.doMath(),n.setup(&quot;init&quot;),n.vars.controlNav&amp;&amp;f.controlNav.setup(),n.vars.directionNav&amp;&amp;f.directionNav.setup(),n.vars.keyboard&amp;&amp;(1===e(n.containerSelector).length||n.vars.multipleKeyboard)&amp;&amp;e(document).bind(&quot;keyup&quot;,function(e){var t=e.keyCode;if(!n.animating&amp;&amp;(39===t||37===t)){var a=39===t?n.getTarget(&quot;next&quot;):37===t?n.getTarget(&quot;prev&quot;):!1;n.flexAnimate(a,n.vars.pauseOnAction)}}),n.vars.mousewheel&amp;&amp;n.bind(&quot;mousewheel&quot;,function(e,t){e.preventDefault();var a=n.getTarget(0&gt;t?&quot;next&quot;:&quot;prev&quot;);n.flexAnimate(a,n.vars.pauseOnAction)}),n.vars.pausePlay&amp;&amp;f.pausePlay.setup(),n.vars.slideshow&amp;&amp;n.vars.pauseInvisible&amp;&amp;f.pauseInvisible.init(),n.vars.slideshow&amp;&amp;(n.vars.pauseOnHover&amp;&amp;n.hover(function(){n.manualPlay||n.manualPause||n.pause()},function(){n.manualPause||n.manualPlay||n.stopped||n.play()}),n.vars.pauseInvisible&amp;&amp;f.pauseInvisible.isHidden()||(n.vars.initDelay&gt;0?n.startTimeout=setTimeout(n.play,n.vars.initDelay):n.play())),m&amp;&amp;f.asNav.setup(),o&amp;&amp;n.vars.touch&amp;&amp;f.touch(),(!p||p&amp;&amp;n.vars.smoothHeight)&amp;&amp;e(window).bind(&quot;resize orientationchange focus&quot;,f.resize),n.find(&quot;img&quot;).attr(&quot;draggable&quot;,&quot;false&quot;),setTimeout(function(){n.vars.start(n)},200)},asNav:{setup:function(){n.asNav=!0,n.animatingTo=Math.floor(n.currentSlide/n.move),n.currentItem=n.currentSlide,n.slides.removeClass(s+&quot;active-slide&quot;).eq(n.currentItem).addClass(s+&quot;active-slide&quot;),r?(t._slider=n,n.slides.each(function(){var t=this;t._gesture=new MSGesture,t._gesture.target=t,t.addEventListener(&quot;MSPointerDown&quot;,function(e){e.preventDefault(),e.currentTarget._gesture&amp;&amp;e.currentTarget._gesture.addPointer(e.pointerId)},!1),t.addEventListener(&quot;MSGestureTap&quot;,function(t){t.preventDefault();var a=e(this),i=a.index();e(n.vars.asNavFor).data(&quot;flexslider&quot;).animating||a.hasClass(&quot;active&quot;)||(n.direction=n.currentItem&lt;i?&quot;next&quot;:&quot;prev&quot;,n.flexAnimate(i,n.vars.pauseOnAction,!1,!0,!0))})})):n.slides.on(l,function(t){t.preventDefault();var a=e(this),i=a.index(),r=a.offset().left-e(n).scrollLeft();0&gt;=r&amp;&amp;a.hasClass(s+&quot;active-slide&quot;)?n.flexAnimate(n.getTarget(&quot;prev&quot;),!0):e(n.vars.asNavFor).data(&quot;flexslider&quot;).animating||a.hasClass(s+&quot;active-slide&quot;)||(n.direction=n.currentItem&lt;i?&quot;next&quot;:&quot;prev&quot;,n.flexAnimate(i,n.vars.pauseOnAction,!1,!0,!0))})}},controlNav:{setup:function(){n.manualControls?f.controlNav.setupManual():f.controlNav.setupPaging()},setupPaging:function(){var t,a,i=&quot;thumbnails&quot;===n.vars.controlNav?&quot;control-thumbs&quot;:&quot;control-paging&quot;,r=1;if(n.controlNavScaffold=e(&#039;&lt;ol class=&quot;&#039;+s+&quot;control-nav &quot;+s+i+&#039;&quot;&gt;&lt;/ol&gt;&#039;),n.pagingCount&gt;1)for(var o=0;o&lt;n.pagingCount;o++){if(a=n.slides.eq(o),t=&quot;thumbnails&quot;===n.vars.controlNav?&#039;&lt;img src=&quot;&#039;+a.attr(&quot;data-thumb&quot;)+&#039;&quot;/&gt;&#039;:&quot;&lt;a&gt;&quot;+r+&quot;&lt;/a&gt;&quot;,&quot;thumbnails&quot;===n.vars.controlNav&amp;&amp;!0===n.vars.thumbCaptions){var d=a.attr(&quot;data-thumbcaption&quot;);&quot;&quot;!=d&amp;&amp;void 0!=d&amp;&amp;(t+=&#039;&lt;span class=&quot;&#039;+s+&#039;caption&quot;&gt;&#039;+d+&quot;&lt;/span&gt;&quot;)}n.controlNavScaffold.append(&quot;&lt;li&gt;&quot;+t+&quot;&lt;/li&gt;&quot;),r++}n.controlsContainer?e(n.controlsContainer).append(n.controlNavScaffold):n.append(n.controlNavScaffold),f.controlNav.set(),f.controlNav.active(),n.controlNavScaffold.delegate(&quot;a, img&quot;,l,function(t){if(t.preventDefault(),&quot;&quot;===c||c===t.type){var a=e(this),i=n.controlNav.index(a);a.hasClass(s+&quot;active&quot;)||(n.direction=i&gt;n.currentSlide?&quot;next&quot;:&quot;prev&quot;,n.flexAnimate(i,n.vars.pauseOnAction))}&quot;&quot;===c&amp;&amp;(c=t.type),f.setToClearWatchedEvent()})},setupManual:function(){n.controlNav=n.manualControls,f.controlNav.active(),n.controlNav.bind(l,function(t){if(t.preventDefault(),&quot;&quot;===c||c===t.type){var a=e(this),i=n.controlNav.index(a);a.hasClass(s+&quot;active&quot;)||(n.direction=i&gt;n.currentSlide?&quot;next&quot;:&quot;prev&quot;,n.flexAnimate(i,n.vars.pauseOnAction))}&quot;&quot;===c&amp;&amp;(c=t.type),f.setToClearWatchedEvent()})},set:function(){var t=&quot;thumbnails&quot;===n.vars.controlNav?&quot;img&quot;:&quot;a&quot;;n.controlNav=e(&quot;.&quot;+s+&quot;control-nav li &quot;+t,n.controlsContainer?n.controlsContainer:n)},active:function(){n.controlNav.removeClass(s+&quot;active&quot;).eq(n.animatingTo).addClass(s+&quot;active&quot;)},update:function(t,a){n.pagingCount&gt;1&amp;&amp;&quot;add&quot;===t?n.controlNavScaffold.append(e(&quot;&lt;li&gt;&lt;a&gt;&quot;+n.count+&quot;&lt;/a&gt;&lt;/li&gt;&quot;)):1===n.pagingCount?n.controlNavScaffold.find(&quot;li&quot;).remove():n.controlNav.eq(a).closest(&quot;li&quot;).remove(),f.controlNav.set(),n.pagingCount&gt;1&amp;&amp;n.pagingCount!==n.controlNav.length?n.update(a,t):f.controlNav.active()}},directionNav:{setup:function(){var t=e(&#039;&lt;ul class=&quot;&#039;+s+&#039;direction-nav&quot;&gt;&lt;li&gt;&lt;a class=&quot;&#039;+s+&#039;prev&quot; href=&quot;#&quot;&gt;&#039;+n.vars.prevText+&#039;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a class=&quot;&#039;+s+&#039;next&quot; href=&quot;#&quot;&gt;&#039;+n.vars.nextText+&quot;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&quot;);n.controlsContainer?(e(n.controlsContainer).append(t),n.directionNav=e(&quot;.&quot;+s+&quot;direction-nav li a&quot;,n.controlsContainer)):(n.append(t),n.directionNav=e(&quot;.&quot;+s+&quot;direction-nav li a&quot;,n)),f.directionNav.update(),n.directionNav.bind(l,function(t){t.preventDefault();var a;(&quot;&quot;===c||c===t.type)&amp;&amp;(a=n.getTarget(e(this).hasClass(s+&quot;next&quot;)?&quot;next&quot;:&quot;prev&quot;),n.flexAnimate(a,n.vars.pauseOnAction)),&quot;&quot;===c&amp;&amp;(c=t.type),f.setToClearWatchedEvent()})},update:function(){var e=s+&quot;disabled&quot;;1===n.pagingCount?n.directionNav.addClass(e).attr(&quot;tabindex&quot;,&quot;-1&quot;):n.vars.animationLoop?n.directionNav.removeClass(e).removeAttr(&quot;tabindex&quot;):0===n.animatingTo?n.directionNav.removeClass(e).filter(&quot;.&quot;+s+&quot;prev&quot;).addClass(e).attr(&quot;tabindex&quot;,&quot;-1&quot;):n.animatingTo===n.last?n.directionNav.removeClass(e).filter(&quot;.&quot;+s+&quot;next&quot;).addClass(e).attr(&quot;tabindex&quot;,&quot;-1&quot;):n.directionNav.removeClass(e).removeAttr(&quot;tabindex&quot;)}},pausePlay:{setup:function(){var t=e(&#039;&lt;div class=&quot;&#039;+s+&#039;pauseplay&quot;&gt;&lt;a&gt;&lt;/a&gt;&lt;/div&gt;&#039;);n.controlsContainer?(n.controlsContainer.append(t),n.pausePlay=e(&quot;.&quot;+s+&quot;pauseplay a&quot;,n.controlsContainer)):(n.append(t),n.pausePlay=e(&quot;.&quot;+s+&quot;pauseplay a&quot;,n)),f.pausePlay.update(n.vars.slideshow?s+&quot;pause&quot;:s+&quot;play&quot;),n.pausePlay.bind(l,function(t){t.preventDefault(),(&quot;&quot;===c||c===t.type)&amp;&amp;(e(this).hasClass(s+&quot;pause&quot;)?(n.manualPause=!0,n.manualPlay=!1,n.pause()):(n.manualPause=!1,n.manualPlay=!0,n.play())),&quot;&quot;===c&amp;&amp;(c=t.type),f.setToClearWatchedEvent()})},update:function(e){&quot;play&quot;===e?n.pausePlay.removeClass(s+&quot;pause&quot;).addClass(s+&quot;play&quot;).html(n.vars.playText):n.pausePlay.removeClass(s+&quot;play&quot;).addClass(s+&quot;pause&quot;).html(n.vars.pauseText)}},touch:function(){function e(e){n.animating?e.preventDefault():(window.navigator.msPointerEnabled||1===e.touches.length)&amp;&amp;(n.pause(),g=d?n.h:n.w,S=Number(new Date),x=e.touches[0].pageX,b=e.touches[0].pageY,f=v&amp;&amp;u&amp;&amp;n.animatingTo===n.last?0:v&amp;&amp;u?n.limit-(n.itemW+n.vars.itemMargin)*n.move*n.animatingTo:v&amp;&amp;n.currentSlide===n.last?n.limit:v?(n.itemW+n.vars.itemMargin)*n.move*n.currentSlide:u?(n.last-n.currentSlide+n.cloneOffset)*g:(n.currentSlide+n.cloneOffset)*g,c=d?b:x,m=d?x:b,t.addEventListener(&quot;touchmove&quot;,a,!1),t.addEventListener(&quot;touchend&quot;,i,!1))}function a(e){x=e.touches[0].pageX,b=e.touches[0].pageY,h=d?c-b:c-x,y=d?Math.abs(h)&lt;Math.abs(x-m):Math.abs(h)&lt;Math.abs(b-m);var t=500;(!y||Number(new Date)-S&gt;t)&amp;&amp;(e.preventDefault(),!p&amp;&amp;n.transitions&amp;&amp;(n.vars.animationLoop||(h/=0===n.currentSlide&amp;&amp;0&gt;h||n.currentSlide===n.last&amp;&amp;h&gt;0?Math.abs(h)/g+2:1),n.setProps(f+h,&quot;setTouch&quot;)))}function i(){if(t.removeEventListener(&quot;touchmove&quot;,a,!1),n.animatingTo===n.currentSlide&amp;&amp;!y&amp;&amp;null!==h){var e=u?-h:h,s=n.getTarget(e&gt;0?&quot;next&quot;:&quot;prev&quot;);n.canAdvance(s)&amp;&amp;(Number(new Date)-S&lt;550&amp;&amp;Math.abs(e)&gt;50||Math.abs(e)&gt;g/2)?n.flexAnimate(s,n.vars.pauseOnAction):p||n.flexAnimate(n.currentSlide,n.vars.pauseOnAction,!0)}t.removeEventListener(&quot;touchend&quot;,i,!1),c=null,m=null,h=null,f=null}function s(e){e.stopPropagation(),n.animating?e.preventDefault():(n.pause(),t._gesture.addPointer(e.pointerId),w=0,g=d?n.h:n.w,S=Number(new Date),f=v&amp;&amp;u&amp;&amp;n.animatingTo===n.last?0:v&amp;&amp;u?n.limit-(n.itemW+n.vars.itemMargin)*n.move*n.animatingTo:v&amp;&amp;n.currentSlide===n.last?n.limit:v?(n.itemW+n.vars.itemMargin)*n.move*n.currentSlide:u?(n.last-n.currentSlide+n.cloneOffset)*g:(n.currentSlide+n.cloneOffset)*g)}function o(e){e.stopPropagation();var a=e.target._slider;if(a){var n=-e.translationX,i=-e.translationY;return w+=d?i:n,h=w,y=d?Math.abs(w)&lt;Math.abs(-n):Math.abs(w)&lt;Math.abs(-i),e.detail===e.MSGESTURE_FLAG_INERTIA?void setImmediate(function(){t._gesture.stop()}):void((!y||Number(new Date)-S&gt;500)&amp;&amp;(e.preventDefault(),!p&amp;&amp;a.transitions&amp;&amp;(a.vars.animationLoop||(h=w/(0===a.currentSlide&amp;&amp;0&gt;w||a.currentSlide===a.last&amp;&amp;w&gt;0?Math.abs(w)/g+2:1)),a.setProps(f+h,&quot;setTouch&quot;))))}}function l(e){e.stopPropagation();var t=e.target._slider;if(t){if(t.animatingTo===t.currentSlide&amp;&amp;!y&amp;&amp;null!==h){var a=u?-h:h,n=t.getTarget(a&gt;0?&quot;next&quot;:&quot;prev&quot;);t.canAdvance(n)&amp;&amp;(Number(new Date)-S&lt;550&amp;&amp;Math.abs(a)&gt;50||Math.abs(a)&gt;g/2)?t.flexAnimate(n,t.vars.pauseOnAction):p||t.flexAnimate(t.currentSlide,t.vars.pauseOnAction,!0)}c=null,m=null,h=null,f=null,w=0}}var c,m,f,g,h,S,y=!1,x=0,b=0,w=0;r?(t.style.msTouchAction=&quot;none&quot;,t._gesture=new MSGesture,t._gesture.target=t,t.addEventListener(&quot;MSPointerDown&quot;,s,!1),t._slider=n,t.addEventListener(&quot;MSGestureChange&quot;,o,!1),t.addEventListener(&quot;MSGestureEnd&quot;,l,!1)):t.addEventListener(&quot;touchstart&quot;,e,!1)},resize:function(){!n.animating&amp;&amp;n.is(&quot;:visible&quot;)&amp;&amp;(v||n.doMath(),p?f.smoothHeight():v?(n.slides.width(n.computedW),n.update(n.pagingCount),n.setProps()):d?(n.viewport.height(n.h),n.setProps(n.h,&quot;setTotal&quot;)):(n.vars.smoothHeight&amp;&amp;f.smoothHeight(),n.newSlides.width(n.computedW),n.setProps(n.computedW,&quot;setTotal&quot;)))},smoothHeight:function(e){if(!d||p){var t=p?n:n.viewport;e?t.animate({height:n.slides.eq(n.animatingTo).height()},e):t.height(n.slides.eq(n.animatingTo).height())}},sync:function(t){var a=e(n.vars.sync).data(&quot;flexslider&quot;),i=n.animatingTo;switch(t){case&quot;animate&quot;:a.flexAnimate(i,n.vars.pauseOnAction,!1,!0);break;case&quot;play&quot;:a.playing||a.asNav||a.play();break;case&quot;pause&quot;:a.pause()}},uniqueID:function(t){return t.filter(&quot;[id]&quot;).add(t.find(&quot;[id]&quot;)).each(function(){var t=e(this);t.attr(&quot;id&quot;,t.attr(&quot;id&quot;)+&quot;_clone&quot;)}),t},pauseInvisible:{visProp:null,init:function(){var e=f.pauseInvisible.getHiddenProp();if(e){var t=e.replace(/[H|h]idden/,&quot;&quot;)+&quot;visibilitychange&quot;;document.addEventListener(t,function(){f.pauseInvisible.isHidden()?n.startTimeout?clearTimeout(n.startTimeout):n.pause():n.started?n.play():n.vars.initDelay&gt;0?setTimeout(n.play,n.vars.initDelay):n.play()})}},isHidden:function(){var e=f.pauseInvisible.getHiddenProp();return e?document[e]:!1},getHiddenProp:function(){var e=[&quot;webkit&quot;,&quot;moz&quot;,&quot;ms&quot;,&quot;o&quot;];if(&quot;hidden&quot;in document)return&quot;hidden&quot;;for(var t=0;t&lt;e.length;t++)if(e[t]+&quot;Hidden&quot;in document)return e[t]+&quot;Hidden&quot;;return null}},setToClearWatchedEvent:function(){clearTimeout(i),i=setTimeout(function(){c=&quot;&quot;},3e3)}},n.flexAnimate=function(t,a,i,r,l){if(n.vars.animationLoop||t===n.currentSlide||(n.direction=t&gt;n.currentSlide?&quot;next&quot;:&quot;prev&quot;),m&amp;&amp;1===n.pagingCount&amp;&amp;(n.direction=n.currentItem&lt;t?&quot;next&quot;:&quot;prev&quot;),!n.animating&amp;&amp;(n.canAdvance(t,l)||i)&amp;&amp;n.is(&quot;:visible&quot;)){if(m&amp;&amp;r){var c=e(n.vars.asNavFor).data(&quot;flexslider&quot;);if(n.atEnd=0===t||t===n.count-1,c.flexAnimate(t,!0,!1,!0,l),n.direction=n.currentItem&lt;t?&quot;next&quot;:&quot;prev&quot;,c.direction=n.direction,Math.ceil((t+1)/n.visible)-1===n.currentSlide||0===t)return n.currentItem=t,n.slides.removeClass(s+&quot;active-slide&quot;).eq(t).addClass(s+&quot;active-slide&quot;),!1;n.currentItem=t,n.slides.removeClass(s+&quot;active-slide&quot;).eq(t).addClass(s+&quot;active-slide&quot;),t=Math.floor(t/n.visible)}if(n.animating=!0,n.animatingTo=t,a&amp;&amp;n.pause(),n.vars.before(n),n.syncExists&amp;&amp;!l&amp;&amp;f.sync(&quot;animate&quot;),n.vars.controlNav&amp;&amp;f.controlNav.active(),v||n.slides.removeClass(s+&quot;active-slide&quot;).eq(t).addClass(s+&quot;active-slide&quot;),n.atEnd=0===t||t===n.last,n.vars.directionNav&amp;&amp;f.directionNav.update(),t===n.last&amp;&amp;(n.vars.end(n),n.vars.animationLoop||n.pause()),p)o?(n.slides.eq(n.currentSlide).css({opacity:0,zIndex:1}),n.slides.eq(t).css({opacity:1,zIndex:2}),n.wrapup(y)):(n.slides.eq(n.currentSlide).css({zIndex:1}).animate({opacity:0},n.vars.animationSpeed,n.vars.easing),n.slides.eq(t).css({zIndex:2}).animate({opacity:1},n.vars.animationSpeed,n.vars.easing,n.wrapup));else{var g,h,S,y=d?n.slides.filter(&quot;:first&quot;).height():n.computedW;v?(g=n.vars.itemMargin,S=(n.itemW+g)*n.move*n.animatingTo,h=S&gt;n.limit&amp;&amp;1!==n.visible?n.limit:S):h=0===n.currentSlide&amp;&amp;t===n.count-1&amp;&amp;n.vars.animationLoop&amp;&amp;&quot;next&quot;!==n.direction?u?(n.count+n.cloneOffset)*y:0:n.currentSlide===n.last&amp;&amp;0===t&amp;&amp;n.vars.animationLoop&amp;&amp;&quot;prev&quot;!==n.direction?u?0:(n.count+1)*y:u?(n.count-1-t+n.cloneOffset)*y:(t+n.cloneOffset)*y,n.setProps(h,&quot;&quot;,n.vars.animationSpeed),n.transitions?(n.vars.animationLoop&amp;&amp;n.atEnd||(n.animating=!1,n.currentSlide=n.animatingTo),n.container.unbind(&quot;webkitTransitionEnd transitionend&quot;),n.container.bind(&quot;webkitTransitionEnd transitionend&quot;,function(){clearTimeout(n.ensureAnimationEnd),n.wrapup(y)}),clearTimeout(n.ensureAnimationEnd),n.ensureAnimationEnd=setTimeout(function(){n.wrapup(y)},n.vars.animationSpeed+100)):n.container.animate(n.args,n.vars.animationSpeed,n.vars.easing,function(){n.wrapup(y)})}n.vars.smoothHeight&amp;&amp;f.smoothHeight(n.vars.animationSpeed)}},n.wrapup=function(e){p||v||(0===n.currentSlide&amp;&amp;n.animatingTo===n.last&amp;&amp;n.vars.animationLoop?n.setProps(e,&quot;jumpEnd&quot;):n.currentSlide===n.last&amp;&amp;0===n.animatingTo&amp;&amp;n.vars.animationLoop&amp;&amp;n.setProps(e,&quot;jumpStart&quot;)),n.animating=!1,n.currentSlide=n.animatingTo,n.vars.after(n)},n.animateSlides=function(){!n.animating&amp;&amp;g&amp;&amp;n.flexAnimate(n.getTarget(&quot;next&quot;))},n.pause=function(){clearInterval(n.animatedSlides),n.animatedSlides=null,n.playing=!1,n.vars.pausePlay&amp;&amp;f.pausePlay.update(&quot;play&quot;),n.syncExists&amp;&amp;f.sync(&quot;pause&quot;)},n.play=function(){n.playing&amp;&amp;clearInterval(n.animatedSlides),n.animatedSlides=n.animatedSlides||setInterval(n.animateSlides,n.vars.slideshowSpeed),n.started=n.playing=!0,n.vars.pausePlay&amp;&amp;f.pausePlay.update(&quot;pause&quot;),n.syncExists&amp;&amp;f.sync(&quot;play&quot;)},n.stop=function(){n.pause(),n.stopped=!0},n.canAdvance=function(e,t){var a=m?n.pagingCount-1:n.last;return t?!0:m&amp;&amp;n.currentItem===n.count-1&amp;&amp;0===e&amp;&amp;&quot;prev&quot;===n.direction?!0:m&amp;&amp;0===n.currentItem&amp;&amp;e===n.pagingCount-1&amp;&amp;&quot;next&quot;!==n.direction?!1:e!==n.currentSlide||m?n.vars.animationLoop?!0:n.atEnd&amp;&amp;0===n.currentSlide&amp;&amp;e===a&amp;&amp;&quot;next&quot;!==n.direction?!1:n.atEnd&amp;&amp;n.currentSlide===a&amp;&amp;0===e&amp;&amp;&quot;next&quot;===n.direction?!1:!0:!1},n.getTarget=function(e){return n.direction=e,&quot;next&quot;===e?n.currentSlide===n.last?0:n.currentSlide+1:0===n.currentSlide?n.last:n.currentSlide-1},n.setProps=function(e,t,a){var i=function(){var a=e?e:(n.itemW+n.vars.itemMargin)*n.move*n.animatingTo,i=function(){if(v)return&quot;setTouch&quot;===t?e:u&amp;&amp;n.animatingTo===n.last?0:u?n.limit-(n.itemW+n.vars.itemMargin)*n.move*n.animatingTo:n.animatingTo===n.last?n.limit:a;switch(t){case&quot;setTotal&quot;:return u?(n.count-1-n.currentSlide+n.cloneOffset)*e:(n.currentSlide+n.cloneOffset)*e;case&quot;setTouch&quot;:return u?e:e;case&quot;jumpEnd&quot;:return u?e:n.count*e;case&quot;jumpStart&quot;:return u?n.count*e:e;default:return e}}();return-1*i+&quot;px&quot;}();n.transitions&amp;&amp;(i=d?&quot;translate3d(0,&quot;+i+&quot;,0)&quot;:&quot;translate3d(&quot;+i+&quot;,0,0)&quot;,a=void 0!==a?a/1e3+&quot;s&quot;:&quot;0s&quot;,n.container.css(&quot;-&quot;+n.pfx+&quot;-transition-duration&quot;,a),n.container.css(&quot;transition-duration&quot;,a)),n.args[n.prop]=i,(n.transitions||void 0===a)&amp;&amp;n.container.css(n.args),n.container.css(&quot;transform&quot;,i)},n.setup=function(t){if(p)n.slides.css({width:&quot;100%&quot;,&quot;float&quot;:&quot;left&quot;,marginRight:&quot;-100%&quot;,position:&quot;relative&quot;}),&quot;init&quot;===t&amp;&amp;(o?n.slides.css({opacity:0,display:&quot;block&quot;,webkitTransition:&quot;opacity &quot;+n.vars.animationSpeed/1e3+&quot;s ease&quot;,zIndex:1}).eq(n.currentSlide).css({opacity:1,zIndex:2}):0==n.vars.fadeFirstSlide?n.slides.css({opacity:0,display:&quot;block&quot;,zIndex:1}).eq(n.currentSlide).css({zIndex:2}).css({opacity:1}):n.slides.css({opacity:0,display:&quot;block&quot;,zIndex:1}).eq(n.currentSlide).css({zIndex:2}).animate({opacity:1},n.vars.animationSpeed,n.vars.easing)),n.vars.smoothHeight&amp;&amp;f.smoothHeight();else{var a,i;&quot;init&quot;===t&amp;&amp;(n.viewport=e(&#039;&lt;div class=&quot;&#039;+s+&#039;viewport&quot;&gt;&lt;/div&gt;&#039;).css({overflow:&quot;hidden&quot;,position:&quot;relative&quot;}).appendTo(n).append(n.container),n.cloneCount=0,n.cloneOffset=0,u&amp;&amp;(i=e.makeArray(n.slides).reverse(),n.slides=e(i),n.container.empty().append(n.slides))),n.vars.animationLoop&amp;&amp;!v&amp;&amp;(n.cloneCount=2,n.cloneOffset=1,&quot;init&quot;!==t&amp;&amp;n.container.find(&quot;.clone&quot;).remove(),n.container.append(f.uniqueID(n.slides.first().clone().addClass(&quot;clone&quot;)).attr(&quot;aria-hidden&quot;,&quot;true&quot;)).prepend(f.uniqueID(n.slides.last().clone().addClass(&quot;clone&quot;)).attr(&quot;aria-hidden&quot;,&quot;true&quot;))),n.newSlides=e(n.vars.selector,n),a=u?n.count-1-n.currentSlide+n.cloneOffset:n.currentSlide+n.cloneOffset,d&amp;&amp;!v?(n.container.height(200*(n.count+n.cloneCount)+&quot;%&quot;).css(&quot;position&quot;,&quot;absolute&quot;).width(&quot;100%&quot;),setTimeout(function(){n.newSlides.css({display:&quot;block&quot;}),n.doMath(),n.viewport.height(n.h),n.setProps(a*n.h,&quot;init&quot;)},&quot;init&quot;===t?100:0)):(n.container.width(200*(n.count+n.cloneCount)+&quot;%&quot;),n.setProps(a*n.computedW,&quot;init&quot;),setTimeout(function(){n.doMath(),n.newSlides.css({width:n.computedW,&quot;float&quot;:&quot;left&quot;,display:&quot;block&quot;}),n.vars.smoothHeight&amp;&amp;f.smoothHeight()},&quot;init&quot;===t?100:0))}v||n.slides.removeClass(s+&quot;active-slide&quot;).eq(n.currentSlide).addClass(s+&quot;active-slide&quot;),n.vars.init(n)},n.doMath=function(){var e=n.slides.first(),t=n.vars.itemMargin,a=n.vars.minItems,i=n.vars.maxItems;n.w=void 0===n.viewport?n.width():n.viewport.width(),n.h=e.height(),n.boxPadding=e.outerWidth()-e.width(),v?(n.itemT=n.vars.itemWidth+t,n.minW=a?a*n.itemT:n.w,n.maxW=i?i*n.itemT-t:n.w,n.itemW=n.minW&gt;n.w?(n.w-t*(a-1))/a:n.maxW&lt;n.w?(n.w-t*(i-1))/i:n.vars.itemWidth&gt;n.w?n.w:n.vars.itemWidth,n.visible=Math.floor(n.w/n.itemW),n.move=n.vars.move&gt;0&amp;&amp;n.vars.move&lt;n.visible?n.vars.move:n.visible,n.pagingCount=Math.ceil((n.count-n.visible)/n.move+1),n.last=n.pagingCount-1,n.limit=1===n.pagingCount?0:n.vars.itemWidth&gt;n.w?n.itemW*(n.count-1)+t*(n.count-1):(n.itemW+t)*n.count-n.w-t):(n.itemW=n.w,n.pagingCount=n.count,n.last=n.count-1),n.computedW=n.itemW-n.boxPadding},n.update=function(e,t){n.doMath(),v||(e&lt;n.currentSlide?n.currentSlide+=1:e&lt;=n.currentSlide&amp;&amp;0!==e&amp;&amp;(n.currentSlide-=1),n.animatingTo=n.currentSlide),n.vars.controlNav&amp;&amp;!n.manualControls&amp;&amp;(&quot;add&quot;===t&amp;&amp;!v||n.pagingCount&gt;n.controlNav.length?f.controlNav.update(&quot;add&quot;):(&quot;remove&quot;===t&amp;&amp;!v||n.pagingCount&lt;n.controlNav.length)&amp;&amp;(v&amp;&amp;n.currentSlide&gt;n.last&amp;&amp;(n.currentSlide-=1,n.animatingTo-=1),f.controlNav.update(&quot;remove&quot;,n.last))),n.vars.directionNav&amp;&amp;f.directionNav.update()},n.addSlide=function(t,a){var i=e(t);n.count+=1,n.last=n.count-1,d&amp;&amp;u?void 0!==a?n.slides.eq(n.count-a).after(i):n.container.prepend(i):void 0!==a?n.slides.eq(a).before(i):n.container.append(i),n.update(a,&quot;add&quot;),n.slides=e(n.vars.selector+&quot;:not(.clone)&quot;,n),n.setup(),n.vars.added(n)},n.removeSlide=function(t){var a=isNaN(t)?n.slides.index(e(t)):t;n.count-=1,n.last=n.count-1,isNaN(t)?e(t,n.slides).remove():d&amp;&amp;u?n.slides.eq(n.last).remove():n.slides.eq(t).remove(),n.doMath(),n.update(a,&quot;remove&quot;),n.slides=e(n.vars.selector+&quot;:not(.clone)&quot;,n),n.setup(),n.vars.removed(n)},f.init()},e(window).blur(function(){focused=!1}).focus(function(){focused=!0}),e.flexslider.defaults={namespace:&quot;flex-&quot;,selector:&quot;.slides &gt; li&quot;,animation:&quot;fade&quot;,easing:&quot;swing&quot;,direction:&quot;horizontal&quot;,reverse:!1,animationLoop:!0,smoothHeight:!1,startAt:0,slideshow:!0,slideshowSpeed:7e3,animationSpeed:600,initDelay:0,randomize:!1,fadeFirstSlide:!0,thumbCaptions:!1,pauseOnAction:!0,pauseOnHover:!1,pauseInvisible:!0,useCSS:!0,touch:!0,video:!1,controlNav:!0,directionNav:!0,prevText:&quot;Previous&quot;,nextText:&quot;Next&quot;,keyboard:!0,multipleKeyboard:!1,mousewheel:!1,pausePlay:!1,pauseText:&quot;Pause&quot;,playText:&quot;Play&quot;,controlsContainer:&quot;&quot;,manualControls:&quot;&quot;,sync:&quot;&quot;,asNavFor:&quot;&quot;,itemWidth:0,itemMargin:0,minItems:1,maxItems:0,move:0,allowOneSlide:!0,start:function(){},before:function(){},after:function(){},end:function(){},added:function(){},removed:function(){},init:function(){}},e.fn.flexslider=function(t){if(void 0===t&amp;&amp;(t={}),&quot;object&quot;==typeof t)return this.each(function(){var a=e(this),n=t.selector?t.selector:&quot;.slides &gt; li&quot;,i=a.find(n);1===i.length&amp;&amp;t.allowOneSlide===!0||0===i.length?(i.fadeIn(400),t.start&amp;&amp;t.start(a)):void 0===a.data(&quot;flexslider&quot;)&amp;&amp;new e.flexslider(this,t)});var a=e(this).data(&quot;flexslider&quot;);switch(t){case&quot;play&quot;:a.play();break;case&quot;pause&quot;:a.pause();break;case&quot;stop&quot;:a.stop();break;case&quot;next&quot;:a.flexAnimate(a.getTarget(&quot;next&quot;),!0);break;case&quot;prev&quot;:case&quot;previous&quot;:a.flexAnimate(a.getTarget(&quot;prev&quot;),!0);break;default:&quot;number&quot;==typeof t&amp;&amp;a.flexAnimate(t,!0)}}}(jQuery);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).setImmediate))
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(setImmediate, clearImmediate) {var nextTick = __webpack_require__(4).nextTick;
+	var slice = Array.prototype.slice;
+	var immediateIds = {};
+	var nextImmediateId = 0;
+
+	// DOM APIs, for completeness
+
+	if (typeof setTimeout !== &#039;undefined&#039;) exports.setTimeout = function() { return setTimeout.apply(window, arguments); };
+	if (typeof clearTimeout !== &#039;undefined&#039;) exports.clearTimeout = function() { clearTimeout.apply(window, arguments); };
+	if (typeof setInterval !== &#039;undefined&#039;) exports.setInterval = function() { return setInterval.apply(window, arguments); };
+	if (typeof clearInterval !== &#039;undefined&#039;) exports.clearInterval = function() { clearInterval.apply(window, arguments); };
+
+	// TODO: Change to more efficient list approach used in Node.js
+	// For now, we just implement the APIs using the primitives above.
+
+	exports.enroll = function(item, delay) {
+	  item._timeoutID = setTimeout(item._onTimeout, delay);
+	};
+
+	exports.unenroll = function(item) {
+	  clearTimeout(item._timeoutID);
+	};
+
+	exports.active = function(item) {
+	  // our naive impl doesn&#039;t care (correctness is still preserved)
+	};
+
+	// That&#039;s not how node.js implements it but the exposed api is the same.
+	exports.setImmediate = typeof setImmediate === &quot;function&quot; ? setImmediate : function(fn) {
+	  var id = nextImmediateId++;
+	  var args = arguments.length &lt; 2 ? false : slice.call(arguments, 1);
+
+	  immediateIds[id] = true;
+
+	  nextTick(function onNextTick() {
+	    if (immediateIds[id]) {
+	      // fn.call() is faster so we optimize for the common use-case
+	      // @see http://jsperf.com/call-apply-segu
+	      if (args) {
+	        fn.apply(null, args);
+	      } else {
+	        fn.call(null);
+	      }
+	      // Prevent ids from leaking
+	      exports.clearImmediate(id);
+	    }
+	  });
+
+	  return id;
+	};
+
+	exports.clearImmediate = typeof clearImmediate === &quot;function&quot; ? clearImmediate : function(id) {
+	  delete immediateIds[id];
+	};
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).setImmediate, __webpack_require__(3).clearImmediate))
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// shim for using process in browser
+
+	var process = module.exports = {};
+	var queue = [];
+	var draining = false;
+
+	function drainQueue() {
+	    if (draining) {
+	        return;
+	    }
+	    draining = true;
+	    var currentQueue;
+	    var len = queue.length;
+	    while(len) {
+	        currentQueue = queue;
+	        queue = [];
+	        var i = -1;
+	        while (++i &lt; len) {
+	            currentQueue[i]();
+	        }
+	        len = queue.length;
+	    }
+	    draining = false;
+	}
+	process.nextTick = function (fun) {
+	    queue.push(fun);
+	    if (!draining) {
+	        setTimeout(drainQueue, 0);
+	    }
+	};
+
+	process.title = &#039;browser&#039;;
+	process.browser = true;
+	process.env = {};
+	process.argv = [];
+	process.version = &#039;&#039;; // empty string to avoid regexp issues
+
+	function noop() {}
+
+	process.on = noop;
+	process.addListener = noop;
+	process.once = noop;
+	process.off = noop;
+	process.removeListener = noop;
+	process.removeAllListeners = noop;
+	process.emit = noop;
+
+	process.binding = function (name) {
+	    throw new Error(&#039;process.binding is not supported&#039;);
+	};
+
+	// TODO(shtylman)
+	process.cwd = function () { return &#039;/&#039; };
+	process.chdir = function (dir) {
+	    throw new Error(&#039;process.chdir is not supported&#039;);
+	};
+	process.umask = function() { return 0; };
+
+
+/***/ }
+/******/ ])</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ complexity.cyclomatic }} <br>
+    Length : {{ complexity.halstead.length }} <br>
+    Difficulty : {{ complexity.halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ complexity.halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

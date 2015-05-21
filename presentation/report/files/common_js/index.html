@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - common.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>common.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">68.21</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">239</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">51.00</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">2.88</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">var extend = function(ary, value){
+	for(var prot in value) {
+		ary[prot] = value[prot];
+	}
+	return ary;
+}
+
+var scrollFunction = function(){
+	this.option = {
+		target: &#039;.toTop&#039;,
+		speed: 200,
+	}
+	this.option = extend(this.option, arguments[0]);
+}
+
+scrollFunction.prototype = {
+	init: function(){
+		var sclTop = $(arguments).scrollTop();
+		(sclTop &gt;= 1)? this.show() : this.hide();
+	},
+	show: function(){
+		$(this.option.target).stop().fadeIn(this.option.speed);
+	},
+	hide: function(){
+		$(this.option.target).stop().fadeOut(this.option.speed / 3);
+	},
+	animate: function(arg){
+		$(&#039;html,body&#039;).animate({scrollTop: arg}, this.option.speed);
+	}
+}
+
+var _SCROLL =function(){},
+	scroll;
+
+_SCROLL.prototype = new scrollFunction();
+scroll = new _SCROLL();
+
+var toggleFunction = function(){
+	this.option = {
+		name: &#039;open&#039;,
+		speed: 200
+	}
+	this.option = extend(this.option, arguments[0]);
+}
+toggleFunction.prototype = {
+	init: function(){
+		var _self = $(arguments);
+		(_self.hasClass(this.option.name))? _self.next().stop().slideDown(this.option.speed) : _self.next().stop().slideUp(this.option.speed);
+	},
+	icon: function(){
+		var _self = $(arguments);
+			(_self.hasClass(this.option.name))? _self.removeClass(this.option.name) : _self.addClass(this.option.name);
+	}
+}
+
+var _TOGGLE =function(){},
+	toggle;
+
+_TOGGLE.prototype = new toggleFunction();
+toggle = new _TOGGLE();
+
+var slideFunc = function(){
+	this.option = {
+		target1: &quot;&quot;,
+		target2: &quot;&quot;,
+		easeIn: &#039;&#039;,
+		easeOut: &#039;easeOutExpo&#039;,
+		speed1: 200,
+		speed2: 300,
+	}
+	this.option = extend(this.option, arguments[0]);
+};
+
+slideFunc.prototype = {
+	show: function(arg1, arg2){
+		arg1.stop().animate({&#039;opacity&#039;: 0}, this.option.speed1);
+	 	arg2.stop().animate({&#039;left&#039;:0}, this.option.spped2, &#039;easeOutExpo&#039;);
+	},
+	hide: function(arg1, arg2){
+		arg1.stop().animate({&#039;opacity&#039;: 1}, this.option.speed1);
+		arg2.stop().animate({&#039;left&#039;:&#039;-9999px&#039;}, this.option.spped2, &#039;easeInExpo&#039;);
+	}
+}
+
+var _SLIDE =function(){},
+	slides;
+
+_SLIDE.prototype = new slideFunc();
+slides = new _SLIDE();
+
+$(function(){
+	var allImage = $(&quot;img&quot;);
+	var allImageCount = allImage.length;
+	var completeImageCount = 0;
+
+	for(var i = 0; i &lt; allImageCount; i++){
+		$(allImage[i]).bind(&quot;load&quot;, function(){
+		  completeImageCount ++;
+		  if (allImageCount == completeImageCount){
+		    $(&#039;figure, .c-slides__body, .c-itemView__title&#039;).removeClass(&#039;is-ready&#039;)
+		  }
+		});
+	}
+	var tabs = $(&#039;.c-tabs__item&#039;).find(&#039;a&#039;),
+		men = $(&#039;.p-itemMens&#039;),
+		ladi = $(&#039;.p-itemLadies&#039;);
+	tabs.on(&#039;click&#039;, function(){
+		var _self = $(this).parent(),
+			_cl = &#039;is-tabActive&#039;;
+		if(!_self.hasClass(_cl)){
+			tabs.parent().removeClass(_cl);
+			_self.addClass(_cl);;
+			switch(_self.index()){
+				case 0: 
+						men.show();
+						ladi.hide();
+					break;
+				case 1: 
+						ladi.show();
+						men.hide();
+					break;
+			}
+		}
+	});
+	
+	$(&#039;.c-headerMenu__body&#039;).append($(&#039;&lt;div/&gt;&#039;).addClass(&#039;c-menuOuter&#039;).height($(window).outerHeight()-$(&#039;.l-header&#039;).outerHeight()));
+	$(&#039;.c-mainSlider&#039;).flexslider({
+			slideshow: false,
+			touch: true,
+			controlNav: true,
+			directionNav: true
+		});
+	$(&#039;.c-interviewSlide&#039;).flexslider({
+			slideshow: false,
+			touch: true,
+			controlNav: false,
+			directionNav: true
+		});
+
+	var _header = $(&#039;.l-header&#039;),
+		_scrollClass = &#039;is-fixed&#039;;
+
+	$(window).on(&#039;scroll&#039;, function(){
+		var _scl = $(this).scrollTop();
+		if(_scl&gt;0){
+			$(_header).addClass(_scrollClass);
+		}else {
+			$(_header).removeClass(_scrollClass);
+		}
+
+	});
+
+	$(&#039;.c-itemView&#039;).bind(&#039;touchstart touchmove touchend&#039;, function(e) {
+    e.preventDefault();
+    var _touch = event.changedTouches[0],
+    	 _self = $(this);
+    switch(e.type){
+			case &#039;touchstart&#039;:
+				startX = _touch.pageX;
+				startY = _touch.pageY;
+
+				break;
+			case &#039;touchmove&#039;:
+				 diffX = _touch.pageX - startX;
+				 diffY = _touch.pageY - startY;
+				 
+				 if (( diffY != 0 )) {
+			        $(window).scrollTop($(window).scrollTop() - diffY);
+			    }
+				break;
+			case &#039;touchend&#039;:
+				endX = _touch.pageX;
+				endY = _touch.pageY;
+				var _el = _self.find(&#039;.c-itemView__detail&#039;),
+					_arw = _self.find(&#039;.c-controler__item--right&#039;);
+				if(endX){
+					if(diffX &gt; 65) {
+					 	slides.show(_arw, _el);
+					}else if(diffX &lt; -50) {
+						slides.hide(_arw, _el);
+					}
+				}
+				break;
+	}
+	});
+	$(&#039;.c-controler__item--right&#039;).find(&#039;a&#039;).on(&#039;click, touchend&#039;, function(e){
+		var _self = $(this);
+	 	slides.show( _self.parent(),  _self.parents(&#039;dl&#039;).find(&#039;.c-itemView__detail&#039;));
+	 	e.preventDefault();
+	});
+	$(&#039;.c-controler__item--left&#039;).find(&#039;a&#039;).on(&#039;click, touchend&#039;, function(e){
+		var _self = $(this);
+	 	slides.hide( _self.parents(&#039;.c-itemView&#039;).find(&#039;.c-controler__item--right&#039;),  _self.parents(&#039;dl&#039;).find(&#039;.c-itemView__detail&#039;));
+	 	e.preventDefault();
+	});
+	$(&#039;.toTop&#039;).on(&#039;click&#039;, function(e){
+		scroll.animate(0);
+		e.preventDefault();
+	});
+
+	var _menu = $(&#039;.c-headerMenu__body&#039;),
+		_btn = $(&#039;.c-headerMenu__btn&#039;),
+		_menuTgClass = &#039;show&#039;,
+		_top = &#039;top&#039;,
+		_speed = 200;
+	_btn.find(&#039;a&#039;).on(&#039;click&#039;, function(e){
+		var _self = $(this);
+		if(!_self.hasClass(_menuTgClass)){
+			_self.addClass(_menuTgClass);
+			_menu.stop().animate({&#039;top&#039;: &#039;59px&#039;}, _speed, &#039;easeOutExpo&#039;);
+		}else{
+			_self.removeClass(_menuTgClass);
+			_menu.stop().animate({&#039;top&#039;: &#039;-9999px&#039;}, _speed, &#039;easeInExpo&#039;);
+		}
+		e.preventDefault();
+	});
+	$(&#039;.c-menuOuter&#039;).on(&#039;click&#039;, function(){
+		_btn.removeClass(_menuTgClass);
+		_menu.stop().animate({&#039;top&#039;: &#039;-9999px&#039;}, _speed, &#039;easeInExpo&#039;);
+	});
+	var _tgClass = &#039;is-toggle&#039;,
+		_target = $(&#039;.c-interviewContens__toggle&#039;),
+		_innerEl = &#039;span&#039;,
+		_speed =  &#039;300&#039;;
+
+	$(&#039;.c-button__toggle&#039;).on(&#039;click&#039;, function(e){
+		var _self = $(this);
+		if(!_self.hasClass(_tgClass)){
+			_self.addClass(_tgClass);
+			_self.find(innerEl).text(&#039;閉じる&#039;);
+			_target.stop().slideDown(_speed, &#039;easeOutCubic&#039;);		
+		}else{
+			_self.removeClass(_tgClass);
+			_self.find(innerEl).text(&#039;続きを見る&#039;);
+			_target.stop().slideUp(_speed, &#039;easeInCubic&#039;);
+		}
+		e.preventDefault();
+	});
+});</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ complexity.cyclomatic }} <br>
+    Length : {{ complexity.halstead.length }} <br>
+    Difficulty : {{ complexity.halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ complexity.halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>
