@@ -8,25 +8,22 @@
   <meta generator="atom">
   
   <title>本サイトについて | Guide&amp;Memo</title>
-  <meta name="description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用し制作しました。
+  <meta name="description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用しgithub上にページ制作し公開ました。
 概要ご閲覧いただきありがとうございます。
-本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いです。
-基礎とかのページもあ">
+本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いで">
 <meta property="og:type" content="article">
 <meta property="og:title" content="本サイトについて">
 <meta property="og:image" content="http://taisun.github.io/img/ogp_image.png">
 <meta property="og:url" content="http://taisun.github.io/uncategorized/index">
 <meta property="og:site_name" content="Guide&Memo">
-<meta property="og:description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用し制作しました。
+<meta property="og:description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用しgithub上にページ制作し公開ました。
 概要ご閲覧いただきありがとうございます。
-本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いです。
-基礎とかのページもあ">
+本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いで">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="本サイトについて">
-<meta name="twitter:description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用し制作しました。
+<meta name="twitter:description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用しgithub上にページ制作し公開ました。
 概要ご閲覧いただきありがとうございます。
-本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いです。
-基礎とかのページもあ">
+本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いで">
 <meta name="twitter:image:src" content="http://taisun.github.io/img/ogp_image.png">
 <meta name="twitter:creator" content="@taisun0523">
   <meta name="google-site-verification" content="mgpVzCYu5iYEYrcPjubr3THQ9YmfI_kYAwUDoJAHMII">
@@ -227,7 +224,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本サイトは「Static Site Generator(静的サイトジェネレーター)」<strong><a href="https://hexo.io/" target="_blank" rel="external">HEXO</a></strong>を使用し制作しました。</p>
+        <p>本サイトは「Static Site Generator(静的サイトジェネレーター)」<strong><a href="https://hexo.io/" target="_blank" rel="external">HEXO</a></strong>を使用し<a href="https://github.com/" target="_blank" rel="external">github</a>上にページ制作し公開ました。</p>
 <h2 id="概要">概要</h2><p>ご閲覧いただきありがとうございます。</p>
 <p>本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。<br>私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。<br>ご閲覧された方の参考になれば幸いです。</p>
 <p>基礎とかのページもありますが基本はコードの書き方は少しで <strong>どうやって考えて作るか</strong> に重点を置いてまとめております。</p>
