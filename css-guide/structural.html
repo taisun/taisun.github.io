@@ -368,14 +368,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-63015288-1', 'auto');
 ga('send', 'pageview');
 
-$("a").click(function(e) {
-        var ahref = $(this).attr('href');
-        if (ahref.indexOf("websae.net") != -1 || ahref.indexOf("http") == -1 ) {
-            ga('send', 'event', '内部リンク', 'クリック', ahref);}
-        else {
-            ga('send', 'event', '外部リンク', 'クリック', ahref);}
-        });
-    });
 </script>
 <!-- End Google Analytics -->
 
