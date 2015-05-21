@@ -7,23 +7,26 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta generator="atom">
   
-  <title>Javascriptガイドライン | Guide&amp;Memo</title>
-  <meta name="description" content="Javascriptのガイドラインです。基本はJavascriptですが一部「jQuery」&amp;amp; 「undescoreJs」などの記述もあります。コーディングルール・命名規則などを記述していきます。
-両方記述しますが、命令型は基本として、宣言型を使用して記述していきたいです。
-Javascriptコーディングルール設計＆思考Javascriptコードの文脈（コンテキスト）を考えた命名規則、手">
+  <title>本サイトについて | Guide&amp;Memo</title>
+  <meta name="description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用し制作しました。
+概要ご閲覧いただきありがとうございます。
+本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いです。
+読んでいただくにあた">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascriptガイドライン">
+<meta property="og:title" content="本サイトについて">
 <meta property="og:image" content="http://taisun.github.io/img/ogp_image.png">
-<meta property="og:url" content="http://taisun.github.io/javascript-guide/index.html">
+<meta property="og:url" content="http://taisun.github.io/uncategorized/index">
 <meta property="og:site_name" content="Guide&Memo">
-<meta property="og:description" content="Javascriptのガイドラインです。基本はJavascriptですが一部「jQuery」&amp;amp; 「undescoreJs」などの記述もあります。コーディングルール・命名規則などを記述していきます。
-両方記述しますが、命令型は基本として、宣言型を使用して記述していきたいです。
-Javascriptコーディングルール設計＆思考Javascriptコードの文脈（コンテキスト）を考えた命名規則、手">
+<meta property="og:description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用し制作しました。
+概要ご閲覧いただきありがとうございます。
+本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いです。
+読んでいただくにあた">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Javascriptガイドライン">
-<meta name="twitter:description" content="Javascriptのガイドラインです。基本はJavascriptですが一部「jQuery」&amp;amp; 「undescoreJs」などの記述もあります。コーディングルール・命名規則などを記述していきます。
-両方記述しますが、命令型は基本として、宣言型を使用して記述していきたいです。
-Javascriptコーディングルール設計＆思考Javascriptコードの文脈（コンテキスト）を考えた命名規則、手">
+<meta name="twitter:title" content="本サイトについて">
+<meta name="twitter:description" content="本サイトは「Static Site Generator(静的サイトジェネレーター)」HEXOを使用し制作しました。
+概要ご閲覧いただきありがとうございます。
+本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。ご閲覧された方の参考になれば幸いです。
+読んでいただくにあた">
 <meta name="twitter:image:src" content="http://taisun.github.io/img/ogp_image.png">
 <meta name="twitter:creator" content="@taisun0523">
   <meta name="google-site-verification" content="mgpVzCYu5iYEYrcPjubr3THQ9YmfI_kYAwUDoJAHMII">
@@ -191,11 +194,11 @@ Javascriptコーディングルール設計＆思考Javascriptコードの文脈
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-index" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/javascript-guide/index.html" class="article-date">
-  	<time datetime="2015-05-13T06:40:35.000Z" itemprop="datePublished">2015-05-13</time>
+      <a href="/uncategorized/index" class="article-date">
+  	<time datetime="2015-05-13T07:41:10.000Z" itemprop="datePublished">2015-05-13</time>
 </a>
     </div>
   
@@ -208,7 +211,7 @@ Javascriptコーディングルール設計＆思考Javascriptコードの文脈
         
   
     <h1 class="article-title" itemprop="name">
-      Javascriptガイドライン
+      本サイトについて
     </h1>
   
 
@@ -224,26 +227,16 @@ Javascriptコーディングルール設計＆思考Javascriptコードの文脈
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Javascriptのガイドラインです。<br>基本はJavascriptですが一部「<strong><a href="https://jquery.com/" target="_blank" rel="external">jQuery</a></strong>」&amp; 「<strong><a href="http://underscorejs.org/" target="_blank" rel="external">undescoreJs</a></strong>」などの記述もあります。<br>コーディングルール・命名規則などを記述していきます。</p>
-<p>両方記述しますが、<br>命令型は基本として、宣言型を使用して記述していきたいです。</p>
-<h2 id="Javascriptコーディングルール設計＆思考"><a href="/javascript-guide/rule.html">Javascriptコーディングルール設計＆思考</a></h2><p>Javascriptコードの文脈（コンテキスト）を考えた命名規則、手法などのコーディングルールを書いております。</p>
-<ul>
-<li><a href="/javascript-guide/rule.html">コーディングルール設計＆思考</a></li>
-</ul>
-<h2 id="Javascriptの基礎＆思考"><a href="/javascript-guide/basic.html">Javascriptの基礎＆思考</a></h2><p>Javascriptの基礎について書いています。<br>基本的な書き方(if・for・関数など)の例と説明をしています。</p>
-<!--一つのコードをベースにどう書いていくかを説明しています。-->
-<ul>
-<li><a href="/javascript-guide/basic.html">Javascriptの基礎＆思考</a></li>
-</ul>
-<h2 id="Javascriptの設計＆思考"><a href="/javascript-guide/structural.html">Javascriptの設計＆思考</a></h2><p>Javascriptはしっかり設計しないと動作が遅くなってしまうため、<br>オブジェクト指向ベース宣言型コード（関数プログラミング）の手法につてい書いています。</p>
-<!--１つのコードをベースに書いていく。-->
-<ul>
-<li><a href="/javascript-guide/structural.html">Javascriptの設計</a></li>
-</ul>
-<h2 id="Javascriptのパフォーマンス＆テスト"><a href="/javascript-guide/performance.html">Javascriptのパフォーマンス＆テスト</a></h2><p>JavascriptはDOM(Document Object Model)などを操作したり、DOM(Document Object Model)を生成したりするとコードが増えたりパーフォマンスが下がります。<br><!--特に昨今ではスマートフォンなどの小型端末が普及しよりパーフォーマンスが重視されています。--><br>パーフォーマンスを意識したコードやファイルの読み込みやより早いコードを書くためのテスト方法について書いています。<br><a href="http://jsoverson.github.io/plato/examples/jquery/" target="_blank" rel="external">plato</a>や<a href="http://jasmine.github.io/" target="_blank" rel="external">jasmin</a>＆<a href="http://karma-runner.github.io/0.12/index.html" target="_blank" rel="external">karma</a>を使用したテスト。<br>テストコードの重要性について書いています。</p>
-<ul>
-<li><a href="/javascript-guide/performance.html">Javascriptのパフォーマンス＆テスト</a></li>
-</ul>
+        <p>本サイトは「Static Site Generator(静的サイトジェネレーター)」<strong><a href="https://hexo.io/" target="_blank" rel="external">HEXO</a></strong>を使用し制作しました。</p>
+<h2 id="概要">概要</h2><p>ご閲覧いただきありがとうございます。</p>
+<p>本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。<br>私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。<br>ご閲覧された方の参考になれば幸いです。</p>
+<h2 id="読んでいただくにあたり">読んでいただくにあたり</h2><p>本サイトはHTML/CSS/Javscriptが理解されている前提で書いております。<br>ですが初心者の方でもわかるように書いたつもりですので、<br>以下の順番で読んでいただくと理解しやすいと思います。</p>
+<div class="em"><strong><a href="/html-guide/index.html">HTML</a></strong>   =&gt;   <strong><a href="/css-guide/index.html">CSS</a></strong>   =&gt;   <strong><a href="/Javascript-guide/index.html">Javascript</a></strong> </div>
+
+<h2 id="お詫び">お詫び</h2><p>本サイトは現在頑張って執筆しています。</p>
+<p>途中のページやまだないページがありますが<br>なるべく早く完成させるように努力しますので<br>温かい目で見守ってください。</p>
+<p>宜しくお願い申し上げます。</p>
+<p>tasisun0523</p>
 
       
     </div>
