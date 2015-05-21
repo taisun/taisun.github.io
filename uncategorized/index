@@ -230,9 +230,16 @@
         <p>本サイトは「Static Site Generator(静的サイトジェネレーター)」<strong><a href="https://hexo.io/" target="_blank" rel="external">HEXO</a></strong>を使用し制作しました。</p>
 <h2 id="概要">概要</h2><p>ご閲覧いただきありがとうございます。</p>
 <p>本サイトはHTML/CSS/Javascriptの私的コーディングガイドラインとメモの目的で制作しました。<br>私自身の考えや手法をまとめて置く場でもあるの間違いなどあればご指摘ください。<br>ご閲覧された方の参考になれば幸いです。</p>
-<h2 id="読んでいただくにあたり">読んでいただくにあたり</h2><p>本サイトはHTML/CSS/Javscriptが理解されている前提で書いております。<br>ですが初心者の方でもわかるように書いたつもりですので、<br>HTMLの項目からお読みになって頂けるとより理解しやすいと思います。</p>
+<h2 id="読んでいただくにあたり">読んでいただくにあたり</h2><p>本サイトはHTML/CSS/Javscriptが理解されている前提で書いております。<br>ですが初心者の方でもわかるように書いたつもりですので、<br>以下の順番で読んでいただくと理解しやすいと思います。</p>
 <ul>
-<li><a href="/html-guide/index.html">HTMLガイドライン</a></li>
+<li><p><a href="/html-guide/index.html">HTML</a></p>
+<p>↓</p>
+</li>
+<li><p><a href="/css-guide/index.html">CSS</a></p>
+<p>↓</p>
+</li>
+<li><p><a href="/Javascript-guide/index.html">Javascript</a></p>
+</li>
 </ul>
 <h2 id="お詫び">お詫び</h2><p>本サイトは現在頑張って執筆しています。</p>
 <p>途中のページやまだないページがありますが<br>なるべく早く完成させるように努力しますので<br>温かい目で見守ってください。</p>
