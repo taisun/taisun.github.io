@@ -2,8 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://taisun.github.io/uncategorized/git</loc>
+    <lastmod>2015-05-28T08:11:27.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://taisun.github.io/uncategorized/page</loc>
+    <lastmod>2015-05-28T08:04:35.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://taisun.github.io/uncategorized/index</loc>
-    <lastmod>2015-05-21T04:25:14.000Z</lastmod>
+    <lastmod>2015-05-28T08:02:50.000Z</lastmod>
   </url>
   
   <url>

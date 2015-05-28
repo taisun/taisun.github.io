@@ -195,7 +195,7 @@
   
     <div class="article-meta">
       <a href="/uncategorized/index" class="article-date">
-  	<time datetime="2015-05-13T07:41:10.000Z" itemprop="datePublished">2015-05-13</time>
+  	<time datetime="2115-05-13T07:41:10.000Z" itemprop="datePublished">2115-05-13</time>
 </a>
     </div>
   
@@ -242,6 +242,16 @@
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/uncategorized/page" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">各ページの更新情報です</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 

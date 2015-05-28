@@ -7,17 +7,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta generator="atom">
   
-  <title>Archives: 2015 | Guide&amp;Memo</title>
-  <meta name="description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+  <title>各ページの更新情報です | Guide&amp;Memo</title>
+  <meta name="description" content="各種ページ公開しました。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Guide&Memo">
+<meta property="og:title" content="各ページの更新情報です">
 <meta property="og:image" content="http://taisun.github.io/img/ogp_image.png">
-<meta property="og:url" content="http://taisun.github.io/archives/2015/index.html">
+<meta property="og:url" content="http://taisun.github.io/uncategorized/page">
 <meta property="og:site_name" content="Guide&Memo">
-<meta property="og:description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+<meta property="og:description" content="各種ページ公開しました。">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Guide&Memo">
-<meta name="twitter:description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+<meta name="twitter:title" content="各ページの更新情報です">
+<meta name="twitter:description" content="各種ページ公開しました。">
 <meta name="twitter:image:src" content="http://taisun.github.io/img/ogp_image.png">
 <meta name="twitter:creator" content="@taisun0523">
   <meta name="google-site-verification" content="mgpVzCYu5iYEYrcPjubr3THQ9YmfI_kYAwUDoJAHMII">
@@ -185,74 +185,76 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-page" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/uncategorized/page" class="archive-article-date">
-  	<time datetime="2015-05-13T08:00:00.000Z" itemprop="datePublished">May 13</time>
+    <div class="article-meta">
+      <a href="/uncategorized/page" class="article-date">
+  	<time datetime="2015-05-13T08:00:00.000Z" itemprop="datePublished">2015-05-13</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/uncategorized/page">各ページの更新情報です</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      各ページの更新情報です
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>各種ページ公開しました。</li>
+</ul>
+
+      
+    </div>
+    
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/uncategorized/git" class="archive-article-date">
-  	<time datetime="2015-05-13T07:41:10.000Z" itemprop="datePublished">May 13</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/uncategorized/git">GitHubリポジトリ</a>
-    </h1>
+    <a href="/uncategorized/index" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          本サイトについて
+        
+      </div>
+    </a>
   
+  
+    <a href="/uncategorized/git" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">GitHubリポジトリ</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
+  
 </article>
-  
-  
-    </div></section>
-  
+
+
+
+
+
+
 </div>
       <footer id="footer">
   <div class="outer">
