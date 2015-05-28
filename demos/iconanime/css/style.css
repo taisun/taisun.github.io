@@ -1,0 +1,174 @@
+@charset "UTF-8";
+/*
+ * IconのUnicodeを返します
+ * @desc Sass4.3~ そのままではUnicodeを使用できないのでエスケープを利用して性k作しました
+ * @param $icnName mixinからの引数名
+ * @param $iconAry valiableの設定した配列です。
+ */
+/*
+ * WebFontをセットします
+ * @desc webフォントの設定用mixin
+ * @param $fontName variableで登録した任意の名前
+ * @param $path variableで登録した任意の値
+ * @param $name variableで登録した任意の値
+ */
+/*
+ * Iconをセットします
+ * @desc webフォントアイコンのです
+ * @param $icnName variableで登録した任意の名前
+ */
+/*
+ * AnimationMixin
+ * @desc CSS3のアニメーション
+ * @param $name variableで登録した任意の名前
+ */
+/*
+ * AnimationMixin
+ * @desc CSS3のアニメーションキーフレームを利用したもので主に回転系
+ * @param $animetionName variableで登録した任意の名前
+ * @param $anime variableで登録した任意の配列
+ */
+@font-face {
+  font-family: "FontAwesome";
+  src: url("../font/fontawesome-webfont.eot?v=4.3.0");
+  src: url("../font/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("../font/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("../font/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("../font/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("../font/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.c-icon__exl::before, .c-icon__word::before, .c-icon__pdf::before, .c-icon__spin::before, .c-icon__right::before, .c-icon__left::before {
+  display: inline-block;
+  font-family: "FontAwesome";
+}
+
+.c-icon__exl::before {
+  content: "\f1c3";
+}
+
+.c-icon__word::before {
+  content: "\f1c2";
+}
+
+.c-icon__pdf::before {
+  content: "\f1c1";
+}
+
+.c-icon__spin::before {
+  content: "\f110";
+  font-size: 30px;
+}
+.c-icon__spin::before {
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.c-icon__right {
+  -webkit-transform-origin: right bottom;
+  transform-origin: right bottom;
+}
+.c-icon__right::before {
+  content: "\f105";
+  font-size: 30px;
+}
+.c-icon__right::before {
+  -webkit-animation: swing 1.5s linear infinite;
+  animation: swing 1.5s linear infinite;
+}
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  40% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  60% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  80% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  40% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  60% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  80% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+.c-icon__left::before {
+  content: "\f104";
+  font-size: 30px;
+}
+.c-icon__left::before {
+  -webkit-animation: move 1.5s linear infinite;
+  animation: move 1.5s linear infinite;
+}
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+@keyframes move {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
