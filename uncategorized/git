@@ -7,17 +7,26 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta generator="atom">
   
-  <title>Archives: 2015 | Guide&amp;Memo</title>
-  <meta name="description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+  <title>GitHubリポジトリ | Guide&amp;Memo</title>
+  <meta name="description" content="アイコン＆アニメーションMixin 公開
+グリッドシステムMixin 公開
+メディアクエリのMixin 公開
+pxからremに変化するMixin 公開- 静的サイトのスタイルガイドベース　公開- 静的サイトジェレネータHEXOのベースファイル（本サイト）　公開">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Guide&Memo">
+<meta property="og:title" content="GitHubリポジトリ">
 <meta property="og:image" content="http://taisun.github.io/img/ogp_image.png">
-<meta property="og:url" content="http://taisun.github.io/archives/2015/index.html">
+<meta property="og:url" content="http://taisun.github.io/uncategorized/git">
 <meta property="og:site_name" content="Guide&Memo">
-<meta property="og:description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+<meta property="og:description" content="アイコン＆アニメーションMixin 公開
+グリッドシステムMixin 公開
+メディアクエリのMixin 公開
+pxからremに変化するMixin 公開- 静的サイトのスタイルガイドベース　公開- 静的サイトジェレネータHEXOのベースファイル（本サイト）　公開">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Guide&Memo">
-<meta name="twitter:description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+<meta name="twitter:title" content="GitHubリポジトリ">
+<meta name="twitter:description" content="アイコン＆アニメーションMixin 公開
+グリッドシステムMixin 公開
+メディアクエリのMixin 公開
+pxからremに変化するMixin 公開- 静的サイトのスタイルガイドベース　公開- 静的サイトジェレネータHEXOのベースファイル（本サイト）　公開">
 <meta name="twitter:image:src" content="http://taisun.github.io/img/ogp_image.png">
 <meta name="twitter:creator" content="@taisun0523">
   <meta name="google-site-verification" content="mgpVzCYu5iYEYrcPjubr3THQ9YmfI_kYAwUDoJAHMII">
@@ -185,74 +194,74 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-git" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/uncategorized/page" class="archive-article-date">
-  	<time datetime="2015-05-13T08:00:00.000Z" itemprop="datePublished">May 13</time>
+    <div class="article-meta">
+      <a href="/uncategorized/git" class="article-date">
+  	<time datetime="2015-05-13T07:41:10.000Z" itemprop="datePublished">2015-05-13</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/uncategorized/page">各ページの更新情報です</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      GitHubリポジトリ
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><a href="https://github.com/taisun/IconAndAnimationMixins" target="_blank" rel="external">アイコン＆アニメーションMixin 公開</a></li>
+<li><a href="https://github.com/taisun/gridSystemMixin" target="_blank" rel="external">グリッドシステムMixin 公開</a></li>
+<li><a href="https://github.com/taisun/media-queries-mixin" target="_blank" rel="external">メディアクエリのMixin 公開</a></li>
+<li><a href="https://github.com/taisun/sizeReplaceRemMixin" target="_blank" rel="external">pxからremに変化するMixin 公開</a><br>- <a href="https://github.com/taisun/tai-styleguide-base" target="_blank" rel="external">静的サイトのスタイルガイドベース　公開</a><br>- <a href="https://github.com/taisun/hexo-base-myblog" target="_blank" rel="external">静的サイトジェレネータHEXOのベースファイル（本サイト）　公開</a></li>
+</ul>
+
+      
+    </div>
+    
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/uncategorized/git" class="archive-article-date">
-  	<time datetime="2015-05-13T07:41:10.000Z" itemprop="datePublished">May 13</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/uncategorized/git">GitHubリポジトリ</a>
-    </h1>
+    <a href="/uncategorized/page" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          各ページの更新情報です
+        
+      </div>
+    </a>
   
+  
+</nav>
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
+  
 </article>
-  
-  
-    </div></section>
-  
+
+
+
+
+
+
 </div>
       <footer id="footer">
   <div class="outer">
