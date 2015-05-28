@@ -7,26 +7,32 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta generator="atom">
   
-  <title>GitHubリポジトリ | Guide&amp;Memo</title>
+  <title>GitHub更新情報 | Guide&amp;Memo</title>
   <meta name="description" content="アイコン＆アニメーションMixin 公開
 グリッドシステムMixin 公開
 メディアクエリのMixin 公開
-pxからremに変化するMixin 公開- 静的サイトのスタイルガイドベース　公開- 静的サイトジェレネータHEXOのベースファイル（本サイト）　公開">
+pxからremに変化するMixin 公開
+静的サイトのスタイルガイドベース　公開
+静的サイトジェレネータHEXOのベースファイル（本サイト）　公開">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GitHubリポジトリ">
+<meta property="og:title" content="GitHub更新情報">
 <meta property="og:image" content="http://taisun.github.io/img/ogp_image.png">
 <meta property="og:url" content="http://taisun.github.io/uncategorized/git">
 <meta property="og:site_name" content="Guide&Memo">
 <meta property="og:description" content="アイコン＆アニメーションMixin 公開
 グリッドシステムMixin 公開
 メディアクエリのMixin 公開
-pxからremに変化するMixin 公開- 静的サイトのスタイルガイドベース　公開- 静的サイトジェレネータHEXOのベースファイル（本サイト）　公開">
+pxからremに変化するMixin 公開
+静的サイトのスタイルガイドベース　公開
+静的サイトジェレネータHEXOのベースファイル（本サイト）　公開">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="GitHubリポジトリ">
+<meta name="twitter:title" content="GitHub更新情報">
 <meta name="twitter:description" content="アイコン＆アニメーションMixin 公開
 グリッドシステムMixin 公開
 メディアクエリのMixin 公開
-pxからremに変化するMixin 公開- 静的サイトのスタイルガイドベース　公開- 静的サイトジェレネータHEXOのベースファイル（本サイト）　公開">
+pxからremに変化するMixin 公開
+静的サイトのスタイルガイドベース　公開
+静的サイトジェレネータHEXOのベースファイル（本サイト）　公開">
 <meta name="twitter:image:src" content="http://taisun.github.io/img/ogp_image.png">
 <meta name="twitter:creator" content="@taisun0523">
   <meta name="google-site-verification" content="mgpVzCYu5iYEYrcPjubr3THQ9YmfI_kYAwUDoJAHMII">
@@ -211,7 +217,7 @@ pxからremに変化するMixin 公開- 静的サイトのスタイルガイド
         
   
     <h1 class="article-title" itemprop="name">
-      GitHubリポジトリ
+      GitHub更新情報
     </h1>
   
 
@@ -231,7 +237,9 @@ pxからremに変化するMixin 公開- 静的サイトのスタイルガイド
 <li><a href="https://github.com/taisun/IconAndAnimationMixins" target="_blank" rel="external">アイコン＆アニメーションMixin 公開</a></li>
 <li><a href="https://github.com/taisun/gridSystemMixin" target="_blank" rel="external">グリッドシステムMixin 公開</a></li>
 <li><a href="https://github.com/taisun/media-queries-mixin" target="_blank" rel="external">メディアクエリのMixin 公開</a></li>
-<li><a href="https://github.com/taisun/sizeReplaceRemMixin" target="_blank" rel="external">pxからremに変化するMixin 公開</a><br>- <a href="https://github.com/taisun/tai-styleguide-base" target="_blank" rel="external">静的サイトのスタイルガイドベース　公開</a><br>- <a href="https://github.com/taisun/hexo-base-myblog" target="_blank" rel="external">静的サイトジェレネータHEXOのベースファイル（本サイト）　公開</a></li>
+<li><a href="https://github.com/taisun/sizeReplaceRemMixin" target="_blank" rel="external">pxからremに変化するMixin 公開</a></li>
+<li><a href="https://github.com/taisun/tai-styleguide-base" target="_blank" rel="external">静的サイトのスタイルガイドベース　公開</a></li>
+<li><a href="https://github.com/taisun/hexo-base-myblog" target="_blank" rel="external">静的サイトジェレネータHEXOのベースファイル（本サイト）　公開</a></li>
 </ul>
 
       
@@ -246,7 +254,7 @@ pxからremに変化するMixin 公開- 静的サイトのスタイルガイド
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          各ページの更新情報です
+          各ページの更新情報
         
       </div>
     </a>

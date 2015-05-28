@@ -7,16 +7,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta generator="atom">
   
-  <title>各ページの更新情報です | Guide&amp;Memo</title>
+  <title>各ページの更新情報 | Guide&amp;Memo</title>
   <meta name="description" content="各種ページ公開しました。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="各ページの更新情報です">
+<meta property="og:title" content="各ページの更新情報">
 <meta property="og:image" content="http://taisun.github.io/img/ogp_image.png">
 <meta property="og:url" content="http://taisun.github.io/uncategorized/page">
 <meta property="og:site_name" content="Guide&Memo">
 <meta property="og:description" content="各種ページ公開しました。">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="各ページの更新情報です">
+<meta name="twitter:title" content="各ページの更新情報">
 <meta name="twitter:description" content="各種ページ公開しました。">
 <meta name="twitter:image:src" content="http://taisun.github.io/img/ogp_image.png">
 <meta name="twitter:creator" content="@taisun0523">
@@ -202,7 +202,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      各ページの更新情報です
+      各ページの更新情報
     </h1>
   
 
@@ -241,7 +241,7 @@
   
   
     <a href="/uncategorized/git" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">GitHubリポジトリ</div>
+      <div class="article-nav-title">GitHub更新情報</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
