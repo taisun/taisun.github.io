@@ -7,17 +7,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta generator="atom">
   
-  <title>環境構築について | Guide&amp;Memo</title>
-  <meta name="description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+  <title>Proxy配下での環境設定について | Guide&amp;Memo</title>
+  <meta name="description" content="「Proxy」配下での環境設定方法です。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="環境構築について">
+<meta property="og:title" content="Proxy配下での環境設定について">
 <meta property="og:image" content="http://taisun.github.io/img/ogp_image.png">
 <meta property="og:url" content="http://taisun.github.io/other-page/base.html">
 <meta property="og:site_name" content="Guide&Memo">
-<meta property="og:description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+<meta property="og:description" content="「Proxy」配下での環境設定方法です。">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="環境構築について">
-<meta name="twitter:description" content="「HTML」、「CSS」、「Javascript」を中心にフロントエンドの最新情報＆思考＆設計などを書く用メモ代わりのブログです。 WAI-ARIAやMicrodata等のアクセシビリティの方法＆手法を書いています。">
+<meta name="twitter:title" content="Proxy配下での環境設定について">
+<meta name="twitter:description" content="「Proxy」配下での環境設定方法です。">
 <meta name="twitter:image:src" content="http://taisun.github.io/img/ogp_image.png">
 <meta name="twitter:creator" content="@taisun0523">
   <meta name="google-site-verification" content="mgpVzCYu5iYEYrcPjubr3THQ9YmfI_kYAwUDoJAHMII">
@@ -189,7 +189,7 @@
   
     <div class="article-meta">
       <a href="/other-page/base.html" class="article-date">
-  	<time datetime="2015-05-14T05:16:46.000Z" itemprop="datePublished">2015-05-14</time>
+  	<time datetime="2015-06-02T01:55:08.000Z" itemprop="datePublished">2015-06-02</time>
 </a>
     </div>
   
@@ -202,7 +202,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      環境構築について
+      Proxy配下での環境設定について
     </h1>
   
 
@@ -218,7 +218,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>各ファイルの環境設定について説明します。<br>しかし環境によっては「<strong>Proxy</strong>」があってインストールができないことがあります。</p>
+<h2 id="基本設定">基本設定</h2><p>基本的な環境を構築するには「Ruby」「git」「Nodejs」とタスクランナーツールの「Grunt」と「Gulp」が必要となります。<br>しかし「Proxy」の影響で設定できないことがあります。</p>
+<h3 id="Windowsでの設定">Windowsでの設定</h3><p>「Windows」の環境では「スタート」=&gt;「コンピューター」=&gt;「システムのプロパティ」=&gt;「システムの詳細設定」=&gt;「環境変数」=&gt;「ユーザー環境変数」から「<strong>http_proxy</strong>」と「<strong>https_proxy</strong>」を設定します。<br>以下のように設定します。</p>
+<p><strong>http_proxy</strong></p>
+<p><div class="em"><a href="http://ユーザ名:パスワード@proxy.example.com:8080" target="_blank" rel="external">http://ユーザ名:パスワード@proxy.example.com:8080</a></div></p>
+<p><strong>https_proxy</strong></p>
+<p><div class="em"><a href="https://ユーザ名:パスワード@proxy.example.com:8080" target="_blank" rel="external">https://ユーザ名:パスワード@proxy.example.com:8080</a></div></p>
+<h3 id="MACでの設定">MACでの設定</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> http_proxy=http:<span class="comment">//ユーザ名:パスワード@example.com:8080/</span></span><br><span class="line"><span class="keyword">export</span> https_proxy=$http_proxy</span><br><span class="line"><span class="keyword">export</span> all_proxy=$http_proxy</span><br></pre></td></tr></table></figure>
+<p>この設定をしても通らない場合があります。<br>その場合は以下のように設定します。</p>
+<h3 id="gem(Ruby)">gem(Ruby)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> http_proxy=http:<span class="comment">//ユーザ名:パスワード@proxy.example.com:8080</span></span><br><span class="line"><span class="keyword">export</span> https_proxy=http:<span class="comment">//ユーザ名:パスワード@proxy.example.com:8080</span></span><br></pre></td></tr></table></figure>
+<h3 id="git">git</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> http_proxy=http:<span class="comment">//ユーザ名:パスワード@proxy.example.com:8080</span></span><br><span class="line"><span class="keyword">export</span> https_proxy=http:<span class="comment">//ユーザ名:パスワード@proxy.example.com:8080</span></span><br></pre></td></tr></table></figure>
+<h3 id="npm(Nodejs)">npm(Nodejs)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm -g config set proxy http:<span class="comment">//ユーザ名:パスワード@proxy.example.com:8080</span></span><br><span class="line">npm -g config set https-proxy http:<span class="comment">//ユーザ名:パスワード@proxy.example.com:8080</span></span><br><span class="line">npm -g config set registry http:<span class="comment">//registry.npmjs.org/</span></span><br></pre></td></tr></table></figure>
+<p>以上のように設定します。</p>
+<p>「Bower」を使用する場合は「.bowerrc」というファイルに（なかったらrootに作る）、以下を記述する。</p>
+<p><strong>.bowerrc</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"proxy"</span> : <span class="string">"http://proxy.example.co.jp:8080"</span>,</span><br><span class="line">  <span class="string">"https-proxy"</span> : <span class="string">"http://proxy.example.co.jp:8080"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
