@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="taisun0523のGuide&Memo">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta generator="atom">
+  
+  <title>タスクランナーツールの設定について | Guide&amp;Memo</title>
+  <meta name="description" content="タスクランナーツール「Gulp」「Grunt」の設定方法です。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="タスクランナーツールの設定について">
+<meta property="og:image" content="http://taisun.github.io/img/ogp_image.png">
+<meta property="og:url" content="http://taisun.github.io/other-page/tools.html">
+<meta property="og:site_name" content="Guide&Memo">
+<meta property="og:description" content="タスクランナーツール「Gulp」「Grunt」の設定方法です。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="タスクランナーツールの設定について">
+<meta name="twitter:description" content="タスクランナーツール「Gulp」「Grunt」の設定方法です。">
+<meta name="twitter:image:src" content="http://taisun.github.io/img/ogp_image.png">
+<meta name="twitter:creator" content="@taisun0523">
+  <meta name="google-site-verification" content="mgpVzCYu5iYEYrcPjubr3THQ9YmfI_kYAwUDoJAHMII">
+  
+    <link rel="alternative" href="/sitemap.xml" title="Guide&amp;Memo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed apple-touch-icon" href="/img/icn/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/icn/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/icn/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/icn/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/icn/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/icn/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/icn/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/icn/apple-touch-icon-152x152.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="home" href="http://taisun.github.io">
+	<link rel="index" href="/sitemap.xml">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img lazy-src="/img/taisun.jpg" class="js-avatar">
+		</a>
+		<p class="header-author"><a href="/">taisun0523</a></p>
+
+		
+		<p class="header-subtitle">Guide&amp;Memo<small>各種自分的ガイドライン</small></p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">Home</a></li>
+				        
+							<li><a href="/html-guide">HTML</a></li>
+				        
+							<li><a href="/css-guide">CSS</a></li>
+				        
+							<li><a href="/javascript-guide">Javascript</a></li>
+				        
+							<li><a href="/other-page">Other</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/taisun" title="github">github</a>
+					        
+								<a class="facebook" target="_blank" href="https://www.facebook.com/taiyi.lingmu" title="facebook">facebook</a>
+					        
+								<a class="google" target="_blank" href="https://plus.google.com/110932632031431342502/about" title="google">google</a>
+					        
+								<a class="twitter" target="_blank" href="https://twitter.com/taisun0523" title="twitter">twitter</a>
+					        
+						</div>
+					</nav>
+				</section>
+
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">都内在住のフロンエンドエンジニアのtaisun0523です。  当サイトは、勉強の為もありますが、私自身の考えをまとめる為にも作成致しました。  修行中ではありますが、皆様と知識の共有をできたら幸いです。  よろしくお願いします。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<p class="header-author js-mobile-header hide">taisun0523</p>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/taisun.jpg" class="js-avatar">
+			</div>
+			<p class="header-author">taisun0523</p>
+			
+      <p class="header-subtitle">Guide&amp;Memo<small>各種自分的ガイドライン</small></p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">Home</a></li>
+		        
+					<li><a href="/html-guide">HTML</a></li>
+		        
+					<li><a href="/css-guide">CSS</a></li>
+		        
+					<li><a href="/javascript-guide">Javascript</a></li>
+		        
+					<li><a href="/other-page">Other</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/taisun" title="github">github</a>
+			        
+						<a class="facebook" target="_blank" href="https://www.facebook.com/taiyi.lingmu" title="facebook">facebook</a>
+			        
+						<a class="google" target="_blank" href="https://plus.google.com/110932632031431342502/about" title="google">google</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/taisun0523" title="twitter">twitter</a>
+			        
+				</div>
+			</nav>
+		</header>
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/other-page/tools.html" class="article-date">
+  	<time datetime="2015-06-02T05:18:50.000Z" itemprop="datePublished">2015-06-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      タスクランナーツールの設定について
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>各タスクランナーについての設定について説明します。<br>「Proxy」の設定が完了しているうえで書いていきます。</p>
+<h2 id="基本設定">基本設定</h2><p>基本的に「Sass」や「CSSのプレフィックス」などはタスクランナーツールをしようして制作します。<br>個人的には「Gulp」がお勧めです。</p>
+<h2 id="Gruntの設定">Gruntの設定</h2><p>「Grunt」のをインストールします。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -g install grunt-cli</span><br></pre></td></tr></table></figure>
+<ul>
+<li>「-g」を付けるとグローバルにインストールするということです。</li>
+</ul>
+<p>コマンドツールでプロジェクトに移動します。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /user/project/...</span><br></pre></td></tr></table></figure>
+<p>移動したら以下のコマンドで</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
+<p>このコマンドを実行すると色々聞かれますがとりあえずは「Enter」で進めてください。<br>そうすると「package.json」と「gruntfile.js」というファイルができます。</p>
+<p>「package.json」ファイルは「npm（node package maneger）」の情報や各種設定が記述されるファイルです。<br>「gruntfile.js」ファイルは「grunt」のタスクを記述するファイルです。</p>
+<p>次に「Grunt」本体をインストールします。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev grunt</span><br></pre></td></tr></table></figure>
+<p>「—save-dev」を付けると「package.json」に記述されます。<br>記述されることで、他のプロジェクトでも同じ設定を使用したい場合でも「package.json」をコピペして以下のコマンドを実行するだけで同じ「npm」が使用できます。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>なので新しい「npm」をインストールするときは「—save-dev」をつけましょう。<br>インストールが完了したらプロジェクトに応じたファイルをインストールします。</p>
+<p>私は以下のファイルをお勧めします</p>
+<ul>
+<li><a href="https://github.com/gruntjs/grunt-contrib-sass" target="_blank" rel="external">grunt-contrib-sass</a> //sass3.4に対応しています。</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-cssmin" target="_blank" rel="external">grunt-contrib-cssmin</a> //cssをmin化してくれます。</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-concat" target="_blank" rel="external">grunt-contrib-concat</a> //ファイルを結合します。</li>
+<li><a href="https://github.com/nDmitry/grunt-autoprefixer" target="_blank" rel="external">grunt-autoprefixer</a> //ベンダープレフィックススをつけてくれます。</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-csslint" target="_blank" rel="external">grunt-contrib-lint</a> //CSSをベストにしてくれます。</li>
+<li><a href="https://github.com/csscomb/grunt-csscomb" target="_blank" rel="external">grunt-csscomb</a> //CSSをバラバラに書いたものの順番を綺麗にしてくれます。</li>
+<li><a href="https://github.com/tvooo/grunt-stylestats" target="_blank" rel="external">grunt-stylestats</a> //cssを分析してくれます。</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-watch" target="_blank" rel="external">grunt-contrib-watch</a> //gruntのタスクツールを監視してくれます。</li>
+<li>etc…</li>
+</ul>
+<p>です。</p>
+<p>この他にもパーフォーマンスを考えたりしてプラグインを選んでいきましょう。</p>
+<h3 id="gruntfile-jsの基本">gruntfile.jsの基本</h3><p>基本的に以下のように記述していきます。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">'use strict';</span><br><span class="line"></span><br><span class="line">module.export = function(grunt)&#123;</span><br><span class="line"></span><br><span class="line">  grunt.registerTask('task', 'description', function() &#123;</span><br><span class="line">    grunt.log.writeln('HelloWorld!);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  grunt.registerTask('default', [ 'task' ]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>分解して解説します。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">'use strict'</span>;</span><br></pre></td></tr></table></figure>
+<p>必ず厳格モードを使用します。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.export = functio(grunt)&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<p>外側で囲んでいる<code>module.export</code>は、Node.js特有の書き方です。これに登録されたオブジェクトを、Gruntが処理します。<br>この中に各タスクを記述していきます。</p>
+<h3 id="タスクの記述">タスクの記述</h3><p>各タスクは以下のように<code>grunt.initConfig</code>の中に<code>リテラル</code>で記述していきます。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">grunt.initConfig(&#123;</span><br><span class="line">  タスク名称<span class="number">1</span>: &#123;</span><br><span class="line">    ...省略</span><br><span class="line">  &#125;,</span><br><span class="line">  タスク名称<span class="number">2</span>: &#123;</span><br><span class="line">    ...省略</span><br><span class="line">  &#125;,...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="gruntプラグイン読み込み">gruntプラグイン読み込み</h3><p>以下のようにして必要なプラグインを読み込みます。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grunt.loadNpmTask(<span class="string">'npmプラグイン名'</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="タスクの実行">タスクの実行</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grunt.registerTask(<span class="string">'task'</span>, <span class="string">'description'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;...&#125;);</span><br></pre></td></tr></table></figure>
+<p><code>grunt.regsterTask</code>を呼び出し「タスク」（任意）を登録しています。<br><code>registerTask</code>に渡す引数は順に、「タスク名称」、「簡単な説明」、「タスク実行内容」です。</p>
+<p>これを元にコードを書くと以下のようになります。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grunt.registerTask(<span class="string">'タスク名称'</span>, <span class="string">'簡単な説明'</span>, タスク実行内容);</span><br></pre></td></tr></table></figure>
+<p>です。<br>「簡単な説明」は省略できます。</p>
+<p>タスクは配列でまとめて登録することもできます。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grunt.registerTask(<span class="string">'default'</span>, [ <span class="string">'task1'</span>, <span class="string">'task2'</span> ]);</span><br></pre></td></tr></table></figure>
+<p>この設定が完了したら、以下のコマンドを実行します。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grunt</span><br></pre></td></tr></table></figure></p>
+<p>そうすると設定通りに実行されます。</p>
+<h2 id="Gulpの設定">Gulpの設定</h2><p>私は以下の理由でこちらを推奨します。</p>
+<ul>
+<li>Gruntより設定ファイルが記述しやすい</li>
+<li>StreamAPI（簡潔に書ける）を利用することでファイルを毎回書き出すGruntより高速</li>
+</ul>
+<p>「Gulp」をインストールします。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g gulp</span><br></pre></td></tr></table></figure>
+<p>グローバルにインストールしたら<br>プロジェクト用フォルダを作りローカルに移動しインストールします</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir test</span><br><span class="line">cd /test</span><br><span class="line">npm install gulp --save-dev</span><br></pre></td></tr></table></figure>
+<p>インストールが完了したら他のnpmファイルもインストールしていきます</p>
+<ul>
+<li><a href="https://github.com/jmreidy/grunt-browserify" target="_blank" rel="external">grunt-browserify</a> //仮想サーバを立ち上げて自動的にブラウザを立ち上げ更新します。<br>- <a href="https://github.com/sindresorhus/gulp-autoprefixer" target="_blank" rel="external">gulp-autoprefixer</a> //ベンダープレフィックスをつけてくれます。<br>- <a href="https://github.com/wearefractal/gulp-concat" target="_blank" rel="external">gulp-concat</a> //ファイルを結合します</li>
+<li><a href="https://github.com/ishotfirst/gulp-specificity-graph" target="_blank" rel="external">gulp-specificity-graph</a> //CSSのセレクタ強度をグラフ化してくれます。<br>- <a href="https://github.com/thirus/gulp-csslint-report" target="_blank" rel="external">gulp-csslint-report</a> //CSSのテストをしてレポートをだしてくれます。</li>
+<li><a href="https://github.com/sindresorhus/gulp-plato" target="_blank" rel="external">gulp-plato</a> //Javascriptのテストをしてレポートをだしてくれます。<br>- <a href="https://github.com/rejahrehim/gulp-hologram" target="_blank" rel="external">gulp-hologram</a> //スタイルガイド生成します<br>- <a href="https://github.com/jackfranklin/gulp-load-plugins" target="_blank" rel="external">gulp-load-plugins</a> // 毎回requireする必要がなくなります<br>- <a href="https://github.com/murphydanger/gulp-minify-css" target="_blank" rel="external">gulp-minify-css</a> // cssをmin化してくれます<br>- <a href="https://github.com/mikaelbr/gulp-notify" target="_blank" rel="external">gulp-notify</a> //デスクトップに処理が完了すると表示してくれます<br>- <a href="https://github.com/floatdrop/gulp-plumber" target="_blank" rel="external">gulp-plumber</a> //エラーが出てもwatchタスクが止まらない<br>- <a href="https://github.com/sindresorhus/gulp-ruby-sass" target="_blank" rel="external">gulp-ruby-sass</a> //RubyのSassを使用してビルドします。</li>
+<li>etc…</li>
+</ul>
+<p>こんな感じで必要なものをインストールしていきます。<br>インストール完了したら<code>gulpfile.js</code>を作りタスクを書いていきます。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &gt; gulpfile.js</span><br></pre></td></tr></table></figure>
+<h3 id="gulpプラグイン読み込み">gulpプラグイン読み込み</h3><p>gulpファイルに以下を記述してプラグインを読み込みます。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">"gulp"</span>);</span><br></pre></td></tr></table></figure>
+<p><code>require</code>を使用して読み込みます。<br><code>gulp-load-plugins</code>を使用すると読み込みが簡単になります。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> $ = <span class="built_in">require</span>(<span class="string">"gulp-load-plugins"</span>);</span><br></pre></td></tr></table></figure>
+<p>このように読み込むと以下のように記述をするだけで読み込むことができます。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.rubySass(<span class="string">'path'</span>,...省略</span><br></pre></td></tr></table></figure>
+<h3 id="gulpのタスク記述">gulpのタスク記述</h3><p>各タスクは以下のように記述していきます。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">'タスク名'</span>, タスク実行内容)</span><br></pre></td></tr></table></figure>
+<p>「タスク名」は任意で命名してください。<br>「タスク実行内容」は基本的に<code>function(){}</code>の記述<code>{}</code>の中にで書いていきます。<br>戻り値としてタスクの処理を記述します。<br>例として<code>grunt-ruby-sass</code>を記述していきます。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">'sass'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> $.rubySass(<span class="string">'_src/sass/style.scss'</span>, オプション) <span class="comment">//コンパイルするscssファイル「*」で指定するとエラー</span></span><br><span class="line">            .pipe(gulp.dest(<span class="string">'_dest/css/'</span>));　<span class="comment">//出力先</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>このように記述していきます。</p>
+<h3 id="gulpのタスク実行&amp;監視">gulpのタスク実行&amp;監視</h3><p><code>gulp-watch</code>を使用しタスクを実行＆監視していきます。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">'defalut'</span>, [<span class="string">'sass'</span>], <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    gulp.watch(<span class="string">'_src/sass/**/*.scss'</span>, [<span class="string">'sass'</span>]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>基本的な記述方法です。<br>実際は以下のコマンドで実行します。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 taisun0523
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script type="text/javascript">
+$("a").click(function(e) {
+        var ahref = $(this).attr('href');
+        ga('link','event','Click' ahref, true);
+    });
+</script>
+
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/mobile.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-63015288-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  </div>
+</body>
+</html>
