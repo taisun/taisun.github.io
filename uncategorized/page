@@ -8,18 +8,21 @@
   <meta generator="atom">
   
   <title>各ページの更新情報 | Guide&amp;Memo</title>
-  <meta name="description" content="Proxy配下での環境設定記述しました。
+  <meta name="description" content="タスクランナーツールの設定について。
+Proxy配下での環境設定記述しました。
 各種ページ公開しました。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="各ページの更新情報">
 <meta property="og:image" content="http://taisun.github.io/img/ogp_image.png">
 <meta property="og:url" content="http://taisun.github.io/uncategorized/page">
 <meta property="og:site_name" content="Guide&Memo">
-<meta property="og:description" content="Proxy配下での環境設定記述しました。
+<meta property="og:description" content="タスクランナーツールの設定について。
+Proxy配下での環境設定記述しました。
 各種ページ公開しました。">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="各ページの更新情報">
-<meta name="twitter:description" content="Proxy配下での環境設定記述しました。
+<meta name="twitter:description" content="タスクランナーツールの設定について。
+Proxy配下での環境設定記述しました。
 各種ページ公開しました。">
 <meta name="twitter:image:src" content="http://taisun.github.io/img/ogp_image.png">
 <meta name="twitter:creator" content="@taisun0523">
@@ -222,6 +225,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
+<li><a href="/other-page/tools.html">タスクランナーツールの設定について。</a></li>
 <li><a href="/other-page/base.html">Proxy配下での環境設定記述しました。</a></li>
 <li>各種ページ公開しました。</li>
 </ul>
