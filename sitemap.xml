@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://taisun.github.io/other-page/tools.html</loc>
+    <lastmod>2015-06-02T05:18:50.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://taisun.github.io/other-page/base.html</loc>
     <lastmod>2015-06-02T02:03:43.000Z</lastmod>
   </url>
