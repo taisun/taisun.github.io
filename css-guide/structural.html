@@ -191,7 +191,7 @@
   
     <div class="article-meta">
       <a href="/css-guide/structural.html" class="article-date">
-  	<time datetime="2015-05-20T05:32:51.000Z" itemprop="datePublished">2015-05-20</time>
+  	<time datetime="2015-06-03T05:18:13.000Z" itemprop="datePublished">2015-06-03</time>
 </a>
     </div>
   
@@ -225,6 +225,9 @@
 <p><strong>CSSを書く上で設計本当に重要です。</strong></p>
 <p>この設計がしっかりできているかできていないかでWeb全体がイケてるかイケてないか決まってしまいます。<br>いくらデザインがかっこよくても設計がダサかったら全てが台無しになるとでも言えます。<br>そのくらい大事なことです。</p>
 <p>そのための方法を私はいつも考えています。</p>
+<h2 id="CSS設計について">CSS設計について</h2><p>CSSの設計はHTMLの構造と深く結びついています例えばしかっりHTMLの構造が設計されルールがしっかりしたものなら<br>以下のような擬似セレクタを使用したスタイルも書くことができます。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">section</span> <span class="tag">-</span> <span class="tag">section</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">margin-top</span>:<span class="value"> <span class="number">20px</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">h1</span> + * <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">margin-top</span>:<span class="value"> <span class="number">20px</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>ですがもしパーツとして普段使用しない部分で使用する場合もあります。<br>そうすると崩れが起きてしまいます。<br>その崩れを打ち消すためのスタイルを書くのもいいですが、その分ファイルが大きくなりパフォーマンスが下がってしまいます。<br>こういったことも考えた上でスタイルを決め制作するのが望ましいでしょう。</p>
 <h2 id="モダンCSS設計について">モダンCSS設計について</h2><p>モダンCSS設計とはOOCSSのオブジェクト指向が元にさらに考えれたものです。<br>有名なものではBEMやSMACSSが有名です。</p>
 <p>この二つを含め基本的にSASSを使用てファイルの構成から考え設計していきます。<br>以下のようにファイル分けます。</p>
 <ul>
