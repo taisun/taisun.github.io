@@ -16,6 +16,9 @@
 <meta property="og:site_name" content="Guide&Memo">
 <meta property="og:description" content="WAI-ARIAの使用方法＆考え方を記述しています。">
 <meta property="og:image" content="/img/role.jpg">
+<meta property="og:image" content="img/tab.jpg">
+<meta property="og:image" content="img/tab2.jpg">
+<meta property="og:image" content="img/tab3.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="アクセシビリティについて">
 <meta name="twitter:description" content="WAI-ARIAの使用方法＆考え方を記述しています。">
@@ -190,7 +193,7 @@
   
     <div class="article-meta">
       <a href="/html-guide/accessibility.html" class="article-date">
-  	<time datetime="2015-06-10T14:52:41.000Z" itemprop="datePublished">2015-06-10</time>
+  	<time datetime="2015-06-10T16:21:36.000Z" itemprop="datePublished">2015-06-11</time>
 </a>
     </div>
   
@@ -318,8 +321,7 @@
 <li>treegrid</li>
 </ul>
 <p><strong>文書構造（HTMLの構造に使用する）</strong></p>
-<p>文書構造は通常、他のroleと違いインタラクティブ（見た目ではわからないもの）ではないです。</p>
-<p><img src="/img/role.jpg" alt=""></p>
+<p>文書構造は通常、他のroleと違いインタラクティブ（見た目ではわからないもの）ではないものです。</p>
 <ul>
 <li>article</li>
 <li>columnheader</li>
@@ -341,7 +343,7 @@
 <li>separator</li>
 <li>toolbar</li>
 </ul>
-<p><strong>ランドマークロール</strong><br>HTML5では大きくランドマークに分けることができます。<br>ランドマークはそのページで一度しか使用できないルールがあるものもあります。<br>以下はそのランドマークに使用します。</p>
+<p><strong>ランドマークロール</strong><br>HTML5では大きく以下のようなランドマークに分けることができます。<br><img src="/img/role.jpg" alt=""><br>ランドマークはそのページで一度しか使用できないルールがあるものもあります。<br>以下はそのランドマークに使用します。</p>
 <ul>
 <li>application =&gt; 1回のみ</li>
 <li>banner =&gt; 1回のみ</li>
@@ -417,6 +419,37 @@
 <p><strong>aria-labelledby</strong></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">id</span>=<span class="value">"desc-txt"</span>&gt;</span>説明<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">aria-labelledby</span>=<span class="value">"desc-txt"</span>&gt;</span>&amp;#xE000;<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>このように使用します。</p>
+<h2 id="アクセシビリティのマークアップルール">アクセシビリティのマークアップルール</h2><p>アクセシビリティが高く、正しいマークアップをするには幾つかルールがあります。<br>W3Cが定めたルールがありそれに基づいて、マークアップすることはWEB標準のマークアップをすることです。</p>
+<p>幾つか例をあげて紹介していきます。</p>
+<h3 id="section,_article要素">section, article要素</h3><p>この要素を使用するときは必ず見出しをつけなければなりません。<br>さらに構造体にする必要があります。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">article</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">h1</span> <span class="attribute">aria-level</span>=<span class="value">"1"</span>&gt;</span>見出し1<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">section</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">h2</span> <span class="attribute">aria-level</span>=<span class="value">"2"</span> <span class="attribute">class</span>=<span class="value">"c-heading__lvOne"</span>&gt;</span>見出し2<span class="tag">&lt;/<span class="title">h2</span>&gt;</span></span><br><span class="line">    ...省略</span><br><span class="line">  <span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">section</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">h2</span> <span class="attribute">aria-level</span>=<span class="value">"2"</span> <span class="attribute">class</span>=<span class="value">"c-heading__lvOne"</span>&gt;</span>見出し2<span class="tag">&lt;/<span class="title">h2</span>&gt;</span></span><br><span class="line">    ...省略</span><br><span class="line">  <span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">article</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>以下のように見出しレベルが下がるごとに入れ子にし構造体にしないといけません。</p>
+<div class="em">h1 &gt; h2 &gt; h3 &gt; h4 &gt; h5 &gt; h6</div>
+
+<p>しかし入れ子をやりすぎると見にくいマークアップになってしまいます。<br>その為<code>aria-level</code>を使用したりしてマークアップを行います。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">h4</span> <span class="attribute">aria-level</span>=<span class="value">"3"</span>&gt;</span>見出し３<span class="tag">&lt;/<span class="title">h4</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>このように使用します。</p>
+<h3 id="form要素">form要素</h3><p>form要素を使用する場合は以下のようにします。<br><code>&lt;filedset&gt;</code>と<code>&lt;legend&gt;</code>はセットで使用します。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">filedset</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">legend</span>&gt;</span>フォームのタイトル<span class="tag">&lt;/<span class="title">legend</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">id</span>=<span class="value">"checkbox"</span>&gt;</span><span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"checkbox"</span>&gt;</span>ラベル<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line">    ...省略</span><br><span class="line">  <span class="tag">&lt;/<span class="title">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">filedset</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="画像の代替テキストの使用方法。">画像の代替テキストの使用方法。</h2><p>以前はテキスト画像を使用する際は<code>alt</code>を使用すればよかったのですが。<br>それではプログレッシブエンハスメントではなくなってしまいます。<br>コンテキストの重要性を考えるとテキスト要素のタグを使用する場合テキストが無いのは構造状おかしいです。</p>
+<p><strong>変更前</strong><br>このマークアップはおかしいです。<br><code>h1</code>は見出し（テキスト）タグです。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"image/logp.png"</span> <span class="attribute">alt</span>=<span class="value">"ロゴ"</span>&gt;</span><span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>どう変えるか以下のように変更します。</p>
+<p><strong>変更後</strong><br>テキストは隠して使用します。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"image/logp.png"</span> <span class="attribute">alt</span>=<span class="value">""</span>&gt;</span>ロゴ<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>h1</code>要素に<code>display:none;</code>,<code>opacity:0;</code>これでは画像も消えてしまいます。<br><code>span</code>要素で囲み隠すのをおすすめします。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"image/logp.png"</span> <span class="attribute">alt</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"u-hidden"</span>&gt;</span>ロゴ<span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.u-hidden</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">visibility</span>:<span class="value"> hidden</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>もし、Adobe Typekitがしようできる状態なら、<code>font-family:Blank;</code>でけすことをおすすめます。<br>よりセマンティックな要素になります。</p>
+<h2 id="アクセシビリティを意識したUI/UX">アクセシビリティを意識したUI/UX</h2><p>アクセシビリティを意識したUI/UXのデザインをしないといけません。<br>キーボードの操作を考えたデザインにし無いといけません。</p>
+<p>特に順番が重要です。<br>Javascriptを使用したインタラクティブなサイトでは実際にフォーカスする順番になってい無いことが多いです。<br>例えば、以下のようなタブで切り替える要素はタブ部分とコンテンツ（テキスト）が分かれてマークアップされることが多いです。</p>
+<p><img src="img/tab.jpg" alt=""></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">role</span>=<span class="value">"tablist"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">role</span>=<span class="value">"presentation"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#section1"</span> <span class="attribute">role</span>=<span class="value">"tab"</span> <span class="attribute">aria-controls</span>=<span class="value">"panel1"</span> <span class="attribute">aria-selected</span>=<span class="value">"true"</span>&gt;</span>tab1<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">role</span>=<span class="value">"presentation"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#section2"</span> <span class="attribute">role</span>=<span class="value">"tab"</span> <span class="attribute">aria-controls</span>=<span class="value">"panel2"</span> <span class="attribute">aria-selected</span>=<span class="value">"true"</span>&gt;</span>tab2<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">role</span>=<span class="value">"presentation"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#section3"</span> <span class="attribute">role</span>=<span class="value">"tab"</span> <span class="attribute">aria-controls</span>=<span class="value">"panel3"</span> <span class="attribute">aria-selected</span>=<span class="value">"true"</span>&gt;</span>tab3<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"section1"</span> <span class="attribute">role</span>=<span class="value">"tabpanel"</span>&gt;</span>...省略<span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"section2"</span> <span class="attribute">role</span>=<span class="value">"tabpanel"</span> <span class="attribute">aria-hidden</span>=<span class="value">"true"</span>&gt;</span>...省略<span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"section3"</span> <span class="attribute">role</span>=<span class="value">"tabpanel"</span> <span class="attribute">aria-hidden</span>=<span class="value">"true"</span>&gt;</span>...省略<span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>このようなタブはキーボードでは以下のように遷移します。</p>
+<p><img src="img/tab2.jpg" alt=""></p>
+<p>しかし実際は次のような動きをしないといけません。</p>
+<p><img src="img/tab3.jpg" alt=""></p>
+<p><code>tabindex</code>とJavascriptでフォーカスを制御します。<br>こういったデザインを作るときは構造と機能を考えて作らないといけません。</p>
 
       
     </div>
