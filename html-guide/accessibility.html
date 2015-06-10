@@ -7,20 +7,18 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta generator="atom">
   
-  <title>アクセシビリティ | Guide&amp;Memo</title>
-  <meta name="description" content="HTMLのアクセシビリティについて記述しています。近年増えてるインタラクティブなWEBサイトやJavascriptを使用したUI/UXで無視されがちなアクセシビリティについて書いていきます。「WAI-ARIA」「Microdata」「アクセシビリティを意識したUI/UX」について書いていきます。
-現在執筆中です。。。もう少しお持ちください。">
+  <title>アクセシビリティについて | Guide&amp;Memo</title>
+  <meta name="description" content="WAI-ARIAの使用方法＆考え方を記述しています。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="アクセシビリティ">
+<meta property="og:title" content="アクセシビリティについて">
 <meta property="og:image" content="http://taisun.github.io/img/ogp_image.png">
 <meta property="og:url" content="http://taisun.github.io/html-guide/accessibility.html">
 <meta property="og:site_name" content="Guide&Memo">
-<meta property="og:description" content="HTMLのアクセシビリティについて記述しています。近年増えてるインタラクティブなWEBサイトやJavascriptを使用したUI/UXで無視されがちなアクセシビリティについて書いていきます。「WAI-ARIA」「Microdata」「アクセシビリティを意識したUI/UX」について書いていきます。
-現在執筆中です。。。もう少しお持ちください。">
+<meta property="og:description" content="WAI-ARIAの使用方法＆考え方を記述しています。">
+<meta property="og:image" content="/img/role.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="アクセシビリティ">
-<meta name="twitter:description" content="HTMLのアクセシビリティについて記述しています。近年増えてるインタラクティブなWEBサイトやJavascriptを使用したUI/UXで無視されがちなアクセシビリティについて書いていきます。「WAI-ARIA」「Microdata」「アクセシビリティを意識したUI/UX」について書いていきます。
-現在執筆中です。。。もう少しお持ちください。">
+<meta name="twitter:title" content="アクセシビリティについて">
+<meta name="twitter:description" content="WAI-ARIAの使用方法＆考え方を記述しています。">
 <meta name="twitter:image:src" content="http://taisun.github.io/img/ogp_image.png">
 <meta name="twitter:creator" content="@taisun0523">
   <meta name="google-site-verification" content="mgpVzCYu5iYEYrcPjubr3THQ9YmfI_kYAwUDoJAHMII">
@@ -192,7 +190,7 @@
   
     <div class="article-meta">
       <a href="/html-guide/accessibility.html" class="article-date">
-  	<time datetime="2015-05-14T16:12:40.000Z" itemprop="datePublished">2015-05-15</time>
+  	<time datetime="2015-06-10T14:52:41.000Z" itemprop="datePublished">2015-06-10</time>
 </a>
     </div>
   
@@ -205,7 +203,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      アクセシビリティ
+      アクセシビリティについて
     </h1>
   
 
@@ -221,8 +219,204 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>HTMLのアクセシビリティについて記述しています。<br>近年増えてるインタラクティブなWEBサイトやJavascriptを使用したUI/UXで無視されがちなアクセシビリティについて書いていきます。<br>「WAI-ARIA」「Microdata」「アクセシビリティを意識したUI/UX」について書いていきます。</p>
-<p>現在執筆中です。。。<br>もう少しお持ちください。</p>
+        <p>HTMLのアクセシビリティについて記述しています。<br>近年増えてるインタラクティブなWEBサイトやJavascriptを使用したUI/UXで無視されがちなアクセシビリティについて書いていきます。</p>
+<p>「WAI-ARIA」「Microdata」「アクセシビリティを意識したUI/UX」について書いていきます。</p>
+<h2 id="アクセシビリティとは">アクセシビリティとは</h2><p>可能な限り広い種類の利用者が、さまざまな製品や建物やサービスなどを支障なく利用できる度合いをいいます。（Wikipediaより引用）<br>WEBでは誰でもどんな環境でも問題なく使いやすく使用出来るサイトのことを指します。</p>
+<p>具体的にどのようなことなのか考えてみましょう。</p>
+<ul>
+<li>キーボードで操作できる</li>
+<li>Javascriptが使用できなくても表示に問題がない</li>
+<li>画像が読見込めなくても何の画像かわかる</li>
+<li>スクリーンリーダーユーザーでも問題なく内容がわかる</li>
+<li>プログレッシブエンハスメントである</li>
+<li>etc…</li>
+</ul>
+<p>その為にWCAG 2.0の考えを元に考えていきます。</p>
+<h2 id="プログレッシブエンハスメントとは">プログレッシブエンハスメントとは</h2><p>正しいHTMLでサイトを作成してCSS3などをサポートしているブラウザに対して、<br>よりリッチなデザインや機能を提供し、サポートしていないブラウザにはそれなりのデザインや機能を提供することを言います。<br>これにを意識し制作することでサイトが構造化しWEB標準になり読みやすく見やすく使いやすいサイトになります。</p>
+<p>ではボタンのマークアップ(HTML5)をベースに考えていきましょう。<br>なぜボタンかというとどんなサイトやWEBアプリケーションにもあるものだからです。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">button</span>&gt;</span>ボタン<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>ボタンの正しいマークアップ(HTML5)は<code>&lt;button&gt;</code>になります。<br>しかしこれだけでは機能しませんしキーボードでもフォーカスしません。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span>&gt;</span>ボタン<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>WCAG 2.0によると<code>type=&quot;button&quot;</code>は何もしないという意味です。<br>なのでJavascriptの操作に適しています。</p>
+<p><code>button</code>の<code>type</code>には以下があります</p>
+<ul>
+<li>submit -&gt; フォームを送信する</li>
+<li>button -&gt; Javascriptの操作</li>
+<li>reset -&gt; フォームのリセットなどに使用</li>
+</ul>
+<p>しかし上記にあげた以外にも機能として使用したいですよね。<br>ページの遷移にわざわざ毎回<code>Javascript</code>を使用していたら重くなってしまいます。</p>
+<p>以下のようなボタンのマークアップはよくあります。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"xxx.html"</span> <span class="attribute">class</span>=<span class="value">"c-button"</span>&gt;</span>ボタン<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>このマークアップではプログレッシブエンハスメントではなくなってしまいます。<br><code>c-button</code>というクラスをつければどんなタグでもボタンの見た目になってしまいます。<br>それでも正しいマークアップではなくなってしまいます。</p>
+<p>W3CとWCAG 2.0では<code>WAI-ARIAラベル</code>をつけることで解決します。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"xxx.html"</span> <span class="attribute">class</span>=<span class="value">"c-button"</span> <span class="attribute">role</span>=<span class="value">"button"</span>&gt;</span>ボタン<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>上記のマークアップのように<code>&lt;button&gt;</code>ではない要素に役割(role要素)を指定すれば、ボタンとして認識されます。</p>
+<h2 id="WAI-ARIAについて">WAI-ARIAについて</h2><p>WAI-ARIAとは正しいマークアップではない要素をプログレッシブエンハスメントにするものです。<br>WAI-ARIAには以下の<code>ARIA</code>があります</p>
+<ul>
+<li><strong>ロール</strong> =&gt; 役割</li>
+<li><strong>プロパティ</strong> =&gt; プロパティ</li>
+<li><strong>ステート</strong> =&gt; 状態</li>
+<li><strong>ラベル</strong>　=&gt; 説明<br>があります。<h3 id="ARIA使用のルール">ARIA使用のルール</h3></li>
+<li>1 要素を置き換えるのに難しい場合と新しいHTMLの属性がサポートされていない場合に使用します。</li>
+<li>2 セマンティックなものには使用してはいけません。</li>
+<li>3 キーボードで使用できなければいけません。</li>
+</ul>
+<h3 id="ロール">ロール</h3><p>ロール要素は正しいマークアップではないものを正しものと認識させます。<br>ロールは以下の種類があります。</p>
+<p><strong>抽象ロール</strong><br>基本的に<strong>抽象ロール</strong>は<strong>使用してはいけません</strong>。</p>
+<ul>
+<li>command</li>
+<li>composite</li>
+<li>input</li>
+<li>landmark</li>
+<li>range</li>
+<li>roletype</li>
+<li>section</li>
+<li>sectionhead</li>
+<li>select</li>
+<li>structure</li>
+<li>widget</li>
+<li>window</li>
+</ul>
+<p><strong>ウィジェットロール（最小限のパーツに使用）</strong></p>
+<ul>
+<li>alert</li>
+<li>alertdialog</li>
+<li>button</li>
+<li>checkbox</li>
+<li>dialog</li>
+<li>gridcell</li>
+<li>link</li>
+<li>log</li>
+<li>marquee</li>
+<li>menuitem</li>
+<li>menuitemcheckbox</li>
+<li>menuitemradio</li>
+<li>option</li>
+<li>progressbar</li>
+<li>radio</li>
+<li>scrollbar</li>
+<li>slider</li>
+<li>spinbutton</li>
+<li>status</li>
+<li>tab</li>
+<li>tabpanel</li>
+<li>textbox</li>
+<li>timer</li>
+<li>tooltip</li>
+<li>treeitem</li>
+</ul>
+<p><strong>複合ユーザーインターフェースウィジェット(複数のパーツで構成されるパーツに使用)</strong></p>
+<ul>
+<li>combobox</li>
+<li>grid</li>
+<li>listbox</li>
+<li>menu</li>
+<li>menubar</li>
+<li>radiogroup</li>
+<li>tablist</li>
+<li>tree</li>
+<li>treegrid</li>
+</ul>
+<p><strong>文書構造（HTMLの構造に使用する）</strong></p>
+<p>文書構造は通常、他のroleと違いインタラクティブ（見た目ではわからないもの）ではないです。</p>
+<p><img src="/img/role.jpg" alt=""></p>
+<ul>
+<li>article</li>
+<li>columnheader</li>
+<li>definition</li>
+<li>directory</li>
+<li>document</li>
+<li>group</li>
+<li>heading</li>
+<li>img</li>
+<li>list</li>
+<li>listitem</li>
+<li>math</li>
+<li>note</li>
+<li>presentation</li>
+<li>region</li>
+<li>row</li>
+<li>rowgroup</li>
+<li>rowheader</li>
+<li>separator</li>
+<li>toolbar</li>
+</ul>
+<p><strong>ランドマークロール</strong><br>HTML5では大きくランドマークに分けることができます。<br>ランドマークはそのページで一度しか使用できないルールがあるものもあります。<br>以下はそのランドマークに使用します。</p>
+<ul>
+<li>application =&gt; 1回のみ</li>
+<li>banner =&gt; 1回のみ</li>
+<li>complementary =&gt; 1回のみ</li>
+<li>contentinfo =&gt; 1回のみ</li>
+<li>form =&gt; 複数化使いすぎに注意</li>
+<li>main =&gt; 1回のみ</li>
+<li>navigation =&gt; 1回のみ</li>
+<li>search =&gt; 複数化使いすぎに注意</li>
+</ul>
+<p>各ロールの使用方法は以下を参照<br><a href="http://momdo.github.io/wai-aria/roles.html#role_definitions_header" target="_blank" rel="external">ロールの定義</a></p>
+<h3 id="プロパティ&amp;ステート">プロパティ&amp;ステート</h3><p>他の言語からの機能に関する助言情報を表すものです。<br>基本的に値は次の種類のいずれかが入ります。</p>
+<ul>
+<li><p><strong>true/false</strong><br>デフォルトは”false”の値をもつ、trueまたはfalseのいずれかを表す値。</p>
+</li>
+<li><p><strong>tristate</strong><br>中間の”mixed”の値をもつ、trueまたはfalseを表す値。特に指定しない限り、デフォルト値は “false”である。</p>
+</li>
+<li><p><strong>true/false/undefined</strong><br>ステートまたはプロパティーを示すものが関連しないデフォルトで”undefined”の値をもつ、trueまたはfalseを表す値。</p>
+</li>
+<li><p><strong>ID参照</strong><br>同じ文書内の別要素のIDへの参照</p>
+</li>
+<li><p><strong>ID参照リスト</strong><br>1つ以上のID参照のリスト。</p>
+</li>
+<li><p><strong>整数</strong><br>小数成分を含まない数値。</p>
+</li>
+<li><p><strong>数</strong><br>任意の実数の値。</p>
+</li>
+<li><p><strong>文字列</strong><br>制約のない値型。</p>
+</li>
+<li><p><strong>トークン</strong><br>許可された限定セットの1つ。</p>
+</li>
+<li><p><strong>トークンリスト</strong><br>1つ以上のトークンのリスト。</p>
+</li>
+</ul>
+<p><strong>ウィジェット属性</strong><br>ウィジェットロールをサポートするために使用される。<br>尚JavascriptによるDOMの変更を行いstateが変更する場合はDOM属性を変更しなければならない。</p>
+<ul>
+<li>aria-autocomplete<br>- aria-checked （ステート）<br>- aria-disabled （ステート）<br>- aria-expanded （ステート）<br>- aria-haspopup<br>- aria-hidden （ステート）<br>- aria-invalid （ステート）<br>- aria-label<br>- aria-level<br>- aria-multiline<br>- aria-multiselectable<br>- aria-orientation<br>- aria-pressed （ステート）<br>- aria-readonly<br>- aria-required<br>- aria-selected （ステート）<br>- aria-sort<br>- aria-valuemax<br>- aria-valuemin<br>- aria-valuenow<br>- aria-valuetext</li>
+</ul>
+<p><strong>ライブ領域属性</strong></p>
+<p>コンテンツをリアルタイムに更新を処理する方法の情報を支援技術に提供することを示すために使用される。</p>
+<ul>
+<li>aria-atomic</li>
+<li>aria-busy （ステート）</li>
+<li>aria-live</li>
+<li>aria-relevant</li>
+</ul>
+<p><strong>ドラッグアンドドロップ属性</strong><br>ドラッグ可能な要素とそのドロップターゲットの要素に使用する。</p>
+<ul>
+<li>aria-dropeffect</li>
+<li>aria-grabbed （ステート）</li>
+</ul>
+<p><strong>関係属性</strong></p>
+<p>要素間の関係または関連を示す属性に使用する。<br>ボタンをクリックすると変わる要素などに使用します。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"c-toolbar"</span> <span class="attribute">role</span>=<span class="value">"toolbar"</span> <span class="attribute">aria-controls</span>=<span class="value">"sortTable"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">button</span>&gt;</span>昇順<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">button</span>&gt;</span>降順<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>=<span class="value">"sortTable"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>テキスト1<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>テキスト2<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>テキスト3<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>テキスト4<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  ...省略</span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>この例では<code>aria-controls=&quot;sortTable&quot;</code>と<code>id=&quot;sortTable&quot;</code>を関連つけています。<br>このように使用します。</p>
+<ul>
+<li>aria-activedescendant</li>
+<li>aria-controls</li>
+<li>aria-describedby</li>
+<li>aria-flowto</li>
+<li>aria-labelledby</li>
+<li>aria-owns</li>
+<li>aria-posinset</li>
+<li>aria-setsize</li>
+</ul>
+<h3 id="ラベル">ラベル</h3><p>非テキストコンテンツの説明に使用します。<br>以下の２つが使用されます。</p>
+<ul>
+<li>aria-label =&gt; 通常の説明で使用します。</li>
+<li>aria-labelledby =&gt; 説明と要素を関連づけて使用します。</li>
+</ul>
+<p><strong>aria-label</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">aria-label</span>=<span class="value">"説明"</span>&gt;</span>&amp;#xE000;<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>aria-labelledby</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">id</span>=<span class="value">"desc-txt"</span>&gt;</span>説明<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">aria-labelledby</span>=<span class="value">"desc-txt"</span>&gt;</span>&amp;#xE000;<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>このように使用します。</p>
 
       
     </div>
