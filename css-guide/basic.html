@@ -380,7 +380,28 @@
   
 </article>
 
+<!--% if (!index && theme.share){ % -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="taisun0523">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!-- head 内か、body 終了タグの直前に次のタグを貼り付けてください。 -->
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'ja'}
+</script>
+
+<!-- +1 ボタン を表示したい位置に次のタグを貼り付けてください。 -->
+<div class="g-plusone" data-size="medium" data-href="http://taisun.github.io/"></div>
+
+<!--% } %-->
 
 
 
