@@ -1,0 +1,147 @@
+
+//型
+var string : string;
+var number: number;
+var any: any;
+var boolean: boolean;
+// void, null, undefind
+
+//配列
+var array: string[] = ["a","b","c"];
+var prime: number[] = [1,2,3];
+
+//関数呼び出し
+//通常のjavascriptと同様に「関数式 (引数)」で呼べる。
+//型を指定する場合は「関数式 <型引数> (引数)」で指定して呼ぶ。
+class type {
+	public a<Type>(type:Type){
+		alert(type);
+	}
+}
+
+var typeData = new type();
+typeData.a<number>(1234);
+
+//列挙型
+//列挙型とは定数のリストです。
+//列挙型を使用することでコードの中にマジックナンバーを使用しない為管理がしやすく見通しのいいコードになる。
+enum nums {
+	one,
+	two,
+	three
+}
+var one:number = nums.one,
+    two:number = nums.two,
+	three:number = nums.three;
+	
+alert(one.toString()+two.toString()+three.toString());
+
+//アロー関数
+//アロー関数は関数式を「引数 => 式」のように省略して記述することができる
+//無名関数として関数名を付ける場合は「var 関数名 = (引数) => 式」のように記述します。
+arow => arow;
+(x:number, y:number):number => x+y;
+var sum = (x:number, y:number):number => x+y;
+
+//モジュール
+//内部モジュールと外部モジュールがある
+//内部モジュール=>ソースファイル内で名前の衝突を抑止する
+//外部モジュール=>複数に分かれた外部ファイルのを結合するもの(impor requireを使う)
+module A {
+	export class hello { // export -> 外部から参照できるようになる無いと参照できない
+		constructor(public text: string){} // constructor -> クラスメンバーオブジェクト
+		say(){
+			alert(this.text); //クラス内のthisはメンバーオブジェクトを参照している。
+		}
+	}
+}
+
+var al: A.hello = new A.hello("aaaa");
+al.say(); 
+
+//クラス
+//Javascriptには元々クラスは無いプロトタイプベースのオブジェクト指向言語だからだ。
+//使用できないのは不便なのでTypeScriptではES6に準拠している。
+//
+//クラスといっても使用できるのは以下だ
+//・インスタンスメンバーと静的メンバーの宣言
+//・プロパティの宣言
+//・コンストラクタ引数による初期化
+//
+//クラスの記述は「class クラス名 {クラス本体}」と記述する。
+//クラスを継承する際は「class クラス名 extends 継承元クラス名 {クラス本体}」と記述する。
+//継承する際には「extends」キーワードをしようする。
+class B {
+	public text: string; //静的メンバー　「public」キーワードを使用するどこからでも参照できる。また「praivate」だと同クラス内のみ参照可能となる。
+	constructor(mess:string){ //コンストラクタ引数による初期化
+		this.text = mess;
+	}
+	say(){// メンバー関数宣言
+		alert(this.text)
+	}
+}
+
+var b = new B("aaa");//インスタンス
+b.say();
+
+//クラス継承
+class person {
+	public name: string;
+	constructor(public age: number){
+		this.name = "suzuki";
+	}
+}
+
+class person2 extends person {
+	public lastName: string;
+	constructor(){
+		super(31); //継承元のコンストラクタをオーバーライドする
+		this.lastName = "taichi";
+	}
+	call() {
+		alert(this.name+" "+this.lastName+" "+this.age+"才");
+	}
+}
+
+var personData = new person2();
+personData.call(); //-> suzuki taichi 31才
+
+ //インターフェース
+ //クラスとは違い定義のみで抽象的なメソッド
+interface C {
+	num(x,y): number;
+}
+interface D extends C { //extends -> 継承 
+	say(): string;
+}
+
+class a implements D { //implements -> クラスでインターフェースを使用するときにインタフェースを呼び出す
+	public num(x,y): number {
+		return x+y;
+	}
+	public say(): string {
+		return "aaaa";
+	}
+}
+
+var fnc: D = new a();
+alert(fnc.num(10,20)+" "+ fnc.say());
+
+//メソッドのオーバーライド
+//「super」キーワード使用継承元のメソッドを呼び出すことができる。
+//使用方法は「super.継承元メソッド」でメソッドを呼び出す。
+//またコンストラクタ内で使用する場合は「super(継承値)」で呼び出す。
+class test {
+	public x(){
+		alert("xx");
+	}
+}
+class test2 extends test {
+	public y(){
+		super.x(); //継承元のクラスのメソッドを呼ぶ
+		alert("yy");
+	}
+}
+
+var n = new test2();
+n.y(); //-> xx yy
