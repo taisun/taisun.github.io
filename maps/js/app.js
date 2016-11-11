@@ -111,34 +111,38 @@
 	    }
 	  });
 
-	  new google.maps.StreetViewPanorama(document.querySelector('.maps-shibuya__01'), {
-	    position: shibuysPos.one,
-	    pov: {
-	      heading: 300,
-	      pitch: 0
-	    }
-	  });
-	  new google.maps.StreetViewPanorama(document.querySelector('.maps-shibuya__02'), {
-	    position: shibuysPos.two,
-	    pov: {
-	      heading: 130,
-	      pitch: 0
-	    }
-	  });
-	  new google.maps.StreetViewPanorama(document.querySelector('.maps-shibuya__03'), {
-	    position: shibuysPos.three,
-	    pov: {
-	      heading: 130,
-	      pitch: 0
-	    }
-	  });
-	  new google.maps.StreetViewPanorama(document.querySelector('.maps-shibuya__04'), {
-	    position: hikawa,
-	    pov: {
-	      heading: 130,
-	      pitch: 0
-	    }
-	  });
+	  // new google.maps.StreetViewPanorama(
+	  //   document.querySelector('.maps-shibuya__01'), {
+	  //     position: shibuysPos.one,
+	  //     pov: {
+	  //       heading: 300,
+	  //       pitch: 0
+	  //     }
+	  //   });
+	  //   new google.maps.StreetViewPanorama(
+	  //     document.querySelector('.maps-shibuya__02'), {
+	  //       position: shibuysPos.two,
+	  //       pov: {
+	  //         heading: 130,
+	  //         pitch: 0
+	  //       }
+	  //     });
+	  //     new google.maps.StreetViewPanorama(
+	  //       document.querySelector('.maps-shibuya__03'), {
+	  //         position: shibuysPos.three,
+	  //         pov: {
+	  //           heading: 130,
+	  //           pitch: 0
+	  //         }
+	  //       });
+	  //       new google.maps.StreetViewPanorama(
+	  //         document.querySelector('.maps-shibuya__04'), {
+	  //           position: hikawa,
+	  //           pov: {
+	  //             heading: 130,
+	  //             pitch: 0
+	  //           }
+	  //         });
 	});
 
 /***/ },
